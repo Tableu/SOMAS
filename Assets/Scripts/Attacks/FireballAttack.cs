@@ -1,0 +1,64 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class FireballAttack : StateMachineBehaviour
+{
+    public GameObject fireballPrefab;
+    public float spawnDistance;
+    public float fireballSpeed;
+    private GameObject fireball;
+    private GameObject player;
+    private Vector2 spawnPos;
+    private bool fireballInstantiated;
+    // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
+    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        player = GameObject.FindWithTag("Player");
+        fireballInstantiated = false;
+    }
+
+    // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
+    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex){
+        float animationProgress = Mathf.Round((stateInfo.normalizedTime % 1)*100f);
+        
+        if(animationProgress > 35f && animationProgress < 50f && !fireballInstantiated){
+            Vector2 userPos = animator.transform.position;
+            Vector2 userDirection = animator.transform.forward;
+            Quaternion userRotation = animator.transform.rotation;
+            spawnPos = userPos + (Vector2.up+userDirection)*spawnDistance;
+            fireball = Instantiate(fireballPrefab, spawnPos, Quaternion.identity);
+            fireballInstantiated = true;
+        }else if(animationProgress > 50f && animationProgress < 100f && fireballInstantiated){
+            if(fireball == null){
+                fireballInstantiated = false;
+                return;
+            }
+            Vector2 playerPos = player.transform.position;
+            Vector2 relativePos = ((playerPos - spawnPos).normalized);
+            
+            fireball.GetComponent<Rigidbody2D>().velocity = relativePos*fireballSpeed;
+            float angle = Mathf.Atan2(relativePos.y, relativePos.x*-1)*Mathf.Rad2Deg;
+            fireball.transform.rotation = Quaternion.AngleAxis(-angle, new Vector3(0,0,1));
+            fireballInstantiated = false;
+        }
+    }
+
+    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
+    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+    //    
+    //}
+
+    // OnStateMove is called right after Animator.OnAnimatorMove()
+    //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+    //    // Implement code that processes and affects root motion
+    //}
+
+    // OnStateIK is called right after Animator.OnAnimatorIK()
+    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+    //    // Implement code that sets up animation IK (inverse kinematics)
+    //}
+}
