@@ -8,10 +8,8 @@ public class PlayerData : MonoBehaviour
     public bool forwardRaycastHit;
     public float speed;
     public float jumpVelocity;
-    private SpriteRenderer spriteRenderer;
     private PlayerData playerData;
     void Start(){
-        spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
         playerData = this.gameObject.GetComponent<PlayerData>();
     }
     void Update(){
@@ -20,10 +18,10 @@ public class PlayerData : MonoBehaviour
     private void updateRotation(){
         float horizontal = Input.GetAxisRaw("Horizontal");
         if(horizontal < 0){
-            spriteRenderer.flipX = false;
+            gameObject.transform.rotation = Quaternion.Euler(0,0,0);
             forward = Vector2.left;
         }else if(horizontal > 0){
-            spriteRenderer.flipX = true;
+            gameObject.transform.rotation = Quaternion.Euler(0,180,0);
             forward = Vector2.right;
         }
     }
