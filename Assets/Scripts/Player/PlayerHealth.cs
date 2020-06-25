@@ -23,12 +23,12 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision){
+    void OnTriggerEnter2D(Collider2D collision){
         if(collision.gameObject.tag == "EnemyProjectile"){
             healthPoints -= collision.gameObject.GetComponent<Projectile>().damagePoints;
         }
     }
-    void OnCollisionExit2D(Collision2D collision){
+    void OnTriggerExit2D(Collider2D collision){
         
     }
 }
