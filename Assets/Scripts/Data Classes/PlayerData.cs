@@ -8,9 +8,15 @@ public class PlayerData : MonoBehaviour
     public bool forwardRaycastHit;
     public float speed;
     public float jumpVelocity;
+    public float maxSpeed;
     private PlayerData playerData;
+    public Vector2 knockback;
+    public Vector3 boundSize;
+    public Vector3 boundCenterOffset;
     void Start(){
         playerData = this.gameObject.GetComponent<PlayerData>();
+        boundSize = gameObject.GetComponent<Collider2D>().bounds.size;
+        boundCenterOffset = gameObject.transform.position - gameObject.GetComponent<Collider2D>().bounds.center;
     }
     void Update(){
         updateRotation();
