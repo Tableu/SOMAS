@@ -43,7 +43,7 @@ public class PlayerRaycasts : MonoBehaviour
         }
     }
     private void setRaycastPositions(){
-        Bounds colliderBounds = col.bounds;
+        Bounds colliderBounds = new Bounds(gameObject.transform.position - playerData.boundCenterOffset,playerData.boundSize);
         downRaycastPos = new Vector2[] {new Vector2(colliderBounds.center.x, colliderBounds.min.y),
                                         new Vector2(colliderBounds.max.x, colliderBounds.min.y),
                                         colliderBounds.min};
@@ -60,7 +60,7 @@ public class PlayerRaycasts : MonoBehaviour
     private void drawRaycasts(RaycastHit2D[] raycastArray, ref int rayIndex, Vector2 direction, float raycastLength, int layerMask, Vector2[] positions){
         for(int index = 0; index < raycastArray.Length; index++){
             raycastArray[index] = Physics2D.Raycast(positions[index], direction, raycastLength, layerMask);
-            Debug.DrawRay(positions[index], transform.TransformDirection(direction)*raycastLength,Color.red);
+            Debug.DrawRay(positions[index], direction*raycastLength,Color.red);
         }
 
         for(int index = 0; index < raycastArray.Length; index++){

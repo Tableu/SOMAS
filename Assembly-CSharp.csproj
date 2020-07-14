@@ -36,6 +36,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\DarkPuddleAttack.cs" />
      <Compile Include="Assets\Scripts\AnimationController States\ChargeWaterAnimation.cs" />
      <Compile Include="Assets\Scripts\AnimationController States\Idle.cs" />
      <Compile Include="Assets\Scripts\AnimationController States\StateMovement.cs" />
@@ -62,6 +63,7 @@
      <Compile Include="Assets\Scripts\Player\LockPlayerInput.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerInput.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerModel.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerRaycasts.cs" />
      <Compile Include="Assets\Scripts\Projectile.cs" />

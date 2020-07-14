@@ -26,9 +26,12 @@ public class PlayerMovement : MonoBehaviour
         float horizontalVelocity = horizontal*playerData.speed;
         
         Jump();
-        
-        rigidBody.velocity = new Vector2(horizontalVelocity, rigidBody.velocity.y);
-        
+        if(Input.GetButtonUp("Horizontal")){
+            rigidBody.velocity = new Vector2(0,rigidBody.velocity.y);
+        }
+        if(Mathf.Abs(rigidBody.velocity.x) < playerData.maxSpeed){
+            rigidBody.AddForce(new Vector2(horizontalVelocity, 0),ForceMode2D.Impulse);
+        }
         if(!playerData.grounded && isTouchingCol && playerData.forwardRaycastHit){
             rigidBody.velocity = new Vector2(0, rigidBody.velocity.y);
         }
