@@ -11,7 +11,7 @@ public class LockPlayerInput : StateMachineBehaviour
     {
         player = GameObject.FindWithTag("Player"); 
         playerInput = player.GetComponent<PlayerInput>();
-        playerInput.castingSpell = true;
+        playerInput.lockInput = true;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -23,7 +23,7 @@ public class LockPlayerInput : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        playerInput.castingSpell = false;
+        playerInput.lockInput = false;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

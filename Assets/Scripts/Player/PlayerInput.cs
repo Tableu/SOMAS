@@ -7,36 +7,39 @@ public class PlayerInput : MonoBehaviour
     private Animator animator;
     public int magicCoreCount;
     public Vector3 playerPos;
-    public bool castingSpell;
+    public bool lockInput;
+    private int magicCore;
+    public WaterMagic waterMagic;
+    public EarthMagic earthMagic;
+    public FireMagic fireMagic;
     // Start is called before the first frame update
     void Start()
     {
-        castingSpell = false;
+        lockInput = false;
         animator = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!castingSpell){
+        if(!lockInput){
             checkInputs();
         }
-        setMagicCore();
+        //setMagicCore();
     }
     private void checkInputs(){
         if(Input.GetButtonDown("Fire1")){
-            animator.SetTrigger("Fire1");
             playerPos = GameObject.FindWithTag("Player").transform.position;
+            waterMagic.castSpell();
         }else if(Input.GetButtonDown("Fire2")){
-            animator.SetTrigger("Fire2");
             playerPos = GameObject.FindWithTag("Player").transform.position;
+            fireMagic.castSpell();
         }else if(Input.GetButtonDown("Fire3")){
-            animator.SetTrigger("Fire3");
             playerPos = GameObject.FindWithTag("Player").transform.position;
+            earthMagic.castSpell();
         }
     }
     private void setMagicCore(){
-        int magicCore = animator.GetInteger("MagicCore");
         if(Input.GetKeyDown("q")){
             magicCore--;
         }else if(Input.GetKeyDown("e")){
@@ -48,6 +51,5 @@ public class PlayerInput : MonoBehaviour
         }else if(magicCore < 0){
             magicCore = magicCoreCount-1;
         }
-        animator.SetInteger("MagicCore", magicCore);
     }
 }
