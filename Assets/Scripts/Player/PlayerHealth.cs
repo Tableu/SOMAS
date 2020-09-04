@@ -31,7 +31,6 @@ public class PlayerHealth : MonoBehaviour
         if(collision.gameObject.tag == "EnemyProjectile"){
             healthPoints -= collision.gameObject.GetComponent<Projectile>().damagePoints;
             float direction = collision.transform.GetComponent<Rigidbody2D>().velocity.normalized.x;
-            animator.SetTrigger("Hit");
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(playerData.knockback.x*direction,playerData.knockback.y),ForceMode2D.Impulse);
             StartCoroutine(Invulnerable());
             if(collision.gameObject.GetComponent<Projectile>().destructible){
