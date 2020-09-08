@@ -112,10 +112,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 948
-  m_MinSize: {x: 577, y: 492}
-  m_MaxSize: {x: 12002, y: 14042}
+  m_MinSize: {x: 579, y: 492}
+  m_MaxSize: {x: 12004, y: 14042}
   vertical: 1
-  controlID: 79
+  controlID: 124
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -138,8 +138,8 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 623
-  m_MinSize: {x: 577, y: 221}
-  m_MaxSize: {x: 12002, y: 4021}
+  m_MinSize: {x: 579, y: 221}
+  m_MaxSize: {x: 12004, y: 4021}
   vertical: 0
   controlID: 125
 --- !u!114 &7
@@ -300,8 +300,8 @@ MonoBehaviour:
     vZoomLockedByDefault: 0
     m_HBaseRangeMin: -526.5
     m_HBaseRangeMax: 526.5
-    m_VBaseRangeMin: -301
-    m_VBaseRangeMax: 301
+    m_VBaseRangeMin: -290.5
+    m_VBaseRangeMax: 290.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -318,11 +318,11 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 0
+      y: 21
       width: 1053
-      height: 602
+      height: 581
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 526.5, y: 301}
+    m_Translation: {x: 526.5, y: 290.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -330,9 +330,9 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -526.5
-      y: -301
+      y: -290.5
       width: 1053
-      height: 602
+      height: 581
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1053, y: 602}
@@ -370,7 +370,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: ec310000
       m_LastClickedID: 0
       m_ExpandedIDs: 36fbffff
       m_RenameOverlay:
@@ -434,7 +434,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: -33.41294, y: -2.0736184, z: -5.0589643}
     speed: 2
-    m_Value: {x: -34.597095, y: -2.0907526, z: -4.948603}
+    m_Value: {x: -33.41294, y: -2.0736184, z: -5.0589643}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -486,7 +486,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 25.597637
     speed: 2
-    m_Value: 24.495346
+    m_Value: 25.597637
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -588,19 +588,19 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Projectiles
+    - Assets/Scripts/Attacks
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Projectiles
+  - Assets/Scripts/Attacks
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Darthvader\SOMAS
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 65}
-    m_SelectedIDs: bc480000
-    m_LastClickedID: 18620
+    scrollPos: {x: 0, y: 5}
+    m_SelectedIDs: ca480000
+    m_LastClickedID: 18634
     m_ExpandedIDs: 000000008a410000924800009448000096480000984800009a4800009c4800009e480000a0480000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
