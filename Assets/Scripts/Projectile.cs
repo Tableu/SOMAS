@@ -6,6 +6,7 @@ public class Projectile : MonoBehaviour
 {
     public int damagePoints;
     public bool destructible = true;
+    public int healthPoints;
     // Start is called before the first frame update
     void Start()
     {

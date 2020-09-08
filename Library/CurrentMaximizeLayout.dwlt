@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 948
-  m_MinSize: {x: 577, y: 492}
-  m_MaxSize: {x: 12002, y: 14042}
+  m_MinSize: {x: 578, y: 492}
+  m_MaxSize: {x: 12003, y: 14042}
   vertical: 1
-  controlID: 1079
+  controlID: 4827
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -138,10 +138,10 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 623
-  m_MinSize: {x: 577, y: 221}
-  m_MaxSize: {x: 12002, y: 4021}
+  m_MinSize: {x: 578, y: 221}
+  m_MaxSize: {x: 12003, y: 4021}
   vertical: 0
-  controlID: 1080
+  controlID: 4828
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -199,7 +199,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 18faffff36fbffff
+      m_ExpandedIDs: fcf9ffff1afaffff36fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -286,9 +286,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -48.475616, y: -2.30676, z: -3.6582031}
+    m_Target: {x: -52.158512, y: -3.948561, z: -6.9746094}
     speed: 2
-    m_Value: {x: -48.475616, y: -2.30676, z: -3.6582031}
+    m_Value: {x: -52.158512, y: -3.948561, z: -6.9746094}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -338,9 +338,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 11.590621
+    m_Target: 4.2211943
     speed: 2
-    m_Value: 11.590621
+    m_Value: 4.2211943
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -384,8 +384,8 @@ MonoBehaviour:
     y: 0
     width: 390
     height: 623
-  m_MinSize: {x: 275, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 9}
   m_Panes:
   - {fileID: 9}
@@ -427,7 +427,7 @@ MonoBehaviour:
     m_ControlHash: 1412526313
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
-  m_LastInspectedObjectInstanceID: -1530
+  m_LastInspectedObjectInstanceID: -2686
   m_LastVerticalScrollValue: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -448,8 +448,8 @@ MonoBehaviour:
     y: 623
     width: 1920
     height: 325
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
+  m_MinSize: {x: 230, y: 271}
+  m_MaxSize: {x: 10000, y: 10021}
   m_ActualView: {fileID: 11}
   m_Panes:
   - {fileID: 11}
@@ -497,20 +497,20 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Projectiles
+    - Assets/Sprites/Projectiles/Metal
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Projectiles
+  - Assets/Sprites/Projectiles/Metal
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Darthvader\SOMAS
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 65}
-    m_SelectedIDs: e4480000
-    m_LastClickedID: 18660
-    m_ExpandedIDs: 000000008a4100009448000096480000984800009a4800009c4800009e480000a0480000a2480000
+    scrollPos: {x: 0, y: 200}
+    m_SelectedIDs: 7c4a0000
+    m_LastClickedID: 19068
+    m_ExpandedIDs: 000000008c41000096480000984800009a4800009c4800009e480000a0480000a2480000a4480000e2480000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -538,7 +538,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008a4100009448000096480000984800009a4800009c4800009e480000a0480000a2480000
+    m_ExpandedIDs: 000000008c41000096480000984800009a4800009c4800009e480000a0480000a2480000a4480000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -563,9 +563,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 06faffff
-    m_LastClickedInstanceID: -1530
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 82f5ffff
+    m_LastClickedInstanceID: -2686
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000e43800009a390000483b0000643d000000000000ec440000b6480000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -648,7 +648,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -2188
+  m_LastSelectedObjectID: -2686
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
