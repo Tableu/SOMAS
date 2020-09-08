@@ -5,6 +5,9 @@ using UnityEngine;
 public class MetalSummon : MonoBehaviour
 {
     public int form;
+    public Sprite liquid;
+    public Sprite shield;
+    public Sprite sword;
     // Start is called before the first frame update
     void Start()
     {
