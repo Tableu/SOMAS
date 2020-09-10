@@ -1,23 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//Holds variables for enemy scripts to use. Sets initial values
 public class EnemyData : MonoBehaviour
 {
+    //Stats
     public float speed;
-    private Animator animator;
-    public float[] boundary;
     public Vector2 forward;
-    public float attackLimit;
-    public float followLimit;
     public bool playerFound;
     public bool grounded;
     public Vector2 distanceToPlayer;
     public int mask;
+    //Raycasts
     public Vector2[] raycastDirections;
     public RaycastHit2D[] raycastArray;
+    //Boundaries
+    public float[] boundary;
+    public float attackLimit;
+    public float followLimit;
+    //Other
     private GameObject player;
-    
+    private Animator animator;
     void Start()
     {
         animator = this.gameObject.GetComponent<Animator>();

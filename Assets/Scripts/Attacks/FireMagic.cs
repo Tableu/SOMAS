@@ -11,6 +11,7 @@ public class FireMagic : MonoBehaviour
     void Update(){
         
     }
+    //Read directional input and cast the appropriate spell
     public void castSpell(){
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
@@ -23,6 +24,7 @@ public class FireMagic : MonoBehaviour
             
         }
     }
+    //Spawn flamethrower projectile in front of player.
     private void Flamethrower(GameObject projectilePrefab){
         Vector3 playerForward = player.GetComponent<PlayerData>().forward;
         GameObject projectile = Instantiate(projectilePrefab, player.transform.position + new Vector3(7.5f*playerForward.x,0.2f,0), Quaternion.identity);

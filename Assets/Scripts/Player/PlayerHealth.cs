@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
     public int healthPoints;
     private Collider2D col;
     public delegate void deathEventDelegate();
-    public event deathEventDelegate deathEvent;
+    public event deathEventDelegate deathEvent; //Handles death of player, i.e stop camera, stop enemies
     private Animator animator;
     private PlayerData playerData;
     // Start is called before the first frame update

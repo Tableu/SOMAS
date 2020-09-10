@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         if(playerData.grounded){
             if(Input.GetButtonDown("Jump")){
                 rigidBody.AddRelativeForce(new Vector2(0,playerData.jumpVelocity), ForceMode2D.Impulse);
-                Debug.Log("jump key pressed");
+                Debug.Log("Jump Key");
             }
         }
     }

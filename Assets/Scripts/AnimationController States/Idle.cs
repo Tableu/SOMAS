@@ -17,7 +17,7 @@ public class Idle : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if(timer < 0 && !triggerSet){
+        if(timer < 0 && !triggerSet){ 
             animator.SetTrigger("Walk");
             triggerSet = true;
         }

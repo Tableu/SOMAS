@@ -5,7 +5,7 @@ using UnityEngine;
 public class StateMovement : StateMachineBehaviour
 {
     public string[] movementMethods;
-    private List<object> list = new List<object>();
+    private List<object> list = new List<object>(); //Arguments for EnemyMovement Methods
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -16,7 +16,7 @@ public class StateMovement : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        for(int index = 0; index < movementMethods.Length; index++){
+        for(int index = 0; index < movementMethods.Length; index++){ //Call all methods attached to the state
             EnemyMovement.InvokeMethod(movementMethods[index],list);
         }
     }
