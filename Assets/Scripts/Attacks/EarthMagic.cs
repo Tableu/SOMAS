@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EarthMagic : MonoBehaviour
 {
+    //Magic Prefabs
     public GameObject earthWall;
     private GameObject player;
     void Start(){
@@ -12,6 +13,7 @@ public class EarthMagic : MonoBehaviour
     void Update(){
         
     }
+    //Read directional input and cast the appropriate spell
     public void castSpell(){
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
@@ -24,6 +26,7 @@ public class EarthMagic : MonoBehaviour
             
         }
     }
+    //Construct a wall of earth in front of the player that blocks attacks. Use a raycast to check if the earth wall can be spawned.
     private void EarthWall(GameObject gameObject, float raycastLength, float earthWallPosition){
         if(!player.GetComponent<PlayerData>().grounded)
             return;

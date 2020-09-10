@@ -22,14 +22,14 @@ public class FireballAttack : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex){
         float animationProgress = Mathf.Round((stateInfo.normalizedTime % 1)*100f);
         
-        if(animationProgress > 35f && animationProgress < 50f && !fireballInstantiated){
+        if(animationProgress > 35f && animationProgress < 50f && !fireballInstantiated){ //Spawn unmoving fireball above cultist
             Vector2 userPos = animator.transform.position;
             Vector2 userDirection = animator.transform.forward;
             Quaternion userRotation = animator.transform.rotation;
             spawnPos = userPos + (Vector2.up+userDirection)*spawnDistance;
             fireball = Instantiate(fireballPrefab, spawnPos, Quaternion.identity);
             fireballInstantiated = true;
-        }else if(animationProgress > 50f && animationProgress < 100f && fireballInstantiated){
+        }else if(animationProgress > 50f && animationProgress < 100f && fireballInstantiated){ //Shoot fireball at player location with the appropriate velocity and rotation.
             if(fireball == null){
                 fireballInstantiated = false;
                 return;
