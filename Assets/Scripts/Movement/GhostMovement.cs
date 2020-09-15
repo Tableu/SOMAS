@@ -16,8 +16,8 @@ public class GhostMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rigidBody = this.gameObject.GetComponent<Rigidbody2D>();
-        spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
+        rigidBody = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         verticalVector = Vector2.up;
         horizontalVector = Vector2.left;
         rigidBody.velocity = new Vector2(-horizontalSpeed, rigidBody.velocity.y);

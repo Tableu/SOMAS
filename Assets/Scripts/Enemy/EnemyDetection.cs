@@ -12,11 +12,11 @@ public class EnemyDetection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        animator = this.gameObject.GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         player = GameObject.FindWithTag("Player");
-        rigidBody = this.gameObject.GetComponent<Rigidbody2D>();
-        enemyData = this.gameObject.GetComponent<EnemyData>();
-        col = this.gameObject.GetComponent<Collider2D>();
+        rigidBody = GetComponent<Rigidbody2D>();
+        enemyData = GetComponent<EnemyData>();
+        col = GetComponent<Collider2D>();
         player.GetComponent<PlayerHealth>().deathEvent += OnDeathEvent;
     }
     
@@ -60,7 +60,7 @@ public class EnemyDetection : MonoBehaviour
         animator.SetFloat("AttackLimit", 1);
         animator.SetFloat("FollowLimit", 1);
         GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().deathEvent -= OnDeathEvent;
-        gameObject.GetComponent<EnemyDetection>().enabled = false;
+        GetComponent<EnemyDetection>().enabled = false;
     }
     void OnEnable(){
         GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().deathEvent += OnDeathEvent;

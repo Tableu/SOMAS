@@ -18,10 +18,10 @@ public class PlayerData : MonoBehaviour
     ///Events
     public delegate void rotateEventDelegate();
     public event rotateEventDelegate rotateEvent;
-    private float previous;
+    public float previous;
     void Start(){
-        boundSize = gameObject.GetComponent<Collider2D>().bounds.size;
-        boundCenterOffset = transform.position - gameObject.GetComponent<Collider2D>().bounds.center;
+        boundSize = GetComponent<Collider2D>().bounds.size;
+        boundCenterOffset = transform.position - GetComponent<Collider2D>().bounds.center;
         previous = -1;
     }
     void Update(){
