@@ -13,9 +13,9 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        animator = gameObject.GetComponent<Animator>();
-        col = this.gameObject.GetComponent<Collider2D>();
-        playerData = this.gameObject.GetComponent<PlayerData>();
+        animator = GetComponent<Animator>();
+        col = GetComponent<Collider2D>();
+        playerData = GetComponent<PlayerData>();
     }
 
     // Update is called once per frame
@@ -31,7 +31,7 @@ public class PlayerHealth : MonoBehaviour
         if(collision.gameObject.tag == "EnemyProjectile"){
             healthPoints -= collision.gameObject.GetComponent<Projectile>().damagePoints;
             float direction = collision.transform.GetComponent<Rigidbody2D>().velocity.normalized.x;
-            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(playerData.knockback.x*direction,playerData.knockback.y),ForceMode2D.Impulse);
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(playerData.knockback.x*direction,playerData.knockback.y),ForceMode2D.Impulse);
             StartCoroutine(Invulnerable());
             if(collision.gameObject.GetComponent<Projectile>().destructible){
                 Destroy(collision.gameObject);
@@ -42,8 +42,8 @@ public class PlayerHealth : MonoBehaviour
         
     }
     IEnumerator Invulnerable(){
-        gameObject.GetComponent<Collider2D>().enabled = false;
+        GetComponent<Collider2D>().enabled = false;
         yield return new WaitForSeconds(3);
-        gameObject.GetComponent<Collider2D>().enabled = true;
+        GetComponent<Collider2D>().enabled = true;
     }
 }

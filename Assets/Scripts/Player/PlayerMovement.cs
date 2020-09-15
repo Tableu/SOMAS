@@ -11,9 +11,9 @@ public class PlayerMovement : MonoBehaviour
     private PlayerData playerData;
     void Start()
     {
-        rigidBody = this.gameObject.GetComponent<Rigidbody2D>();
-        col = this.gameObject.GetComponent<Collider2D>();
-        playerData = this.gameObject.GetComponent<PlayerData>();
+        rigidBody = GetComponent<Rigidbody2D>();
+        col = GetComponent<Collider2D>();
+        playerData = GetComponent<PlayerData>();
         isTouchingCol = false;
     }
 

@@ -15,8 +15,8 @@ public class PlayerRaycasts : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        col = this.gameObject.GetComponent<Collider2D>();
-        playerData = this.gameObject.GetComponent<PlayerData>();
+        col = GetComponent<Collider2D>();
+        playerData = GetComponent<PlayerData>();
     }
 
     // Update is called once per frame

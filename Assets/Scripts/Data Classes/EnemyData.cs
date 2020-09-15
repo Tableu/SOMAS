@@ -23,7 +23,7 @@ public class EnemyData : MonoBehaviour
     private Animator animator;
     void Start()
     {
-        animator = this.gameObject.GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         Spawner spawner = transform.parent.GetComponent<Spawner>();
         boundary = new float[2];
         boundary[0] = spawner.leftBoundary.position.x;

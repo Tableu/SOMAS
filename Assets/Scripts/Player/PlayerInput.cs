@@ -12,11 +12,12 @@ public class PlayerInput : MonoBehaviour
     public WaterMagic waterMagic;
     public EarthMagic earthMagic;
     public FireMagic fireMagic;
+    public MetalSummon metalSummon;
     // Start is called before the first frame update
     void Start()
     {
         lockInput = false;
-        animator = gameObject.GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -36,7 +37,7 @@ public class PlayerInput : MonoBehaviour
             fireMagic.castSpell();
         }else if(Input.GetButtonDown("Fire3")){
             playerPos = GameObject.FindWithTag("Player").transform.position;
-            earthMagic.castSpell();
+            metalSummon.castSpell();
         }
     }
     private void setMagicCore(){

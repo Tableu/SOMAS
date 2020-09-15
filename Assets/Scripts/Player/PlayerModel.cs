@@ -9,8 +9,8 @@ public class PlayerModel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        animator = gameObject.GetComponent<Animator>();
-        rigidBody = this.gameObject.transform.parent.GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        rigidBody = transform.parent.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame

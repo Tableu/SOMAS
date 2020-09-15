@@ -11,8 +11,8 @@ public class EnemyRaycasts : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        col = this.gameObject.GetComponent<Collider2D>();
-        enemyData = this.gameObject.GetComponent<EnemyData>();
+        col = GetComponent<Collider2D>();
+        enemyData = GetComponent<EnemyData>();
     }
 
     // Update is called once per frame

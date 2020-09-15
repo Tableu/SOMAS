@@ -10,7 +10,7 @@ public class EnemyMovement
         t.GetMethod(methodName).Invoke(null, args.ToArray());
     }
     public static void Walk(GameObject gameObject){
-        Transform transform = gameObject.transform;
+        Transform transform = gameObject.GetComponent<Transform>();
         EnemyData enemyData = gameObject.GetComponent<EnemyData>();
         Rigidbody2D rigidBody = gameObject.GetComponent<Rigidbody2D>();
         
@@ -24,8 +24,8 @@ public class EnemyMovement
         rigidBody.velocity = new Vector2(enemyData.forward.x*enemyData.speed,rigidBody.velocity.y);
     }
     public static void FlipCharacter(GameObject gameObject){
-        Transform transform = gameObject.transform;
         EnemyData enemyData = gameObject.GetComponent<EnemyData>();
+        Transform transform = gameObject.GetComponent<Transform>();
         
         if(enemyData.distanceToPlayer.x < 0){
             transform.localRotation = Quaternion.Euler(transform.localRotation.x, 0, transform.localRotation.z);

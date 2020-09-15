@@ -9,7 +9,7 @@ public class MeleeAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        col = this.gameObject.GetComponent<Collider2D>();
+        col = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
