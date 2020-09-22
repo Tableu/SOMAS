@@ -1,20 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EarthMagic : MonoBehaviour
 {
     //Magic Prefabs
     public GameObject earthWall;
     private GameObject player;
-    void Start(){
+
+    private void Start(){
 
     }
-    void Update(){
+
+    private void Update(){
         
     }
     //Read directional input and cast the appropriate spell
-    public void castSpell(){
+    public void CastSpell(){
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
         player = GameObject.FindWithTag("Player");

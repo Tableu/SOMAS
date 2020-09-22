@@ -1,19 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class WaterMagic : MonoBehaviour
 {
     public GameObject waterOrb;
     public GameObject waterWave;
     private GameObject player;
-    void Start(){
+
+    private void Start(){
 
     }
-    void Update(){
+
+    private void Update(){
 
     }
-    public void castSpell(){
+    public void CastSpell(){
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
         player = GameObject.FindWithTag("Player");
@@ -22,7 +22,7 @@ public class WaterMagic : MonoBehaviour
         }else if(vertical > 0){
             
         }else if(vertical < 0){
-            waveAttack(waterWave,10,new Vector2(2,0));
+            WaveAttack(waterWave,10,new Vector2(2,0));
         }
     }
     public void BasicWaterAttack(GameObject projectilePrefab, float speed,float rotationSpeed){
@@ -31,7 +31,7 @@ public class WaterMagic : MonoBehaviour
         projectile.GetComponent<Rigidbody2D>().AddTorque(rotationSpeed);
         player.GetComponent<PlayerInput>().lockInput = false;
     }
-    private void iceAttack(GameObject projectilePrefab, float speed){
+    private void IceAttack(GameObject projectilePrefab, float speed){
         Vector3 playerForward = player.GetComponent<PlayerData>().forward;
         Vector3 playerPos = player.GetComponent<PlayerInput>().playerPos;
         Vector3[] spawnPos = new Vector3[3];
@@ -56,7 +56,7 @@ public class WaterMagic : MonoBehaviour
         projectile[1].GetComponent<Rigidbody2D>().velocity = player.GetComponent<PlayerData>().forward*speed;
         projectile[2].GetComponent<Rigidbody2D>().velocity = player.GetComponent<PlayerData>().forward*speed;
     }
-    private void waveAttack(GameObject projectilePrefab, float speed, Vector2 displacement){
+    private void WaveAttack(GameObject projectilePrefab, float speed, Vector2 displacement){
         Vector3 playerForward = player.GetComponent<PlayerData>().forward;
         Vector3 dist = playerForward*displacement;
         int angle = 0;

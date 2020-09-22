@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -9,7 +7,8 @@ public class PlayerMovement : MonoBehaviour
     private Collider2D col;
     private bool isTouchingCol;
     private PlayerData playerData;
-    void Start()
+
+    private void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
@@ -18,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
@@ -46,13 +45,14 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision){
-        if(collision.gameObject.tag == "Platform"){
+    private void OnCollisionEnter2D(Collision2D collision){
+        if(collision.gameObject.CompareTag("Platform")){
             isTouchingCol = true;
         }
     }
-    void OnCollisionExit2D(Collision2D collision){
-        if(collision.gameObject.tag == "Platform"){
+
+    private void OnCollisionExit2D(Collision2D collision){
+        if(collision.gameObject.CompareTag("Platform")){
             isTouchingCol = false;
         }
     }

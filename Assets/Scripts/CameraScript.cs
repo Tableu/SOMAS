@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CameraScript : MonoBehaviour
 {
@@ -14,53 +12,59 @@ public class CameraScript : MonoBehaviour
     public Transform leftBoundary;
     public Transform rightBoundary;
     // Start is called before the first frame update
-    void Awake(){
+    private void Awake(){
         leftBoundary = transform.GetChild(1).transform;
         rightBoundary = transform.GetChild(2).transform;
     }
-    void Start()
+
+    private void Start()
     {
         horizontalLimits[0] = leftBoundary.position.x;
         verticalLimits[0] = leftBoundary.position.y;
         horizontalLimits[1] = rightBoundary.position.x;
         verticalLimits[1] = rightBoundary.position.y;
         velocity = Vector3.zero;
-        GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().deathEvent += OnDeathEvent;
+        GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().DeathEvent += OnDeathEvent;
     }
-    void OnDeathEvent(){
-        GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().deathEvent -= OnDeathEvent;
+
+    private void OnDeathEvent(){
+        GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().DeathEvent -= OnDeathEvent;
         gameObject.GetComponent<CameraScript>().enabled = false;
     }
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         FollowPlayer();
     }
 
-    private void FollowPlayer(){
-        float horizontalDist = transform.position.x - player.position.x;
-        float verticalDist = transform.position.y - player.position.y;
+    private void FollowPlayer()
+    {
+        Vector3 position = transform.position;
+        Vector3 playerPosition = player.position;
+        float horizontalDist = position.x - playerPosition.x;
+        float verticalDist = position.y - playerPosition.y;
         Vector3 target;
         if(Mathf.Abs(horizontalDist) > horizontalFollowDistance){    
-            target = new Vector3(player.position.x, transform.position.y,transform.position.z);
-            if(player.position.x < horizontalLimits[0]){
-                target = new Vector3(horizontalLimits[0], transform.position.y, transform.position.z);
-            }else if(player.position.x > horizontalLimits[1]){
-                target = new Vector3(horizontalLimits[1], transform.position.y, transform.position.z);
+            target = new Vector3(playerPosition.x, position.y, position.z);
+            if(playerPosition.x < horizontalLimits[0]){
+                target = new Vector3(horizontalLimits[0], position.y, position.z);
+            }else if(playerPosition.x > horizontalLimits[1]){
+                target = new Vector3(horizontalLimits[1], position.y, position.z);
             }
             transform.position = Vector3.SmoothDamp(transform.position, target,ref velocity, 0.1F);
         }
         if(Mathf.Abs(verticalDist) > verticalFollowDistance){
-            target = new Vector3(transform.position.x, player.position.y,transform.position.z);
-            if(player.position.y < verticalLimits[0]){
-                target = new Vector3(transform.position.x, verticalLimits[0], transform.position.z);
-            }else if(player.position.y > verticalLimits[1]){
-                target = new Vector3(transform.position.x, verticalLimits[1], transform.position.z);
+            target = new Vector3(position.x, playerPosition.y,position.z);
+            if(playerPosition.y < verticalLimits[0]){
+                target = new Vector3(position.x, verticalLimits[0], position.z);
+            }else if(playerPosition.y > verticalLimits[1]){
+                target = new Vector3(position.x, verticalLimits[1], position.z);
             }
             transform.position = Vector3.SmoothDamp(transform.position, target,ref velocity, 0.3F);
         }
     }
-    void OnEnable(){
-        GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().deathEvent += OnDeathEvent;
+
+    private void OnEnable(){
+        GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().DeathEvent += OnDeathEvent;
     }
 }

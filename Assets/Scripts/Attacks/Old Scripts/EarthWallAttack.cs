@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EarthWallAttack : StateMachineBehaviour
 {
@@ -10,11 +8,11 @@ public class EarthWallAttack : StateMachineBehaviour
     public float earthWallPosition;
     public float raycastLength;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player = GameObject.FindWithTag("Player");  
         if(player.GetComponent<PlayerData>().grounded){
-            createEarthWall(animator);  
+            CreateEarthWall(animator);  
         }else{
             animator.SetTrigger("ConditionFailed");
         }
@@ -43,7 +41,7 @@ public class EarthWallAttack : StateMachineBehaviour
     //{
     //    // Implement code that sets up animation IK (inverse kinematics)
     //}
-    private void createEarthWall(Animator animator){
+    private void CreateEarthWall(Animator animator){
         Vector3 playerForward = player.GetComponent<PlayerData>().forward;
         Vector2 spawnPosition = player.transform.position + playerForward*earthWallPosition;
         

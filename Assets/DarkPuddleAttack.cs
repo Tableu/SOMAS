@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class DarkPuddleAttack : StateMachineBehaviour
 {
@@ -12,14 +10,14 @@ public class DarkPuddleAttack : StateMachineBehaviour
     public Vector2 direction;
     private bool projectileInstantiated;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player = GameObject.FindWithTag("Player"); 
         projectileInstantiated = false;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         float animationProgress = Mathf.Round((stateInfo.normalizedTime % 1)*100f);
         if((animationProgress > 85f) && !projectileInstantiated){

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 //Holds variables for enemy scripts to use. Sets initial values
 public class EnemyData : MonoBehaviour
 {
@@ -21,7 +19,8 @@ public class EnemyData : MonoBehaviour
     //Other
     private GameObject player;
     private Animator animator;
-    void Start()
+
+    private void Start()
     {
         animator = GetComponent<Animator>();
         Spawner spawner = transform.parent.GetComponent<Spawner>();
@@ -33,17 +32,19 @@ public class EnemyData : MonoBehaviour
         mask = LayerMask.GetMask("Player", "Platforms");
     }
 
-    void Update()
+    private void Update()
     {
         animator.SetBool("PlayerFound",playerFound);
     }
-    void OnCollisionEnter2D(Collision2D collision){
-        if(collision.gameObject.tag == "Platform"){
+
+    private void OnCollisionEnter2D(Collision2D collision){
+        if(collision.gameObject.CompareTag("Platform")){
             grounded = true;
         }
     }
-    void OnCollisionExit2D(Collision2D collision){
-        if(collision.gameObject.tag == "Platform"){
+
+    private void OnCollisionExit2D(Collision2D collision){
+        if(collision.gameObject.CompareTag("Platform")){
             grounded = false;
         }
     }

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GhostMovement : MonoBehaviour
 {
@@ -14,7 +12,7 @@ public class GhostMovement : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public float velocity;
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -24,7 +22,7 @@ public class GhostMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if(gameObject.transform.position.x > horizontalLimits[1]){
             spriteRenderer.flipX = false;

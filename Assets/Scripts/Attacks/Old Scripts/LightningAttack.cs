@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class LightningAttack : StateMachineBehaviour
 {
@@ -9,14 +7,14 @@ public class LightningAttack : StateMachineBehaviour
     private GameObject player;
     private int timer;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex){
+    public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex){
         player = GameObject.FindWithTag("Player");
-        lightningAttack();  
+        Lightning();  
         timer = 0;  
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if(timer == 15){
             Destroy(projectile);
@@ -42,7 +40,7 @@ public class LightningAttack : StateMachineBehaviour
     //{
     //    // Implement code that sets up animation IK (inverse kinematics)
     //}
-    private void lightningAttack(){
+    private void Lightning(){
         Vector3 playerForward = player.GetComponent<PlayerData>().forward;
         projectile = Instantiate(projectilePrefab, player.transform.position, Quaternion.identity);
         projectile.transform.rotation = Quaternion.Euler(0,0,90*playerForward.x);

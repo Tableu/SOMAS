@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class IceSpikeAttack : StateMachineBehaviour
 {
@@ -9,10 +7,10 @@ public class IceSpikeAttack : StateMachineBehaviour
     private GameObject player;
     public float speed;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player = GameObject.FindWithTag("Player");
-        iceAttack(); 
+        IceAttack(); 
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -38,7 +36,7 @@ public class IceSpikeAttack : StateMachineBehaviour
     //{
     //    // Implement code that sets up animation IK (inverse kinematics)
     //}
-    private void iceAttack(){
+    private void IceAttack(){
         Vector3 playerForward = player.GetComponent<PlayerData>().forward;
         Vector3 playerPos = player.GetComponent<PlayerInput>().playerPos;
         Vector3[] spawnPos = new Vector3[3];
