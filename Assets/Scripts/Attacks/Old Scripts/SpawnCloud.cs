@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SpawnCloud : StateMachineBehaviour
 {
@@ -12,18 +10,18 @@ public class SpawnCloud : StateMachineBehaviour
     private GameObject player;
     private int timer;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex){
+    public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex){
         player = GameObject.FindWithTag("Player");
-        spawnCloud();    
+        Spawn();    
         timer = 0;
         player.GetComponent<PlayerMovement>().enabled = false;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if(timer == 10){
-            cloudLightning();
+            CloudLightning();
         }
         if(timer == 30){
             Destroy(cloud);
@@ -53,11 +51,11 @@ public class SpawnCloud : StateMachineBehaviour
     //{
     //    // Implement code that sets up animation IK (inverse kinematics)
     //}
-    private void spawnCloud(){
+    private void Spawn(){
         Vector3 playerForward = player.GetComponent<PlayerData>().forward;
         cloud = Instantiate(cloudPrefab, new Vector3(player.transform.position.x, player.transform.position.y+10, 0), Quaternion.identity);
     }
-    private void cloudLightning(){
+    private void CloudLightning(){
         RaycastHit2D hit = Physics2D.Raycast(cloud.transform.position, Vector2.down, cloudRange, LayerMask.GetMask("Platforms"));
         if(hit){
             lightning = Instantiate(lightningPrefab, cloud.transform.position, Quaternion.identity);

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 public class PlayerData : MonoBehaviour
 {
     //Stats
@@ -16,28 +14,30 @@ public class PlayerData : MonoBehaviour
     public Vector3 boundSize;
     public Vector3 boundCenterOffset;
     ///Events
-    public delegate void rotateEventDelegate();
-    public event rotateEventDelegate rotateEvent;
+    public delegate void RotateEventDelegate();
+    public event RotateEventDelegate RotateEvent;
     public float previous;
-    void Start(){
+
+    private void Start(){
         boundSize = GetComponent<Collider2D>().bounds.size;
         boundCenterOffset = transform.position - GetComponent<Collider2D>().bounds.center;
         previous = -1;
     }
-    void Update(){
-        updateRotation();
+
+    private void Update(){
+        UpdateRotation();
     }
-    private void updateRotation(){
+    private void UpdateRotation(){
         float horizontal = Input.GetAxisRaw("Horizontal");
         if(horizontal < 0 && previous > 0){
             transform.rotation = Quaternion.Euler(0,0,0);
             forward = Vector2.left;
-            rotateEvent.Invoke();
+            RotateEvent?.Invoke();
             previous = horizontal;
         }else if(horizontal > 0 && previous < 0){
             transform.rotation = Quaternion.Euler(0,180,0);
             forward = Vector2.right;
-            rotateEvent.Invoke();
+            RotateEvent?.Invoke();
             previous = horizontal;
         }
     }

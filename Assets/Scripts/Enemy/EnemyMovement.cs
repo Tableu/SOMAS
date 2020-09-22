@@ -1,13 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System;
 using UnityEngine;
 
 public class EnemyMovement
 {
-    public static Type t = typeof(EnemyMovement);
+    private static Type t = typeof(EnemyMovement);
     public static void InvokeMethod(string methodName, List<object> args){
-        t.GetMethod(methodName).Invoke(null, args.ToArray());
+        t.GetMethod(methodName)?.Invoke(null, args.ToArray());
     }
     public static void Walk(GameObject gameObject){
         Transform transform = gameObject.GetComponent<Transform>();
@@ -26,12 +25,14 @@ public class EnemyMovement
     public static void FlipCharacter(GameObject gameObject){
         EnemyData enemyData = gameObject.GetComponent<EnemyData>();
         Transform transform = gameObject.GetComponent<Transform>();
-        
+        Quaternion localRotation = transform.localRotation;
         if(enemyData.distanceToPlayer.x < 0){
-            transform.localRotation = Quaternion.Euler(transform.localRotation.x, 0, transform.localRotation.z);
+            localRotation = Quaternion.Euler(localRotation.x, 0, localRotation.z);
+            transform.localRotation = localRotation;
             enemyData.forward = Vector2.left;
         }else if(enemyData.distanceToPlayer.x > 0){
-            transform.localRotation = Quaternion.Euler(transform.localRotation.x, 180, transform.localRotation.z);
+            localRotation = Quaternion.Euler(localRotation.x, 180, localRotation.z);
+            transform.localRotation = localRotation;
             enemyData.forward = Vector2.right;
         }
     }

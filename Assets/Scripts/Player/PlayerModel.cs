@@ -1,20 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerModel : MonoBehaviour
 {
     private Animator animator;
     private Rigidbody2D rigidBody;
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         animator = GetComponent<Animator>();
         rigidBody = transform.parent.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if(Input.GetAxis("Horizontal") == 0){
             animator.SetBool("Walk",false);

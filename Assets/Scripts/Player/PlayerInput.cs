@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
@@ -14,33 +12,33 @@ public class PlayerInput : MonoBehaviour
     public FireMagic fireMagic;
     public MetalSummon metalSummon;
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         lockInput = false;
         animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if(!lockInput){
-            checkInputs();
+            CheckInputs();
         }
         //setMagicCore();
     }
-    private void checkInputs(){
+    private void CheckInputs(){
         if(Input.GetButtonDown("Fire1")){
             playerPos = GameObject.FindWithTag("Player").transform.position;
-            waterMagic.castSpell();
+            waterMagic.CastSpell();
         }else if(Input.GetButtonDown("Fire2")){
             playerPos = GameObject.FindWithTag("Player").transform.position;
-            fireMagic.castSpell();
+            fireMagic.CastSpell();
         }else if(Input.GetButtonDown("Fire3")){
             playerPos = GameObject.FindWithTag("Player").transform.position;
-            metalSummon.castSpell();
+            metalSummon.CastSpell();
         }
     }
-    private void setMagicCore(){
+    private void SetMagicCore(){
         if(Input.GetKeyDown("q")){
             magicCore--;
         }else if(Input.GetKeyDown("e")){

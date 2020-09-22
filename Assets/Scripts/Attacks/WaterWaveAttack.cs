@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class WaterWaveAttack : StateMachineBehaviour
 {
@@ -10,10 +8,10 @@ public class WaterWaveAttack : StateMachineBehaviour
     public Vector2 displacement;
     public float speed;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player = GameObject.FindWithTag("Player"); 
-        waveAttack();
+        WaveAttack();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -39,7 +37,7 @@ public class WaterWaveAttack : StateMachineBehaviour
     //{
     //    // Implement code that sets up animation IK (inverse kinematics)
     //}
-    private void waveAttack(){
+    private void WaveAttack(){
         Vector3 playerForward = player.GetComponent<PlayerData>().forward;
         Vector3 dist = playerForward*displacement;
         int angle = 0;

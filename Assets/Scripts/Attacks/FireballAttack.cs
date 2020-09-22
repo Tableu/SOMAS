@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class FireballAttack : StateMachineBehaviour
 {
@@ -12,20 +10,21 @@ public class FireballAttack : StateMachineBehaviour
     private Vector2 spawnPos;
     private bool fireballInstantiated;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player = GameObject.FindWithTag("Player");
         fireballInstantiated = false;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex){
+    public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex){
         float animationProgress = Mathf.Round((stateInfo.normalizedTime % 1)*100f);
         
         if(animationProgress > 35f && animationProgress < 50f && !fireballInstantiated){ //Spawn unmoving fireball above cultist
-            Vector2 userPos = animator.transform.position;
-            Vector2 userDirection = animator.transform.forward;
-            Quaternion userRotation = animator.transform.rotation;
+            Transform transform = animator.transform;
+            Vector2 userPos = transform.position;
+            Vector2 userDirection = transform.forward;
+            //Quaternion userRotation = transform.rotation;
             spawnPos = userPos + (Vector2.up+userDirection)*spawnDistance;
             fireball = Instantiate(fireballPrefab, spawnPos, Quaternion.identity);
             fireballInstantiated = true;

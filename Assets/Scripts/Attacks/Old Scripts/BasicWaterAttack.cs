@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BasicWaterAttack : StateMachineBehaviour
 {
@@ -10,10 +8,10 @@ public class BasicWaterAttack : StateMachineBehaviour
     public float speed;
     public float rotationSpeed;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player = GameObject.FindWithTag("Player"); 
-        waterAttack();
+        WaterAttack();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -39,7 +37,7 @@ public class BasicWaterAttack : StateMachineBehaviour
     //{
     //    // Implement code that sets up animation IK (inverse kinematics)
     //}
-    private void waterAttack(){
+    private void WaterAttack(){
         projectile = Instantiate(projectilePrefab, player.transform.position, Quaternion.identity);
         projectile.GetComponent<Rigidbody2D>().velocity = player.GetComponent<PlayerData>().forward*speed;
         projectile.GetComponent<Rigidbody2D>().AddTorque(rotationSpeed);

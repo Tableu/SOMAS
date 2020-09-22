@@ -1,17 +1,16 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
     public int healthPoints;
     private Collider2D col;
-    public delegate void deathEventDelegate();
-    public event deathEventDelegate deathEvent; //Handles death of player, i.e stop camera, stop enemies
+    public delegate void DeathEventDelegate();
+    public event DeathEventDelegate DeathEvent; //Handles death of player, i.e stop camera, stop enemies
     private Animator animator;
     private PlayerData playerData;
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         animator = GetComponent<Animator>();
         col = GetComponent<Collider2D>();
@@ -19,16 +18,16 @@ public class PlayerHealth : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if(healthPoints <= 0){
-            deathEvent.Invoke();
+            DeathEvent.Invoke();
             Destroy(gameObject);
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collision){
-        if(collision.gameObject.tag == "EnemyProjectile"){
+    private void OnTriggerEnter2D(Collider2D collision){
+        if(collision.gameObject.CompareTag("EnemyProjectile")){
             healthPoints -= collision.gameObject.GetComponent<Projectile>().damagePoints;
             float direction = collision.transform.GetComponent<Rigidbody2D>().velocity.normalized.x;
             GetComponent<Rigidbody2D>().AddForce(new Vector2(playerData.knockback.x*direction,playerData.knockback.y),ForceMode2D.Impulse);
@@ -38,10 +37,12 @@ public class PlayerHealth : MonoBehaviour
             }
         }
     }
-    void OnTriggerExit2D(Collider2D collision){
+
+    private void OnTriggerExit2D(Collider2D collision){
         
     }
-    IEnumerator Invulnerable(){
+
+    private IEnumerator Invulnerable(){
         GetComponent<Collider2D>().enabled = false;
         yield return new WaitForSeconds(3);
         GetComponent<Collider2D>().enabled = true;

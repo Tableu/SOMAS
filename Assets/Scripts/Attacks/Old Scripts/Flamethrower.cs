@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Flamethrower : StateMachineBehaviour
 {
@@ -10,15 +8,15 @@ public class Flamethrower : StateMachineBehaviour
     public float speed;
     private float timer;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player = GameObject.FindWithTag("Player"); 
-        flamethrowerAttack();
+        FlamethrowerAttack();
         timer = 0f;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {   
         timer += Time.deltaTime;
         if(timer > 1f){
@@ -44,7 +42,7 @@ public class Flamethrower : StateMachineBehaviour
     //{
     //    // Implement code that sets up animation IK (inverse kinematics)
     //}
-    private void flamethrowerAttack(){
+    private void FlamethrowerAttack(){
         Vector3 playerForward = player.GetComponent<PlayerData>().forward;
         projectile = Instantiate(projectilePrefab, player.transform.position + new Vector3(7.5f*playerForward.x,0.2f,0), Quaternion.identity);
         projectile.transform.parent = player.transform;

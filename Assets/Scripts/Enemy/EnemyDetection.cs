@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyDetection : MonoBehaviour
 {
@@ -10,28 +8,28 @@ public class EnemyDetection : MonoBehaviour
     private EnemyData enemyData;
     private Collider2D col;
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         animator = GetComponent<Animator>();
         player = GameObject.FindWithTag("Player");
         rigidBody = GetComponent<Rigidbody2D>();
         enemyData = GetComponent<EnemyData>();
         col = GetComponent<Collider2D>();
-        player.GetComponent<PlayerHealth>().deathEvent += OnDeathEvent;
+        player.GetComponent<PlayerHealth>().DeathEvent += OnDeathEvent;
     }
     
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        detectPlayer();
+        DetectPlayer();
     }
-    private void detectPlayer(){
+    private void DetectPlayer(){
         enemyData.distanceToPlayer = (player.transform.position - transform.position);
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
         
         if(!enemyData.playerFound && enemyData.grounded){
             if(!stateInfo.IsName("Attack")){
-                if(checkRaycastsForTag(enemyData.raycastArray, "Player")){
+                if(CheckRaycastsForTag(enemyData.raycastArray, "Player")){
                     animator.SetTrigger("Attack");
                     enemyData.playerFound = true;
                 }
@@ -46,23 +44,25 @@ public class EnemyDetection : MonoBehaviour
             }
         }
     }
-    private bool checkRaycastsForTag(RaycastHit2D[] raycastHits, string tag){
+    private bool CheckRaycastsForTag(RaycastHit2D[] raycastHits, string tag){
         for(int index = 0; index < raycastHits.Length; index++){
             if(raycastHits[index]){
-                if(raycastHits[index].transform.gameObject.tag == tag){
+                if(raycastHits[index].transform.gameObject.CompareTag(tag)){
                     return true;
                 }
             }
         }
         return false;
     }
-    void OnDeathEvent(){
+
+    private void OnDeathEvent(){
         animator.SetFloat("AttackLimit", 1);
         animator.SetFloat("FollowLimit", 1);
-        GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().deathEvent -= OnDeathEvent;
+        GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().DeathEvent -= OnDeathEvent;
         GetComponent<EnemyDetection>().enabled = false;
     }
-    void OnEnable(){
-        GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().deathEvent += OnDeathEvent;
+
+    private void OnEnable(){
+        GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().DeathEvent += OnDeathEvent;
     }
 }
