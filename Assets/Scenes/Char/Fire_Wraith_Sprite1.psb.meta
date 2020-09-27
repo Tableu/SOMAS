@@ -1,54 +1,147 @@
 fileFormatVersion: 2
 guid: 52c528978592b4d4db2014fdc034f789
 ScriptedImporter:
-  fileIDToRecycleName:
-    100000: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO
-    100002: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/mask
-    100004: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/wraith
-    100006: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1
-    100036: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2
-    100038: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9
-    100040: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3
-    100042: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_4
-    100044: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_4/bone_15
-    100046: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_5
-    100048: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_5/bone_16
-    100050: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_6
-    100052: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_6/bone_13
-    100054: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_7
-    100056: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_7/bone_12
-    100058: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_14
-    100060: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_10
-    100062: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_10/bone_11
-    100064: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_8
-    400000: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/Transform
-    400002: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/mask/Transform
-    400004: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/wraith/Transform
-    400006: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/Transform
-    400036: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/Transform
-    400038: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/Transform
-    400040: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/Transform
-    400042: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_4/Transform
-    400044: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_4/bone_15/Transform
-    400046: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_5/Transform
-    400048: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_5/bone_16/Transform
-    400050: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_6/Transform
-    400052: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_6/bone_13/Transform
-    400054: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_7/Transform
-    400056: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_7/bone_12/Transform
-    400058: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_14/Transform
-    400060: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_10/Transform
-    400062: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_10/bone_11/Transform
-    400064: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_8/Transform
-    2800000: Fire_Wraith_Sprite1
-    11400000: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/mask/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400002: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/wraith/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    21200000: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/mask/SpriteRenderer
-    21200002: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/wraith/SpriteRenderer
-    21300000: 2e080532608850842b52de708634ad38
-    21300002: b3933261482b93041b4c5a8a3fb1bfa4
-    100100000: Fire_Wraith_Sprite1_GO
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO
+  - first:
+      1: 100002
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/mask
+  - first:
+      1: 100004
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/wraith
+  - first:
+      1: 100006
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1
+  - first:
+      1: 100036
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2
+  - first:
+      1: 100038
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9
+  - first:
+      1: 100040
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3
+  - first:
+      1: 100042
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_4
+  - first:
+      1: 100044
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_4/bone_15
+  - first:
+      1: 100046
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_5
+  - first:
+      1: 100048
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_5/bone_16
+  - first:
+      1: 100050
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_6
+  - first:
+      1: 100052
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_6/bone_13
+  - first:
+      1: 100054
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_7
+  - first:
+      1: 100056
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_7/bone_12
+  - first:
+      1: 100058
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_14
+  - first:
+      1: 100060
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_10
+  - first:
+      1: 100062
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_10/bone_11
+  - first:
+      1: 100064
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_8
+  - first:
+      4: 400000
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/Transform
+  - first:
+      4: 400002
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/mask/Transform
+  - first:
+      4: 400004
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/wraith/Transform
+  - first:
+      4: 400006
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/Transform
+  - first:
+      4: 400036
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/Transform
+  - first:
+      4: 400038
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/Transform
+  - first:
+      4: 400040
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/Transform
+  - first:
+      4: 400042
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_4/Transform
+  - first:
+      4: 400044
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_4/bone_15/Transform
+  - first:
+      4: 400046
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_5/Transform
+  - first:
+      4: 400048
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_5/bone_16/Transform
+  - first:
+      4: 400050
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_6/Transform
+  - first:
+      4: 400052
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_6/bone_13/Transform
+  - first:
+      4: 400054
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_7/Transform
+  - first:
+      4: 400056
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_7/bone_12/Transform
+  - first:
+      4: 400058
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_3/bone_14/Transform
+  - first:
+      4: 400060
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_10/Transform
+  - first:
+      4: 400062
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_2/bone_9/bone_10/bone_11/Transform
+  - first:
+      4: 400064
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/bone_1/bone_8/Transform
+  - first:
+      28: 2800000
+    second: Fire_Wraith_Sprite1
+  - first:
+      114: 11400000
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/mask/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      114: 11400002
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/wraith/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      212: 21200000
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/mask/SpriteRenderer
+  - first:
+      212: 21200002
+    second: Fire_Wraith_Sprite1_GO/Fire_Wraith_Sprite1_GO/wraith/SpriteRenderer
+  - first:
+      213: 21300000
+    second: 2e080532608850842b52de708634ad38
+  - first:
+      213: 21300002
+    second: b3933261482b93041b4c5a8a3fb1bfa4
+  - first:
+      1001: 100100000
+    second: Fire_Wraith_Sprite1_GO
   externalObjects: {}
+  serializedVersion: 2
   userData: 
   assetBundleName: 
   assetBundleVariant: 
@@ -69,6 +162,7 @@ ScriptedImporter:
     isReadable: 0
     streamingMipmaps: 1
     streamingMipmapsPriority: 0
+    vTOnly: 0
     nPOTScale: 1
     sRGBTexture: 1
     spriteMode: 2
@@ -87,6 +181,7 @@ ScriptedImporter:
     textureType: 8
     textureShape: 1
     singleChannelComponent: 0
+    ignorePngGamma: 0
     filterMode: 1
     aniso: 1
     mipBias: 0
@@ -106,6 +201,7 @@ ScriptedImporter:
     maxTextureSizeSet: 0
     compressionQualitySet: 0
     textureFormatSet: 0
+    applyGammaDecoding: 0
   spriteImportData:
   - name: 
     originalName: 
@@ -119,6 +215,7 @@ ScriptedImporter:
       width: 0
       height: 0
     spriteID: 
+    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,6 +239,7 @@ ScriptedImporter:
       width: 362
       height: 406
     spriteID: 2e080532608850842b52de708634ad38
+    internalID: 0
     spriteBone:
     - name: bone_8
       position: {x: 175.69409, y: 18.340332, z: 0}
@@ -605,6 +703,7 @@ ScriptedImporter:
       width: 446
       height: 1182
     spriteID: b3933261482b93041b4c5a8a3fb1bfa4
+    internalID: 0
     spriteBone:
     - name: bone_12
       position: {x: 60.910645, y: -0.000007759794, z: 0}
@@ -1466,6 +1565,10 @@ ScriptedImporter:
   importedTextureWidth: 1024
   importedTextureHeight: 2048
   documentSize: {x: 1084, y: 1323}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
   textureActualWidth: 1024
   textureActualHeight: 2048
   spritePackingTag: 
@@ -1577,6 +1680,8 @@ ScriptedImporter:
         height: 406
       spriteId: 2e080532608850842b52de708634ad38
       bones: 07000000
+      parentGroup: 0
+      order: 0
     - spritePosition:
         x: 319
         y: 21
@@ -1584,40 +1689,12 @@ ScriptedImporter:
         height: 1182
       spriteId: b3933261482b93041b4c5a8a3fb1bfa4
       bones: 0b00000005000000060000000c0000000d00000003000000020000000e000000040000000f000000090000000a00000008000000010000000000000007000000
+      parentGroup: 0
+      order: 0
     dimension: {x: 0, y: 0}
-  boneGOs:
-  - go: {fileID: 100006, guid: 52c528978592b4d4db2014fdc034f789, type: 3}
-    index: 0
-  - go: {fileID: 100036, guid: 52c528978592b4d4db2014fdc034f789, type: 3}
-    index: 1
-  - go: {fileID: 100040, guid: 52c528978592b4d4db2014fdc034f789, type: 3}
-    index: 2
-  - go: {fileID: 100042, guid: 52c528978592b4d4db2014fdc034f789, type: 3}
-    index: 3
-  - go: {fileID: 100046, guid: 52c528978592b4d4db2014fdc034f789, type: 3}
-    index: 4
-  - go: {fileID: 100050, guid: 52c528978592b4d4db2014fdc034f789, type: 3}
-    index: 5
-  - go: {fileID: 100054, guid: 52c528978592b4d4db2014fdc034f789, type: 3}
-    index: 6
-  - go: {fileID: 100064, guid: 52c528978592b4d4db2014fdc034f789, type: 3}
-    index: 7
-  - go: {fileID: 100038, guid: 52c528978592b4d4db2014fdc034f789, type: 3}
-    index: 8
-  - go: {fileID: 100060, guid: 52c528978592b4d4db2014fdc034f789, type: 3}
-    index: 9
-  - go: {fileID: 100062, guid: 52c528978592b4d4db2014fdc034f789, type: 3}
-    index: 10
-  - go: {fileID: 100056, guid: 52c528978592b4d4db2014fdc034f789, type: 3}
-    index: 11
-  - go: {fileID: 100052, guid: 52c528978592b4d4db2014fdc034f789, type: 3}
-    index: 12
-  - go: {fileID: 100058, guid: 52c528978592b4d4db2014fdc034f789, type: 3}
-    index: 13
-  - go: {fileID: 100044, guid: 52c528978592b4d4db2014fdc034f789, type: 3}
-    index: 14
-  - go: {fileID: 100048, guid: 52c528978592b4d4db2014fdc034f789, type: 3}
-    index: 15
+    characterGroups: []
   generateGOHierarchy: 0
   textureAssetName: Fire_Wraith_Sprite1
   prefabAssetName: Fire_Wraith_Sprite1_GO
+  spriteLibAssetName: Fire_Wraith_Sprite1 Sprite Lib
+  secondarySpriteTextures: []

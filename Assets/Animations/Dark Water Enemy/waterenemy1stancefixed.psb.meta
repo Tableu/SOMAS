@@ -1,76 +1,213 @@
 fileFormatVersion: 2
 guid: 8904327a14b24654697f31e2958dddac
 ScriptedImporter:
-  fileIDToRecycleName:
-    100000: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO
-    100002: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/arm l
-    100004: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/arm r
-    100006: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/body
-    100008: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/head
-    100010: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1
-    100012: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2
-    100014: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_9
-    100016: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_9/bone_20
-    100018: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_10
-    100020: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_10/bone_21
-    100022: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_11
-    100024: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_11/bone_22
-    100026: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_12
-    100028: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_12/bone_19
-    100030: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_13
-    100032: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_13/bone_17
-    100034: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_14
-    100036: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_14/bone_18
-    100038: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_14/bone_18/bone_15
-    100040: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_16
-    100042: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_16/bone_3
-    100044: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_16/bone_3/bone_4
-    100046: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_16/bone_3/bone_5
-    100048: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_16/bone_3/bone_5/bone_6
-    100050: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_16/bone_3/bone_7
-    100052: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_16/bone_3/bone_7/bone_8
-    400000: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/Transform
-    400002: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/arm l/Transform
-    400004: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/arm r/Transform
-    400006: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/body/Transform
-    400008: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/head/Transform
-    400010: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/Transform
-    400012: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/Transform
-    400014: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_9/Transform
-    400016: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_9/bone_20/Transform
-    400018: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_10/Transform
-    400020: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_10/bone_21/Transform
-    400022: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_11/Transform
-    400024: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_11/bone_22/Transform
-    400026: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_12/Transform
-    400028: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_12/bone_19/Transform
-    400030: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_13/Transform
-    400032: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_13/bone_17/Transform
-    400034: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_14/Transform
-    400036: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_14/bone_18/Transform
-    400038: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_14/bone_18/bone_15/Transform
-    400040: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_16/Transform
-    400042: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_16/bone_3/Transform
-    400044: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_16/bone_3/bone_4/Transform
-    400046: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_16/bone_3/bone_5/Transform
-    400048: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_16/bone_3/bone_5/bone_6/Transform
-    400050: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_16/bone_3/bone_7/Transform
-    400052: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_16/bone_3/bone_7/bone_8/Transform
-    2800000: waterenemy1stancefixed
-    11400000: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/arm l/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400002: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/arm r/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400004: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/body/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400006: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/head/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    21200000: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/arm l/SpriteRenderer
-    21200002: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/arm r/SpriteRenderer
-    21200004: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/body/SpriteRenderer
-    21200006: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/head/SpriteRenderer
-    21300000: 5ba4c94d4df025d459359af78d0766eb
-    21300002: 06a1863e4817c8a4e99e7ccaa46e8985
-    21300004: aa3ce91816d330e4388ed9f21eba6865
-    21300006: 70e175f5a9568ae4697bad09effb7d37
-    100100000: waterenemy1stancefixed_GO
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO
+  - first:
+      1: 100002
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/arm l
+  - first:
+      1: 100004
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/arm r
+  - first:
+      1: 100006
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/body
+  - first:
+      1: 100008
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/head
+  - first:
+      1: 100010
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1
+  - first:
+      1: 100012
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2
+  - first:
+      1: 100014
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_9
+  - first:
+      1: 100016
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_9/bone_20
+  - first:
+      1: 100018
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_10
+  - first:
+      1: 100020
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_10/bone_21
+  - first:
+      1: 100022
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_11
+  - first:
+      1: 100024
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_11/bone_22
+  - first:
+      1: 100026
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_12
+  - first:
+      1: 100028
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_12/bone_19
+  - first:
+      1: 100030
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_13
+  - first:
+      1: 100032
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_13/bone_17
+  - first:
+      1: 100034
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_14
+  - first:
+      1: 100036
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_14/bone_18
+  - first:
+      1: 100038
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_14/bone_18/bone_15
+  - first:
+      1: 100040
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_16
+  - first:
+      1: 100042
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_16/bone_3
+  - first:
+      1: 100044
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_16/bone_3/bone_4
+  - first:
+      1: 100046
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_16/bone_3/bone_5
+  - first:
+      1: 100048
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_16/bone_3/bone_5/bone_6
+  - first:
+      1: 100050
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_16/bone_3/bone_7
+  - first:
+      1: 100052
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_16/bone_3/bone_7/bone_8
+  - first:
+      4: 400000
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/Transform
+  - first:
+      4: 400002
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/arm l/Transform
+  - first:
+      4: 400004
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/arm r/Transform
+  - first:
+      4: 400006
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/body/Transform
+  - first:
+      4: 400008
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/head/Transform
+  - first:
+      4: 400010
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/Transform
+  - first:
+      4: 400012
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/Transform
+  - first:
+      4: 400014
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_9/Transform
+  - first:
+      4: 400016
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_9/bone_20/Transform
+  - first:
+      4: 400018
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_10/Transform
+  - first:
+      4: 400020
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_10/bone_21/Transform
+  - first:
+      4: 400022
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_11/Transform
+  - first:
+      4: 400024
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_11/bone_22/Transform
+  - first:
+      4: 400026
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_12/Transform
+  - first:
+      4: 400028
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_12/bone_19/Transform
+  - first:
+      4: 400030
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_13/Transform
+  - first:
+      4: 400032
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_13/bone_17/Transform
+  - first:
+      4: 400034
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_14/Transform
+  - first:
+      4: 400036
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_14/bone_18/Transform
+  - first:
+      4: 400038
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_14/bone_18/bone_15/Transform
+  - first:
+      4: 400040
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_16/Transform
+  - first:
+      4: 400042
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_16/bone_3/Transform
+  - first:
+      4: 400044
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_16/bone_3/bone_4/Transform
+  - first:
+      4: 400046
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_16/bone_3/bone_5/Transform
+  - first:
+      4: 400048
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_16/bone_3/bone_5/bone_6/Transform
+  - first:
+      4: 400050
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_16/bone_3/bone_7/Transform
+  - first:
+      4: 400052
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/bone_1/bone_2/bone_16/bone_3/bone_7/bone_8/Transform
+  - first:
+      28: 2800000
+    second: waterenemy1stancefixed
+  - first:
+      114: 11400000
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/arm l/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      114: 11400002
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/arm r/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      114: 11400004
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/body/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      114: 11400006
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/head/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      212: 21200000
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/arm l/SpriteRenderer
+  - first:
+      212: 21200002
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/arm r/SpriteRenderer
+  - first:
+      212: 21200004
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/body/SpriteRenderer
+  - first:
+      212: 21200006
+    second: waterenemy1stancefixed_GO/waterenemy1stancefixed_GO/head/SpriteRenderer
+  - first:
+      213: 21300000
+    second: 5ba4c94d4df025d459359af78d0766eb
+  - first:
+      213: 21300002
+    second: 06a1863e4817c8a4e99e7ccaa46e8985
+  - first:
+      213: 21300004
+    second: aa3ce91816d330e4388ed9f21eba6865
+  - first:
+      213: 21300006
+    second: 70e175f5a9568ae4697bad09effb7d37
+  - first:
+      1001: 100100000
+    second: waterenemy1stancefixed_GO
   externalObjects: {}
+  serializedVersion: 2
   userData: 
   assetBundleName: 
   assetBundleVariant: 
@@ -91,6 +228,7 @@ ScriptedImporter:
     isReadable: 0
     streamingMipmaps: 1
     streamingMipmapsPriority: 0
+    vTOnly: 0
     nPOTScale: 1
     sRGBTexture: 1
     spriteMode: 2
@@ -109,6 +247,7 @@ ScriptedImporter:
     textureType: 8
     textureShape: 1
     singleChannelComponent: 0
+    ignorePngGamma: 0
     filterMode: 1
     aniso: 1
     mipBias: 0
@@ -128,6 +267,7 @@ ScriptedImporter:
     maxTextureSizeSet: 0
     compressionQualitySet: 0
     textureFormatSet: 0
+    applyGammaDecoding: 0
   spriteImportData:
   - name: 
     originalName: 
@@ -141,6 +281,7 @@ ScriptedImporter:
       width: 0
       height: 0
     spriteID: 
+    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -164,6 +305,7 @@ ScriptedImporter:
       width: 837
       height: 803
     spriteID: 5ba4c94d4df025d459359af78d0766eb
+    internalID: 0
     spriteBone:
     - name: bone_4
       position: {x: 417.3015, y: 224.13983, z: 0}
@@ -14072,6 +14214,7 @@ ScriptedImporter:
       width: 1066
       height: 632
     spriteID: 06a1863e4817c8a4e99e7ccaa46e8985
+    internalID: 0
     spriteBone:
     - name: bone_14
       position: {x: -42.98589, y: 344.03238, z: 0}
@@ -15590,6 +15733,7 @@ ScriptedImporter:
       width: 388
       height: 271
     spriteID: aa3ce91816d330e4388ed9f21eba6865
+    internalID: 0
     spriteBone:
     - name: bone_7
       position: {x: 332.51343, y: 56.4812, z: 0}
@@ -16102,6 +16246,7 @@ ScriptedImporter:
       width: 357
       height: 241
     spriteID: 70e175f5a9568ae4697bad09effb7d37
+    internalID: 0
     spriteBone:
     - name: bone_5
       position: {x: 45.113037, y: 54.32428, z: 0}
@@ -16548,6 +16693,10 @@ ScriptedImporter:
   importedTextureWidth: 2048
   importedTextureHeight: 2048
   documentSize: {x: 1355, y: 1295}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
   textureActualWidth: 2048
   textureActualHeight: 2048
   spritePackingTag: 
@@ -16703,6 +16852,8 @@ ScriptedImporter:
         height: 803
       spriteId: 5ba4c94d4df025d459359af78d0766eb
       bones: 03000000
+      parentGroup: 0
+      order: 0
     - spritePosition:
         x: 128
         y: 44
@@ -16710,6 +16861,8 @@ ScriptedImporter:
         height: 632
       spriteId: 06a1863e4817c8a4e99e7ccaa46e8985
       bones: 0d0000000c00000000000000090000000a00000008000000020000000b000000010000000e0000001000000012000000130000001400000015000000
+      parentGroup: 0
+      order: 0
     - spritePosition:
         x: 24
         y: 484
@@ -16717,6 +16870,8 @@ ScriptedImporter:
         height: 271
       spriteId: aa3ce91816d330e4388ed9f21eba6865
       bones: 0600000007000000
+      parentGroup: 0
+      order: 0
     - spritePosition:
         x: 975
         y: 497
@@ -16724,52 +16879,12 @@ ScriptedImporter:
         height: 241
       spriteId: 70e175f5a9568ae4697bad09effb7d37
       bones: 0400000005000000
+      parentGroup: 0
+      order: 0
     dimension: {x: 0, y: 0}
-  boneGOs:
-  - go: {fileID: 100010, guid: 8904327a14b24654697f31e2958dddac, type: 3}
-    index: 0
-  - go: {fileID: 100012, guid: 8904327a14b24654697f31e2958dddac, type: 3}
-    index: 1
-  - go: {fileID: 100042, guid: 8904327a14b24654697f31e2958dddac, type: 3}
-    index: 2
-  - go: {fileID: 100044, guid: 8904327a14b24654697f31e2958dddac, type: 3}
-    index: 3
-  - go: {fileID: 100046, guid: 8904327a14b24654697f31e2958dddac, type: 3}
-    index: 4
-  - go: {fileID: 100048, guid: 8904327a14b24654697f31e2958dddac, type: 3}
-    index: 5
-  - go: {fileID: 100050, guid: 8904327a14b24654697f31e2958dddac, type: 3}
-    index: 6
-  - go: {fileID: 100052, guid: 8904327a14b24654697f31e2958dddac, type: 3}
-    index: 7
-  - go: {fileID: 100014, guid: 8904327a14b24654697f31e2958dddac, type: 3}
-    index: 8
-  - go: {fileID: 100018, guid: 8904327a14b24654697f31e2958dddac, type: 3}
-    index: 9
-  - go: {fileID: 100022, guid: 8904327a14b24654697f31e2958dddac, type: 3}
-    index: 10
-  - go: {fileID: 100026, guid: 8904327a14b24654697f31e2958dddac, type: 3}
-    index: 11
-  - go: {fileID: 100030, guid: 8904327a14b24654697f31e2958dddac, type: 3}
-    index: 12
-  - go: {fileID: 100034, guid: 8904327a14b24654697f31e2958dddac, type: 3}
-    index: 13
-  - go: {fileID: 100038, guid: 8904327a14b24654697f31e2958dddac, type: 3}
-    index: 14
-  - go: {fileID: 100040, guid: 8904327a14b24654697f31e2958dddac, type: 3}
-    index: 15
-  - go: {fileID: 100032, guid: 8904327a14b24654697f31e2958dddac, type: 3}
-    index: 16
-  - go: {fileID: 100036, guid: 8904327a14b24654697f31e2958dddac, type: 3}
-    index: 17
-  - go: {fileID: 100028, guid: 8904327a14b24654697f31e2958dddac, type: 3}
-    index: 18
-  - go: {fileID: 100016, guid: 8904327a14b24654697f31e2958dddac, type: 3}
-    index: 19
-  - go: {fileID: 100020, guid: 8904327a14b24654697f31e2958dddac, type: 3}
-    index: 20
-  - go: {fileID: 100024, guid: 8904327a14b24654697f31e2958dddac, type: 3}
-    index: 21
+    characterGroups: []
   generateGOHierarchy: 0
   textureAssetName: waterenemy1stancefixed
   prefabAssetName: waterenemy1stancefixed_GO
+  spriteLibAssetName: waterenemy1stancefixed Sprite Lib
+  secondarySpriteTextures: []

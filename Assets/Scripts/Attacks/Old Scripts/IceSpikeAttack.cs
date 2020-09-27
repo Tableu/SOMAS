@@ -38,9 +38,9 @@ public class IceSpikeAttack : StateMachineBehaviour
     //}
     private void IceAttack(){
         Vector3 playerForward = player.GetComponent<PlayerData>().forward;
-        Vector3 playerPos = player.GetComponent<PlayerInput>().playerPos;
-        Vector3[] spawnPos = new Vector3[3];
-        int angle = 0;
+        var playerPos = player.GetComponent<PlayerInput>().playerPos;
+        var spawnPos = new Vector3[3];
+        var angle = 0;
         spawnPos[0] = player.transform.position + playerForward*-1f*2 + new Vector3(0,1,0);
         spawnPos[1] = player.transform.position + playerForward*-1f*4;
         spawnPos[2] = player.transform.position + playerForward*-1f*2 + new Vector3(0,-1,0);

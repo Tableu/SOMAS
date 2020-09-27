@@ -56,7 +56,7 @@ public class SpawnCloud : StateMachineBehaviour
         cloud = Instantiate(cloudPrefab, new Vector3(player.transform.position.x, player.transform.position.y+10, 0), Quaternion.identity);
     }
     private void CloudLightning(){
-        RaycastHit2D hit = Physics2D.Raycast(cloud.transform.position, Vector2.down, cloudRange, LayerMask.GetMask("Platforms"));
+        var hit = Physics2D.Raycast(cloud.transform.position, Vector2.down, cloudRange, LayerMask.GetMask("Platforms"));
         if(hit){
             lightning = Instantiate(lightningPrefab, cloud.transform.position, Quaternion.identity);
             Stretch(lightning, cloud.transform.position, new Vector3(cloud.transform.position.x,hit.collider.bounds.max.y,0));
@@ -65,7 +65,7 @@ public class SpawnCloud : StateMachineBehaviour
     public void Stretch(GameObject sprite,Vector3 initialPosition, Vector3 finalPosition) {
          sprite.transform.position = initialPosition;
          
-         Vector3 scale = new Vector3(1,1,1);
+         var scale = new Vector3(1,1,1);
          scale.y = Vector3.Distance(initialPosition, finalPosition)/10;
          sprite.transform.localScale = scale;
      }

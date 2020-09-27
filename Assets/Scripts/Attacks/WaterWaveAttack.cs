@@ -40,7 +40,7 @@ public class WaterWaveAttack : StateMachineBehaviour
     private void WaveAttack(){
         Vector3 playerForward = player.GetComponent<PlayerData>().forward;
         Vector3 dist = playerForward*displacement;
-        int angle = 0;
+        var angle = 0;
         projectile = Instantiate(projectilePrefab, player.transform.position+dist, Quaternion.identity);
         projectile.GetComponent<Rigidbody2D>().velocity = playerForward*speed;
         if(playerForward.x < 0){

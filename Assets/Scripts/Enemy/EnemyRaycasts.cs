@@ -20,7 +20,7 @@ public class EnemyRaycasts : MonoBehaviour
     }
 
     private void DrawRaycasts(RaycastHit2D[] raycastArray, ref int rayIndex, Vector2[] direction, float raycastLength, int layerMask, Vector2 position){
-        for(int index = 0; index < raycastArray.Length; index++){
+        for(var index = 0; index < raycastArray.Length; index++){
             raycastArray[index] = Physics2D.Raycast(position, direction[index], raycastLength, layerMask);
             Debug.DrawRay(position, transform.TransformDirection(direction[index])*raycastLength,Color.red);
         }

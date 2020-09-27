@@ -1,78 +1,203 @@
 fileFormatVersion: 2
 guid: 5caf3ef96ee047240aaa1693056a1f75
 ScriptedImporter:
-  fileIDToRecycleName:
-    100000: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO
-    100002: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/arm
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO
+  - first:
+      1: 100002
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/arm
       l
-    100004: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/arm
+  - first:
+      1: 100004
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/arm
       r
-    100006: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/body
-    100008: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/earring
-    100010: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/earring2
-    100012: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/Head
-    100014: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/legs
-    100016: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/legs2
-    100018: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1
-    100020: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_2
-    100022: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_2/bone_3
-    100024: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_2/bone_3/bone_8
-    100026: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_2/bone_3/bone_9
-    100028: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_2/bone_4
-    100030: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_2/bone_5
-    100032: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_6
-    100034: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_7
-    400000: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/Transform
-    400002: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/arm
+  - first:
+      1: 100006
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/body
+  - first:
+      1: 100008
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/earring
+  - first:
+      1: 100010
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/earring2
+  - first:
+      1: 100012
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/Head
+  - first:
+      1: 100014
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/legs
+  - first:
+      1: 100016
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/legs2
+  - first:
+      1: 100018
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1
+  - first:
+      1: 100020
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_2
+  - first:
+      1: 100022
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_2/bone_3
+  - first:
+      1: 100024
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_2/bone_3/bone_8
+  - first:
+      1: 100026
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_2/bone_3/bone_9
+  - first:
+      1: 100028
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_2/bone_4
+  - first:
+      1: 100030
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_2/bone_5
+  - first:
+      1: 100032
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_6
+  - first:
+      1: 100034
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_7
+  - first:
+      4: 400000
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/Transform
+  - first:
+      4: 400002
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/arm
       l/Transform
-    400004: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/arm
+  - first:
+      4: 400004
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/arm
       r/Transform
-    400006: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/body/Transform
-    400008: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/earring/Transform
-    400010: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/earring2/Transform
-    400012: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/Head/Transform
-    400014: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/legs/Transform
-    400016: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/legs2/Transform
-    400018: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/Transform
-    400020: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_2/Transform
-    400022: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_2/bone_3/Transform
-    400024: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_2/bone_3/bone_8/Transform
-    400026: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_2/bone_3/bone_9/Transform
-    400028: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_2/bone_4/Transform
-    400030: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_2/bone_5/Transform
-    400032: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_6/Transform
-    400034: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_7/Transform
-    2800000: spritewateranimaterevised2(1)
-    11400000: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/arm
+  - first:
+      4: 400006
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/body/Transform
+  - first:
+      4: 400008
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/earring/Transform
+  - first:
+      4: 400010
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/earring2/Transform
+  - first:
+      4: 400012
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/Head/Transform
+  - first:
+      4: 400014
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/legs/Transform
+  - first:
+      4: 400016
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/legs2/Transform
+  - first:
+      4: 400018
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/Transform
+  - first:
+      4: 400020
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_2/Transform
+  - first:
+      4: 400022
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_2/bone_3/Transform
+  - first:
+      4: 400024
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_2/bone_3/bone_8/Transform
+  - first:
+      4: 400026
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_2/bone_3/bone_9/Transform
+  - first:
+      4: 400028
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_2/bone_4/Transform
+  - first:
+      4: 400030
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_2/bone_5/Transform
+  - first:
+      4: 400032
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_6/Transform
+  - first:
+      4: 400034
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/bone_1/bone_7/Transform
+  - first:
+      28: 2800000
+    second: spritewateranimaterevised2(1)
+  - first:
+      114: 11400000
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/arm
       l/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400002: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/arm
+  - first:
+      114: 11400002
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/arm
       r/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400004: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/body/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400006: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/earring/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400008: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/earring2/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400010: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/Head/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400012: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/legs/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400014: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/legs2/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    21200000: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/arm
+  - first:
+      114: 11400004
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/body/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      114: 11400006
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/earring/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      114: 11400008
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/earring2/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      114: 11400010
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/Head/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      114: 11400012
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/legs/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      114: 11400014
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/legs2/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      212: 21200000
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/arm
       l/SpriteRenderer
-    21200002: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/arm
+  - first:
+      212: 21200002
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/arm
       r/SpriteRenderer
-    21200004: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/body/SpriteRenderer
-    21200006: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/earring/SpriteRenderer
-    21200008: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/earring2/SpriteRenderer
-    21200010: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/Head/SpriteRenderer
-    21200012: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/legs/SpriteRenderer
-    21200014: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/legs2/SpriteRenderer
-    21300000: e7503c73e4e2ead4d8e73db0b0e95ea3
-    21300002: c0e2da465e743a3439c95de966b11ec8
-    21300004: 95ecd5a1de41fe94d80a1d9ade48878f
-    21300006: ccd1720abea8b6e46b0368423e9f18c2
-    21300008: a76d0be1cb9e2c249acccc8566a5dbc9
-    21300010: 672b4a503fc14e644a8daaf8404bef43
-    21300012: 5a9f1b4ba8a000c4887fc8b3dd000582
-    21300014: 1a81fe2f171c26444a82a2a0c90e988d
-    100100000: spritewateranimaterevised2(1)_GO
+  - first:
+      212: 21200004
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/body/SpriteRenderer
+  - first:
+      212: 21200006
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/earring/SpriteRenderer
+  - first:
+      212: 21200008
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/earring2/SpriteRenderer
+  - first:
+      212: 21200010
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/Head/SpriteRenderer
+  - first:
+      212: 21200012
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/legs/SpriteRenderer
+  - first:
+      212: 21200014
+    second: spritewateranimaterevised2(1)_GO/spritewateranimaterevised2(1)_GO/legs2/SpriteRenderer
+  - first:
+      213: 21300000
+    second: e7503c73e4e2ead4d8e73db0b0e95ea3
+  - first:
+      213: 21300002
+    second: c0e2da465e743a3439c95de966b11ec8
+  - first:
+      213: 21300004
+    second: 95ecd5a1de41fe94d80a1d9ade48878f
+  - first:
+      213: 21300006
+    second: ccd1720abea8b6e46b0368423e9f18c2
+  - first:
+      213: 21300008
+    second: a76d0be1cb9e2c249acccc8566a5dbc9
+  - first:
+      213: 21300010
+    second: 672b4a503fc14e644a8daaf8404bef43
+  - first:
+      213: 21300012
+    second: 5a9f1b4ba8a000c4887fc8b3dd000582
+  - first:
+      213: 21300014
+    second: 1a81fe2f171c26444a82a2a0c90e988d
+  - first:
+      1001: 100100000
+    second: spritewateranimaterevised2(1)_GO
   externalObjects: {}
+  serializedVersion: 2
   userData: 
   assetBundleName: 
   assetBundleVariant: 
@@ -93,6 +218,7 @@ ScriptedImporter:
     isReadable: 0
     streamingMipmaps: 1
     streamingMipmapsPriority: 0
+    vTOnly: 0
     nPOTScale: 1
     sRGBTexture: 1
     spriteMode: 2
@@ -111,6 +237,7 @@ ScriptedImporter:
     textureType: 8
     textureShape: 1
     singleChannelComponent: 0
+    ignorePngGamma: 0
     filterMode: 1
     aniso: 1
     mipBias: 0
@@ -130,6 +257,7 @@ ScriptedImporter:
     maxTextureSizeSet: 0
     compressionQualitySet: 0
     textureFormatSet: 0
+    applyGammaDecoding: 0
   spriteImportData:
   - name: 
     originalName: 
@@ -143,6 +271,7 @@ ScriptedImporter:
       width: 0
       height: 0
     spriteID: 
+    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -166,6 +295,7 @@ ScriptedImporter:
       width: 83
       height: 116
     spriteID: e7503c73e4e2ead4d8e73db0b0e95ea3
+    internalID: 0
     spriteBone:
     - name: bone_8
       position: {x: 37.698975, y: 90.60516, z: 0}
@@ -597,6 +727,7 @@ ScriptedImporter:
       width: 86
       height: 132
     spriteID: c0e2da465e743a3439c95de966b11ec8
+    internalID: 0
     spriteBone:
     - name: bone_9
       position: {x: 45.585815, y: 101.55084, z: 0}
@@ -983,6 +1114,7 @@ ScriptedImporter:
       width: 744
       height: 353
     spriteID: 95ecd5a1de41fe94d80a1d9ade48878f
+    internalID: 0
     spriteBone:
     - name: bone_2
       position: {x: 264.00354, y: -0.000023745677, z: 0}
@@ -1720,6 +1852,7 @@ ScriptedImporter:
       width: 286
       height: 155
     spriteID: ccd1720abea8b6e46b0368423e9f18c2
+    internalID: 0
     spriteBone:
     - name: bone_4
       position: {x: 228.17322, y: 54.127502, z: 0}
@@ -2125,6 +2258,7 @@ ScriptedImporter:
       width: 266
       height: 148
     spriteID: a76d0be1cb9e2c249acccc8566a5dbc9
+    internalID: 0
     spriteBone:
     - name: bone_5
       position: {x: 32.37152, y: 75.46039, z: 0}
@@ -2587,6 +2721,7 @@ ScriptedImporter:
       width: 186
       height: 83
     spriteID: 672b4a503fc14e644a8daaf8404bef43
+    internalID: 0
     spriteBone:
     - name: bone_6
       position: {x: 38.127563, y: 37.61139, z: 0}
@@ -3132,6 +3267,7 @@ ScriptedImporter:
       width: 358
       height: 92
     spriteID: 5a9f1b4ba8a000c4887fc8b3dd000582
+    internalID: 0
     spriteBone:
     - name: bone_7
       position: {x: 137.32031, y: 35.516205, z: 0}
@@ -3476,6 +3612,7 @@ ScriptedImporter:
       width: 588
       height: 624
     spriteID: 1a81fe2f171c26444a82a2a0c90e988d
+    internalID: 0
     spriteBone:
     - name: bone_1
       position: {x: 288.22437, y: 26.324219, z: 0}
@@ -4032,6 +4169,10 @@ ScriptedImporter:
   importedTextureWidth: 1024
   importedTextureHeight: 1024
   documentSize: {x: 1500, y: 1500}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
   textureActualWidth: 1024
   textureActualHeight: 1024
   spritePackingTag: 
@@ -4150,6 +4291,8 @@ ScriptedImporter:
         height: 116
       spriteId: e7503c73e4e2ead4d8e73db0b0e95ea3
       bones: 07000000
+      parentGroup: 0
+      order: 0
     - spritePosition:
         x: 387
         y: 911
@@ -4157,6 +4300,8 @@ ScriptedImporter:
         height: 132
       spriteId: c0e2da465e743a3439c95de966b11ec8
       bones: 08000000
+      parentGroup: 0
+      order: 0
     - spritePosition:
         x: 390
         y: 911
@@ -4164,6 +4309,8 @@ ScriptedImporter:
         height: 353
       spriteId: 95ecd5a1de41fe94d80a1d9ade48878f
       bones: 01000000020000000000000007000000
+      parentGroup: 0
+      order: 0
     - spritePosition:
         x: 730
         y: 647
@@ -4171,6 +4318,8 @@ ScriptedImporter:
         height: 155
       spriteId: ccd1720abea8b6e46b0368423e9f18c2
       bones: 03000000
+      parentGroup: 0
+      order: 0
     - spritePosition:
         x: 490
         y: 655
@@ -4178,6 +4327,8 @@ ScriptedImporter:
         height: 148
       spriteId: a76d0be1cb9e2c249acccc8566a5dbc9
       bones: 04000000
+      parentGroup: 0
+      order: 0
     - spritePosition:
         x: 809
         y: 234
@@ -4185,6 +4336,8 @@ ScriptedImporter:
         height: 83
       spriteId: 672b4a503fc14e644a8daaf8404bef43
       bones: 05000000
+      parentGroup: 0
+      order: 0
     - spritePosition:
         x: 582
         y: 234
@@ -4192,6 +4345,8 @@ ScriptedImporter:
         height: 92
       spriteId: 5a9f1b4ba8a000c4887fc8b3dd000582
       bones: 06000000
+      parentGroup: 0
+      order: 0
     - spritePosition:
         x: 473
         y: 327
@@ -4199,26 +4354,12 @@ ScriptedImporter:
         height: 624
       spriteId: 1a81fe2f171c26444a82a2a0c90e988d
       bones: 000000000100000002000000
+      parentGroup: 0
+      order: 0
     dimension: {x: 0, y: 0}
-  boneGOs:
-  - go: {fileID: 100018, guid: 5caf3ef96ee047240aaa1693056a1f75, type: 3}
-    index: 0
-  - go: {fileID: 100020, guid: 5caf3ef96ee047240aaa1693056a1f75, type: 3}
-    index: 1
-  - go: {fileID: 100022, guid: 5caf3ef96ee047240aaa1693056a1f75, type: 3}
-    index: 2
-  - go: {fileID: 100028, guid: 5caf3ef96ee047240aaa1693056a1f75, type: 3}
-    index: 3
-  - go: {fileID: 100030, guid: 5caf3ef96ee047240aaa1693056a1f75, type: 3}
-    index: 4
-  - go: {fileID: 100032, guid: 5caf3ef96ee047240aaa1693056a1f75, type: 3}
-    index: 5
-  - go: {fileID: 100034, guid: 5caf3ef96ee047240aaa1693056a1f75, type: 3}
-    index: 6
-  - go: {fileID: 100024, guid: 5caf3ef96ee047240aaa1693056a1f75, type: 3}
-    index: 7
-  - go: {fileID: 100026, guid: 5caf3ef96ee047240aaa1693056a1f75, type: 3}
-    index: 8
+    characterGroups: []
   generateGOHierarchy: 0
   textureAssetName: spritewateranimaterevised2(1)
   prefabAssetName: spritewateranimaterevised2(1)_GO
+  spriteLibAssetName: spritewateranimaterevised2(1) Sprite Lib
+  secondarySpriteTextures: []

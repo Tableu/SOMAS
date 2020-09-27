@@ -28,7 +28,7 @@ public class PlayerData : MonoBehaviour
         UpdateRotation();
     }
     private void UpdateRotation(){
-        float horizontal = Input.GetAxisRaw("Horizontal");
+        var horizontal = Input.GetAxisRaw("Horizontal");
         if(horizontal < 0 && previous > 0){
             transform.rotation = Quaternion.Euler(0,0,0);
             forward = Vector2.left;

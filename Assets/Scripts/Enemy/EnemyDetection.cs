@@ -25,7 +25,7 @@ public class EnemyDetection : MonoBehaviour
     }
     private void DetectPlayer(){
         enemyData.distanceToPlayer = (player.transform.position - transform.position);
-        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        var stateInfo = animator.GetCurrentAnimatorStateInfo(0);
         
         if(!enemyData.playerFound && enemyData.grounded){
             if(!stateInfo.IsName("Attack")){
@@ -35,7 +35,7 @@ public class EnemyDetection : MonoBehaviour
                 }
             }
         }else{
-            float magnitude = enemyData.distanceToPlayer.magnitude;
+            var magnitude = enemyData.distanceToPlayer.magnitude;
             animator.SetFloat("AttackLimit", magnitude - enemyData.attackLimit);
             animator.SetFloat("FollowLimit", magnitude - enemyData.followLimit);
             
@@ -45,7 +45,7 @@ public class EnemyDetection : MonoBehaviour
         }
     }
     private bool CheckRaycastsForTag(RaycastHit2D[] raycastHits, string tag){
-        for(int index = 0; index < raycastHits.Length; index++){
+        for(var index = 0; index < raycastHits.Length; index++){
             if(raycastHits[index]){
                 if(raycastHits[index].transform.gameObject.CompareTag(tag)){
                     return true;

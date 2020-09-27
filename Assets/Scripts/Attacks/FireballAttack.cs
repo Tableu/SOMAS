@@ -18,10 +18,10 @@ public class FireballAttack : StateMachineBehaviour
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex){
-        float animationProgress = Mathf.Round((stateInfo.normalizedTime % 1)*100f);
+        var animationProgress = Mathf.Round((stateInfo.normalizedTime % 1)*100f);
         
         if(animationProgress > 35f && animationProgress < 50f && !fireballInstantiated){ //Spawn unmoving fireball above cultist
-            Transform transform = animator.transform;
+            var transform = animator.transform;
             Vector2 userPos = transform.position;
             Vector2 userDirection = transform.forward;
             //Quaternion userRotation = transform.rotation;
@@ -34,10 +34,10 @@ public class FireballAttack : StateMachineBehaviour
                 return;
             }
             Vector2 playerPos = player.transform.position;
-            Vector2 relativePos = ((playerPos - spawnPos).normalized);
+            var relativePos = ((playerPos - spawnPos).normalized);
             
             fireball.GetComponent<Rigidbody2D>().velocity = relativePos*fireballSpeed;
-            float angle = Mathf.Atan2(relativePos.y, relativePos.x*-1)*Mathf.Rad2Deg;
+            var angle = Mathf.Atan2(relativePos.y, relativePos.x*-1)*Mathf.Rad2Deg;
             fireball.transform.rotation = Quaternion.AngleAxis(-angle, new Vector3(0,0,1));
             fireballInstantiated = false;
         }
