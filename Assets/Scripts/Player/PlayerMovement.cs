@@ -19,10 +19,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+        var horizontal = Input.GetAxisRaw("Horizontal");
+        var vertical = Input.GetAxisRaw("Vertical");
         
-        float horizontalVelocity = horizontal*playerData.speed;
+        var horizontalVelocity = horizontal*playerData.speed;
         
         Jump();
         if(Input.GetButtonUp("Horizontal")){

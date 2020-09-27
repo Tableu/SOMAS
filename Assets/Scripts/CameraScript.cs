@@ -39,10 +39,10 @@ public class CameraScript : MonoBehaviour
 
     private void FollowPlayer()
     {
-        Vector3 position = transform.position;
-        Vector3 playerPosition = player.position;
-        float horizontalDist = position.x - playerPosition.x;
-        float verticalDist = position.y - playerPosition.y;
+        var position = transform.position;
+        var playerPosition = player.position;
+        var horizontalDist = position.x - playerPosition.x;
+        var verticalDist = position.y - playerPosition.y;
         Vector3 target;
         if(Mathf.Abs(horizontalDist) > horizontalFollowDistance){    
             target = new Vector3(playerPosition.x, position.y, position.z);

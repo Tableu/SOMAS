@@ -2,20 +2,23 @@
 
 public class MetalSummon : MonoBehaviour
 {
-    public const int Liquid = 0; public const int Shield = 1; public const int Sword = 2;
-    public const int Left = -1; public const int Right = 1;
+    private const int Liquid = 0; private const int Shield = 1; private const int Sword = 2;
+    private const int Left = -1; private const int Right = 1;
     public int currentForm; // 0 is liquid. 1 is shield. 2 is sword.
     public Sprite[] sprites;
     public GameObject player;
     public int metalRotation;
     private SpriteRenderer spriteRenderer;
-
+    public int healthPoints;
+    private int previous; 
+    
     private Collider2D col;
     // Start is called before the first frame update
     private void Start()
     {
         GameObject.FindWithTag("Player").GetComponent<PlayerData>().RotateEvent += OnRotateEvent;
-        currentForm = 1;
+        currentForm = Shield;
+        previous = Left;
         metalRotation = Left;
         spriteRenderer = GetComponent<SpriteRenderer>();
         col = GetComponent<Collider2D>();
@@ -27,8 +30,8 @@ public class MetalSummon : MonoBehaviour
         
     }
     public void CastSpell(){
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        var horizontal = Input.GetAxis("Horizontal");
+        var vertical = Input.GetAxis("Vertical");
         player = GameObject.FindWithTag("Player");
         if(horizontal != 0){
             if(currentForm == Shield)
@@ -37,10 +40,9 @@ public class MetalSummon : MonoBehaviour
                 Attack();
         }else if(vertical > 0){
             ChangeForm(Sword);
-            currentForm = Sword;
-        }else if(vertical < 0){
+        }else if(vertical < 0)
+        {
             ChangeForm(Shield);
-            currentForm = Shield;
         }
     }
 
@@ -49,6 +51,8 @@ public class MetalSummon : MonoBehaviour
     }
     private void ChangeForm(int form){ //Switch to a different metal form (liquid, shield, sword)
         spriteRenderer.sprite = sprites[form];
+        spriteRenderer.enabled = true;
+        currentForm = form;
         switch(form){
             case Liquid:
                 col.enabled = false;
@@ -68,7 +72,7 @@ public class MetalSummon : MonoBehaviour
 
     }
     public void Attack(){
-        float horizontal = Input.GetAxis("Horizontal");
+        var horizontal = Input.GetAxis("Horizontal");
         if(horizontal < 0){
             transform.Translate(Vector2.left*Time.deltaTime);
         }else if(horizontal > 0){
@@ -77,32 +81,46 @@ public class MetalSummon : MonoBehaviour
     }
     //Switch the shield to the direction indicated by the horizontal axis
     public void SwitchSides(){
-        float horizontal = Input.GetAxis("Horizontal");
-        Vector3 position = transform.localPosition;
-        if(horizontal < 0){
+        var horizontal = Input.GetAxis("Horizontal");
+        var position = transform.localPosition;
+        if(horizontal < 0 && previous > 0){
             Transform transform1;
             (transform1 = transform).rotation = Quaternion.Euler(0,180,0);
             transform1.localPosition = new Vector3(position.x*(-1),position.y,position.z);
             metalRotation = Left;
+            previous = Left;
             Debug.Log("Metal switched to left side");
-        }else if(horizontal > 0){
+        }else if(horizontal > 0 && previous < 0){
             Transform transform1;
             (transform1 = transform).rotation = Quaternion.Euler(0,0,0);
             transform1.localPosition = new Vector3(position.x*(-1),position.y,position.z);
             metalRotation = Right;
+            previous = Right;
             Debug.Log("Metal switched to right side");
         }
     }
 
     private void OnRotateEvent(){
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        Vector3 position = transform.localPosition;
-        if(metalRotation == Left){
-            transform.rotation = Quaternion.Euler(0,180,0);
-        }else if(metalRotation == Right){
-            transform.rotation = Quaternion.Euler(0,0,0);
+        var horizontal = Input.GetAxisRaw("Horizontal");
+        var position = transform.localPosition;
+        switch (metalRotation)
+        {
+            case Left:
+                transform.rotation = Quaternion.Euler(0,180,0);
+                break;
+            case Right:
+                transform.rotation = Quaternion.Euler(0,0,0);
+                break;
         }
-        transform.localPosition = new Vector3(transform.localPosition.x*(-1),position.y,position.z);
+        transform.localPosition = new Vector3(position.x*(-1),position.y,position.z);
         Debug.Log("Rotated Metal");
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        healthPoints -= collision.gameObject.GetComponent<Projectile>().damagePoints;
+        if (healthPoints > 0) return;
+        //When health points reach zero delete shield
+        ChangeForm(Liquid);
+        spriteRenderer.enabled = false;
     }
 }

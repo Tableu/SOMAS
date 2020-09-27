@@ -29,7 +29,7 @@ public class PlayerInput : MonoBehaviour
     private void CheckInputs(){
         if(Input.GetButtonDown("Fire1")){
             playerPos = GameObject.FindWithTag("Player").transform.position;
-            waterMagic.CastSpell();
+            earthMagic.CastSpell();
         }else if(Input.GetButtonDown("Fire2")){
             playerPos = GameObject.FindWithTag("Player").transform.position;
             fireMagic.CastSpell();

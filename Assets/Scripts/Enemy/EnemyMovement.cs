@@ -9,9 +9,9 @@ public class EnemyMovement
         t.GetMethod(methodName)?.Invoke(null, args.ToArray());
     }
     public static void Walk(GameObject gameObject){
-        Transform transform = gameObject.GetComponent<Transform>();
-        EnemyData enemyData = gameObject.GetComponent<EnemyData>();
-        Rigidbody2D rigidBody = gameObject.GetComponent<Rigidbody2D>();
+        var transform = gameObject.GetComponent<Transform>();
+        var enemyData = gameObject.GetComponent<EnemyData>();
+        var rigidBody = gameObject.GetComponent<Rigidbody2D>();
         
         if(transform.position.x > enemyData.boundary[1]){
             transform.localRotation = Quaternion.Euler(0, 0, 0);
@@ -23,9 +23,9 @@ public class EnemyMovement
         rigidBody.velocity = new Vector2(enemyData.forward.x*enemyData.speed,rigidBody.velocity.y);
     }
     public static void FlipCharacter(GameObject gameObject){
-        EnemyData enemyData = gameObject.GetComponent<EnemyData>();
-        Transform transform = gameObject.GetComponent<Transform>();
-        Quaternion localRotation = transform.localRotation;
+        var enemyData = gameObject.GetComponent<EnemyData>();
+        var transform = gameObject.GetComponent<Transform>();
+        var localRotation = transform.localRotation;
         if(enemyData.distanceToPlayer.x < 0){
             localRotation = Quaternion.Euler(localRotation.x, 0, localRotation.z);
             transform.localRotation = localRotation;
@@ -38,15 +38,15 @@ public class EnemyMovement
     }
 
     public static void StopCharacter(GameObject gameObject){
-        Rigidbody2D rigidBody = gameObject.GetComponent<Rigidbody2D>();
+        var rigidBody = gameObject.GetComponent<Rigidbody2D>();
         
         rigidBody.velocity = new Vector2(0,rigidBody.velocity.y);
     }
 
     public static void FollowPlayer(GameObject gameObject){
-        EnemyData enemyData = gameObject.GetComponent<EnemyData>();
-        Rigidbody2D rigidBody = gameObject.GetComponent<Rigidbody2D>();
-        Vector2 distanceToPlayer = enemyData.distanceToPlayer;
+        var enemyData = gameObject.GetComponent<EnemyData>();
+        var rigidBody = gameObject.GetComponent<Rigidbody2D>();
+        var distanceToPlayer = enemyData.distanceToPlayer;
         
         distanceToPlayer = new Vector2(distanceToPlayer.x,0).normalized;
         rigidBody.velocity = new Vector2(distanceToPlayer.x*enemyData.speed, rigidBody.velocity.y);

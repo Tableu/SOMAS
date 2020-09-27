@@ -14,8 +14,8 @@ public class WaterMagic : MonoBehaviour
 
     }
     public void CastSpell(){
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        var horizontal = Input.GetAxis("Horizontal");
+        var vertical = Input.GetAxis("Vertical");
         player = GameObject.FindWithTag("Player");
         if(horizontal != 0){
             BasicWaterAttack(waterOrb, 10, 10);
@@ -27,16 +27,16 @@ public class WaterMagic : MonoBehaviour
     }
     public void BasicWaterAttack(GameObject projectilePrefab, float speed,float rotationSpeed){
         player.GetComponent<PlayerInput>().lockInput = true;
-        GameObject projectile = AttackFunctions.SpawnProjectile(projectilePrefab, player,speed);
+        var projectile = AttackFunctions.SpawnProjectile(projectilePrefab, player,speed);
         projectile.GetComponent<Rigidbody2D>().AddTorque(rotationSpeed);
         player.GetComponent<PlayerInput>().lockInput = false;
     }
     private void IceAttack(GameObject projectilePrefab, float speed){
         Vector3 playerForward = player.GetComponent<PlayerData>().forward;
-        Vector3 playerPos = player.GetComponent<PlayerInput>().playerPos;
-        Vector3[] spawnPos = new Vector3[3];
-        GameObject[] projectile = new GameObject[3];
-        int angle = 0;
+        var playerPos = player.GetComponent<PlayerInput>().playerPos;
+        var spawnPos = new Vector3[3];
+        var projectile = new GameObject[3];
+        var angle = 0;
         spawnPos[0] = player.transform.position + playerForward*-1f*2 + new Vector3(0,1,0);
         spawnPos[1] = player.transform.position + playerForward*-1f*4;
         spawnPos[2] = player.transform.position + playerForward*-1f*2 + new Vector3(0,-1,0);
@@ -59,8 +59,8 @@ public class WaterMagic : MonoBehaviour
     private void WaveAttack(GameObject projectilePrefab, float speed, Vector2 displacement){
         Vector3 playerForward = player.GetComponent<PlayerData>().forward;
         Vector3 dist = playerForward*displacement;
-        int angle = 0;
-        GameObject projectile = Instantiate(projectilePrefab, player.transform.position+dist, Quaternion.identity);
+        var angle = 0;
+        var projectile = Instantiate(projectilePrefab, player.transform.position+dist, Quaternion.identity);
         projectile.GetComponent<Rigidbody2D>().velocity = playerForward*speed;
         if(playerForward.x < 0){
             angle = 180;

@@ -19,7 +19,7 @@ public class DarkPuddleAttack : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        float animationProgress = Mathf.Round((stateInfo.normalizedTime % 1)*100f);
+        var animationProgress = Mathf.Round((stateInfo.normalizedTime % 1)*100f);
         if((animationProgress > 85f) && !projectileInstantiated){
             projectile = Instantiate(projectilePrefab, animator.GetComponent<Transform>().position + spawnDisplacement,Quaternion.identity);
             projectile.GetComponent<Rigidbody2D>().velocity = projectileSpeed*direction;   

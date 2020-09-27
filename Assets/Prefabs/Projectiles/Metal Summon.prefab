@@ -49,6 +49,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -118,8 +119,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damagePoints: 0
-  destructible: 1
-  healthPoints: 0
+  destructible: 0
+  healthPoints: 25
 --- !u!114 &4447187279914631621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a3508b14c35a14587e197cbcca6668, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  form: 0
-  liquid: {fileID: 21300000, guid: 673805685f7341449837075a2664c4d1, type: 3}
-  shield: {fileID: 21300000, guid: 8a9557e91cb753946aff66cc06accc83, type: 3}
-  sword: {fileID: 21300000, guid: d31211c4e0059654f904ba9be3bcdee7, type: 3}
+  currentForm: 0
+  sprites: []
+  player: {fileID: 0}
+  metalRotation: 0

@@ -1,97 +1,252 @@
 fileFormatVersion: 2
 guid: a74bcb27b8f0f8a4db4de66547686103
 ScriptedImporter:
-  fileIDToRecycleName:
-    100000: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO
-    100002: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/arm 3
-    100004: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/arm 4
-    100006: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/body 6
-    100008: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/front leg 2
-    100010: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/hand empty 9
-    100012: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/hand stabby
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO
+  - first:
+      1: 100002
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/arm 3
+  - first:
+      1: 100004
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/arm 4
+  - first:
+      1: 100006
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/body 6
+  - first:
+      1: 100008
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/front leg 2
+  - first:
+      1: 100010
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/hand empty
+      9
+  - first:
+      1: 100012
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/hand stabby
       5
-    100014: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/head 7
-    100016: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/knife stabby
+  - first:
+      1: 100014
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/head 7
+  - first:
+      1: 100016
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/knife stabby
       8
-    100018: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/leg back 1
-    100020: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1
-    100022: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_2
-    100024: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_2/bone_3
-    100026: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_2/bone_4
-    100028: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_2/bone_4/bone_5
-    100030: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_2/bone_6
-    100032: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_2/bone_6/bone_7
-    100034: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_8
-    100036: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_8/bone_9
-    100038: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_8/bone_9/bone_10
-    100040: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_11
-    100042: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_11/bone_12
-    100044: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_11/bone_12/bone_13
-    100046: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_2/bone_6/bone_7/bone_14
-    400000: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/Transform
-    400002: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/arm 3/Transform
-    400004: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/arm 4/Transform
-    400006: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/body 6/Transform
-    400008: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/front leg 2/Transform
-    400010: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/hand empty 9/Transform
-    400012: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/hand stabby
+  - first:
+      1: 100018
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/leg back 1
+  - first:
+      1: 100020
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1
+  - first:
+      1: 100022
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_2
+  - first:
+      1: 100024
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_2/bone_3
+  - first:
+      1: 100026
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_2/bone_4
+  - first:
+      1: 100028
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_2/bone_4/bone_5
+  - first:
+      1: 100030
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_2/bone_6
+  - first:
+      1: 100032
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_2/bone_6/bone_7
+  - first:
+      1: 100034
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_8
+  - first:
+      1: 100036
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_8/bone_9
+  - first:
+      1: 100038
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_8/bone_9/bone_10
+  - first:
+      1: 100040
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_11
+  - first:
+      1: 100042
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_11/bone_12
+  - first:
+      1: 100044
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_11/bone_12/bone_13
+  - first:
+      1: 100046
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_2/bone_6/bone_7/bone_14
+  - first:
+      4: 400000
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/Transform
+  - first:
+      4: 400002
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/arm 3/Transform
+  - first:
+      4: 400004
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/arm 4/Transform
+  - first:
+      4: 400006
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/body 6/Transform
+  - first:
+      4: 400008
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/front leg 2/Transform
+  - first:
+      4: 400010
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/hand empty
+      9/Transform
+  - first:
+      4: 400012
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/hand stabby
       5/Transform
-    400014: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/head 7/Transform
-    400016: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/knife stabby
+  - first:
+      4: 400014
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/head 7/Transform
+  - first:
+      4: 400016
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/knife stabby
       8/Transform
-    400018: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/leg back 1/Transform
-    400020: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/Transform
-    400022: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_2/Transform
-    400024: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_2/bone_3/Transform
-    400026: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_2/bone_4/Transform
-    400028: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_2/bone_4/bone_5/Transform
-    400030: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_2/bone_6/Transform
-    400032: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_2/bone_6/bone_7/Transform
-    400034: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_8/Transform
-    400036: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_8/bone_9/Transform
-    400038: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_8/bone_9/bone_10/Transform
-    400040: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_11/Transform
-    400042: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_11/bone_12/Transform
-    400044: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_11/bone_12/bone_13/Transform
-    400046: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_2/bone_6/bone_7/bone_14/Transform
-    2800000: Fire_Minion_Sprite3_2_psb
-    11400000: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/arm 3/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400002: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/arm 4/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400004: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/body 6/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400006: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/front leg
-      2/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400008: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/hand empty
+  - first:
+      4: 400018
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/leg back 1/Transform
+  - first:
+      4: 400020
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/Transform
+  - first:
+      4: 400022
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_2/Transform
+  - first:
+      4: 400024
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_2/bone_3/Transform
+  - first:
+      4: 400026
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_2/bone_4/Transform
+  - first:
+      4: 400028
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_2/bone_4/bone_5/Transform
+  - first:
+      4: 400030
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_2/bone_6/Transform
+  - first:
+      4: 400032
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_2/bone_6/bone_7/Transform
+  - first:
+      4: 400034
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_8/Transform
+  - first:
+      4: 400036
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_8/bone_9/Transform
+  - first:
+      4: 400038
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_8/bone_9/bone_10/Transform
+  - first:
+      4: 400040
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_11/Transform
+  - first:
+      4: 400042
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_11/bone_12/Transform
+  - first:
+      4: 400044
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_11/bone_12/bone_13/Transform
+  - first:
+      4: 400046
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/bone_1/bone_2/bone_6/bone_7/bone_14/Transform
+  - first:
+      28: 2800000
+    second: Fire_Minion_Sprite3_2_psb
+  - first:
+      114: 11400000
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/arm 3/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      114: 11400002
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/arm 4/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      114: 11400004
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/body 6/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      114: 11400006
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/front leg 2/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      114: 11400008
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/hand empty
       9/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400010: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/hand stabby
+  - first:
+      114: 11400010
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/hand stabby
       5/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400012: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/head 7/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400014: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/knife stabby
+  - first:
+      114: 11400012
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/head 7/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      114: 11400014
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/knife stabby
       8/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400016: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/leg back 1/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    21200000: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/arm 3/SpriteRenderer
-    21200002: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/arm 4/SpriteRenderer
-    21200004: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/body 6/SpriteRenderer
-    21200006: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/front leg
-      2/SpriteRenderer
-    21200008: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/hand empty
+  - first:
+      114: 11400016
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/leg back 1/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      212: 21200000
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/arm 3/SpriteRenderer
+  - first:
+      212: 21200002
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/arm 4/SpriteRenderer
+  - first:
+      212: 21200004
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/body 6/SpriteRenderer
+  - first:
+      212: 21200006
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/front leg 2/SpriteRenderer
+  - first:
+      212: 21200008
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/hand empty
       9/SpriteRenderer
-    21200010: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/hand stabby
+  - first:
+      212: 21200010
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/hand stabby
       5/SpriteRenderer
-    21200012: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/head 7/SpriteRenderer
-    21200014: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/knife stabby
+  - first:
+      212: 21200012
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/head 7/SpriteRenderer
+  - first:
+      212: 21200014
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/knife stabby
       8/SpriteRenderer
-    21200016: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/leg back 1/SpriteRenderer
-    21300000: 25e58a9352fab62439a06e10c45220db
-    21300002: 4323df7acddd53b4fade58e0b58a01ba
-    21300004: d8681ce73c6fc874fbe3f5f1e57b4288
-    21300006: a4fd2ef589c674845942592c0b5e8280
-    21300008: e881f46c44245214296b1a9c5b04f92e
-    21300010: bf2348e07b677c84cbce5bcad7a255f8
-    21300012: e4c05a235cb478647a90b3c2d07818bf
-    21300014: e2d42d9defe1e0447ab64089a0904a95
-    21300016: bc5aa942b8cf19a43b218cecdb1697eb
-    100100000: Fire_Minion_Sprite3_2_psb_GO
+  - first:
+      212: 21200016
+    second: Fire_Minion_Sprite3_2_psb_GO/Fire_Minion_Sprite3_2_psb_GO/leg back 1/SpriteRenderer
+  - first:
+      213: 21300000
+    second: 25e58a9352fab62439a06e10c45220db
+  - first:
+      213: 21300002
+    second: 4323df7acddd53b4fade58e0b58a01ba
+  - first:
+      213: 21300004
+    second: d8681ce73c6fc874fbe3f5f1e57b4288
+  - first:
+      213: 21300006
+    second: a4fd2ef589c674845942592c0b5e8280
+  - first:
+      213: 21300008
+    second: e881f46c44245214296b1a9c5b04f92e
+  - first:
+      213: 21300010
+    second: bf2348e07b677c84cbce5bcad7a255f8
+  - first:
+      213: 21300012
+    second: e4c05a235cb478647a90b3c2d07818bf
+  - first:
+      213: 21300014
+    second: e2d42d9defe1e0447ab64089a0904a95
+  - first:
+      213: 21300016
+    second: bc5aa942b8cf19a43b218cecdb1697eb
+  - first:
+      1001: 100100000
+    second: Fire_Minion_Sprite3_2_psb_GO
   externalObjects: {}
+  serializedVersion: 2
   userData: 
   assetBundleName: 
   assetBundleVariant: 
@@ -112,6 +267,7 @@ ScriptedImporter:
     isReadable: 0
     streamingMipmaps: 1
     streamingMipmapsPriority: 0
+    vTOnly: 0
     nPOTScale: 1
     sRGBTexture: 1
     spriteMode: 2
@@ -130,6 +286,7 @@ ScriptedImporter:
     textureType: 8
     textureShape: 1
     singleChannelComponent: 0
+    ignorePngGamma: 0
     filterMode: 1
     aniso: 1
     mipBias: 0
@@ -149,6 +306,7 @@ ScriptedImporter:
     maxTextureSizeSet: 0
     compressionQualitySet: 0
     textureFormatSet: 0
+    applyGammaDecoding: 0
   spriteImportData:
   - name: 
     originalName: 
@@ -162,6 +320,7 @@ ScriptedImporter:
       width: 0
       height: 0
     spriteID: 
+    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -185,6 +344,7 @@ ScriptedImporter:
       width: 319
       height: 699
     spriteID: 25e58a9352fab62439a06e10c45220db
+    internalID: 0
     spriteBone:
     - name: bone_1
       position: {x: -144.45764, y: 31.413452, z: 0}
@@ -558,6 +718,7 @@ ScriptedImporter:
       width: 275
       height: 46
     spriteID: 4323df7acddd53b4fade58e0b58a01ba
+    internalID: 0
     spriteBone:
     - name: bone_5
       position: {x: 70.25531, y: 146.70312, z: 0}
@@ -1362,6 +1523,7 @@ ScriptedImporter:
       width: 380
       height: 414
     spriteID: d8681ce73c6fc874fbe3f5f1e57b4288
+    internalID: 0
     spriteBone:
     - name: bone_2
       position: {x: 182.92487, y: -146.37097, z: 0}
@@ -1830,6 +1992,7 @@ ScriptedImporter:
       width: 438
       height: 421
     spriteID: a4fd2ef589c674845942592c0b5e8280
+    internalID: 0
     spriteBone:
     - name: bone_1
       position: {x: 211.54236, y: 63.413452, z: 0}
@@ -2506,6 +2669,7 @@ ScriptedImporter:
       width: 291
       height: 200
     spriteID: e881f46c44245214296b1a9c5b04f92e
+    internalID: 0
     spriteBone:
     - name: bone_7
       position: {x: 143.3097, y: 0.000029941153, z: 0}
@@ -3009,6 +3173,7 @@ ScriptedImporter:
       width: 130
       height: 162
     spriteID: bf2348e07b677c84cbce5bcad7a255f8
+    internalID: 0
     spriteBone:
     - name: bone_6
       position: {x: 67.842896, y: 131.06635, z: 0}
@@ -3368,6 +3533,7 @@ ScriptedImporter:
       width: 167
       height: 217
     spriteID: e4c05a235cb478647a90b3c2d07818bf
+    internalID: 0
     spriteBone:
     - name: bone_5
       position: {x: 151.25325, y: -0.00022003164, z: 0}
@@ -3737,6 +3903,7 @@ ScriptedImporter:
       width: 124
       height: 313
     spriteID: e2d42d9defe1e0447ab64089a0904a95
+    internalID: 0
     spriteBone:
     - name: bone_10
       position: {x: 143.82928, y: -0.00003135177, z: 0}
@@ -4243,6 +4410,7 @@ ScriptedImporter:
       width: 122
       height: 307
     spriteID: bc5aa942b8cf19a43b218cecdb1697eb
+    internalID: 0
     spriteBone:
     - name: bone_13
       position: {x: 143.82945, y: -0.00010278812, z: 0}
@@ -4759,6 +4927,10 @@ ScriptedImporter:
   importedTextureWidth: 1024
   importedTextureHeight: 1024
   documentSize: {x: 1440, y: 1800}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
   textureActualWidth: 1024
   textureActualHeight: 1024
   spritePackingTag: 
@@ -4909,6 +5081,8 @@ ScriptedImporter:
         height: 699
       spriteId: 25e58a9352fab62439a06e10c45220db
       bones: 000000000400000003000000
+      parentGroup: 0
+      order: 0
     - spritePosition:
         x: 834
         y: 684
@@ -4916,6 +5090,8 @@ ScriptedImporter:
         height: 46
       spriteId: 4323df7acddd53b4fade58e0b58a01ba
       bones: 04000000
+      parentGroup: 0
+      order: 0
     - spritePosition:
         x: 502
         y: 984
@@ -4923,6 +5099,8 @@ ScriptedImporter:
         height: 414
       spriteId: d8681ce73c6fc874fbe3f5f1e57b4288
       bones: 0100000002000000
+      parentGroup: 0
+      order: 0
     - spritePosition:
         x: 478
         y: 638
@@ -4930,6 +5108,8 @@ ScriptedImporter:
         height: 421
       spriteId: a4fd2ef589c674845942592c0b5e8280
       bones: 0000000001000000
+      parentGroup: 0
+      order: 0
     - spritePosition:
         x: 258
         y: 670
@@ -4937,6 +5117,8 @@ ScriptedImporter:
         height: 200
       spriteId: e881f46c44245214296b1a9c5b04f92e
       bones: 06000000050000000d000000
+      parentGroup: 0
+      order: 0
     - spritePosition:
         x: 437
         y: 822
@@ -4944,6 +5126,8 @@ ScriptedImporter:
         height: 162
       spriteId: bf2348e07b677c84cbce5bcad7a255f8
       bones: 0500000006000000
+      parentGroup: 0
+      order: 0
     - spritePosition:
         x: 804
         y: 791
@@ -4951,6 +5135,8 @@ ScriptedImporter:
         height: 217
       spriteId: e4c05a235cb478647a90b3c2d07818bf
       bones: 0400000003000000
+      parentGroup: 0
+      order: 0
     - spritePosition:
         x: 532
         y: 357
@@ -4958,6 +5144,8 @@ ScriptedImporter:
         height: 313
       spriteId: e2d42d9defe1e0447ab64089a0904a95
       bones: 0900000008000000070000000c000000
+      parentGroup: 0
+      order: 0
     - spritePosition:
         x: 668
         y: 363
@@ -4965,36 +5153,12 @@ ScriptedImporter:
         height: 307
       spriteId: bc5aa942b8cf19a43b218cecdb1697eb
       bones: 0c0000000b0000000a000000
+      parentGroup: 0
+      order: 0
     dimension: {x: 0, y: 0}
-  boneGOs:
-  - go: {fileID: 100020, guid: a74bcb27b8f0f8a4db4de66547686103, type: 3}
-    index: 0
-  - go: {fileID: 100022, guid: a74bcb27b8f0f8a4db4de66547686103, type: 3}
-    index: 1
-  - go: {fileID: 100024, guid: a74bcb27b8f0f8a4db4de66547686103, type: 3}
-    index: 2
-  - go: {fileID: 100026, guid: a74bcb27b8f0f8a4db4de66547686103, type: 3}
-    index: 3
-  - go: {fileID: 100028, guid: a74bcb27b8f0f8a4db4de66547686103, type: 3}
-    index: 4
-  - go: {fileID: 100030, guid: a74bcb27b8f0f8a4db4de66547686103, type: 3}
-    index: 5
-  - go: {fileID: 100032, guid: a74bcb27b8f0f8a4db4de66547686103, type: 3}
-    index: 6
-  - go: {fileID: 100034, guid: a74bcb27b8f0f8a4db4de66547686103, type: 3}
-    index: 7
-  - go: {fileID: 100036, guid: a74bcb27b8f0f8a4db4de66547686103, type: 3}
-    index: 8
-  - go: {fileID: 100038, guid: a74bcb27b8f0f8a4db4de66547686103, type: 3}
-    index: 9
-  - go: {fileID: 100040, guid: a74bcb27b8f0f8a4db4de66547686103, type: 3}
-    index: 10
-  - go: {fileID: 100042, guid: a74bcb27b8f0f8a4db4de66547686103, type: 3}
-    index: 11
-  - go: {fileID: 100044, guid: a74bcb27b8f0f8a4db4de66547686103, type: 3}
-    index: 12
-  - go: {fileID: 100046, guid: a74bcb27b8f0f8a4db4de66547686103, type: 3}
-    index: 13
+    characterGroups: []
   generateGOHierarchy: 0
   textureAssetName: Fire_Minion_Sprite3_2_psb
   prefabAssetName: Fire_Minion_Sprite3_2_psb_GO
+  spriteLibAssetName: Fire_Minion_Sprite3_2_psb Sprite Lib
+  secondarySpriteTextures: []

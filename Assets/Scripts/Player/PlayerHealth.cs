@@ -20,21 +20,21 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if(healthPoints <= 0){
-            DeathEvent.Invoke();
-            Destroy(gameObject);
-        }
+        if (healthPoints > 0) return;
+        DeathEvent?.Invoke();
+        Destroy(gameObject);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision){
-        if(collision.gameObject.CompareTag("EnemyProjectile")){
-            healthPoints -= collision.gameObject.GetComponent<Projectile>().damagePoints;
-            float direction = collision.transform.GetComponent<Rigidbody2D>().velocity.normalized.x;
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(playerData.knockback.x*direction,playerData.knockback.y),ForceMode2D.Impulse);
-            StartCoroutine(Invulnerable());
-            if(collision.gameObject.GetComponent<Projectile>().destructible){
-                Destroy(collision.gameObject);
-            }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!collision.gameObject.CompareTag("EnemyProjectile")) return;
+        
+        healthPoints -= collision.gameObject.GetComponent<Projectile>().damagePoints;
+        var direction = collision.transform.GetComponent<Rigidbody2D>().velocity.normalized.x;
+        GetComponent<Rigidbody2D>().AddForce(new Vector2(playerData.knockback.x*direction,playerData.knockback.y),ForceMode2D.Impulse);
+        StartCoroutine(Invulnerable());
+        if(collision.gameObject.GetComponent<Projectile>().destructible){
+            Destroy(collision.gameObject);
         }
     }
 
@@ -43,8 +43,8 @@ public class PlayerHealth : MonoBehaviour
     }
 
     private IEnumerator Invulnerable(){
-        GetComponent<Collider2D>().enabled = false;
+        col.enabled = false;
         yield return new WaitForSeconds(3);
-        GetComponent<Collider2D>().enabled = true;
+        col.enabled = true;
     }
 }

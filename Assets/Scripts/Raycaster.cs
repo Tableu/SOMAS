@@ -12,7 +12,7 @@ public class Raycaster : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        Vector2 raycastPos = new Vector2(gameObject.transform.position.x + 7.65f,gameObject.transform.position.y - 2.27f);
+        var raycastPos = new Vector2(gameObject.transform.position.x + 7.65f,gameObject.transform.position.y - 2.27f);
         Debug.DrawRay(raycastPos, transform.TransformDirection(direction)*7,Color.red);
         if(Physics2D.Raycast(raycastPos,direction,7) == false){
             Destroy(gameObject);

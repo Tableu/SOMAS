@@ -1,58 +1,159 @@
 fileFormatVersion: 2
 guid: fb6193e0c9c7e1441ab168bca53cf25d
 ScriptedImporter:
-  fileIDToRecycleName:
-    100000: firespriteonev2_GO/firespriteonev2_GO
-    100002: firespriteonev2_GO/firespriteonev2_GO/Layer 1 Forearm L
-    100004: firespriteonev2_GO/firespriteonev2_GO/Layer 1.5 Arm L
-    100006: firespriteonev2_GO/firespriteonev2_GO/Layer 2 Head
-    100008: firespriteonev2_GO/firespriteonev2_GO/Layer 3 Body
-    100010: firespriteonev2_GO/firespriteonev2_GO/Layer 4 Forearm R
-    100012: firespriteonev2_GO/firespriteonev2_GO/Layer 4.5 Arm R
-    100014: firespriteonev2_GO/firespriteonev2_GO/bone_1
-    100016: firespriteonev2_GO/firespriteonev2_GO/bone_1/bone_2
-    100018: firespriteonev2_GO/firespriteonev2_GO/bone_1/bone_2/bone_3
-    100020: firespriteonev2_GO/firespriteonev2_GO/bone_1/bone_2/bone_3/bone_4
-    100022: firespriteonev2_GO/firespriteonev2_GO/bone_1/bone_2/bone_3/bone_5
-    100024: firespriteonev2_GO/firespriteonev2_GO/bone_1/bone_2/bone_3/bone_5/bone_6
-    100026: firespriteonev2_GO/firespriteonev2_GO/bone_1/bone_2/bone_3/bone_7
-    100028: firespriteonev2_GO/firespriteonev2_GO/bone_1/bone_2/bone_3/bone_7/bone_8
-    400000: firespriteonev2_GO/firespriteonev2_GO/Transform
-    400002: firespriteonev2_GO/firespriteonev2_GO/Layer 1 Forearm L/Transform
-    400004: firespriteonev2_GO/firespriteonev2_GO/Layer 1.5 Arm L/Transform
-    400006: firespriteonev2_GO/firespriteonev2_GO/Layer 2 Head/Transform
-    400008: firespriteonev2_GO/firespriteonev2_GO/Layer 3 Body/Transform
-    400010: firespriteonev2_GO/firespriteonev2_GO/Layer 4 Forearm R/Transform
-    400012: firespriteonev2_GO/firespriteonev2_GO/Layer 4.5 Arm R/Transform
-    400014: firespriteonev2_GO/firespriteonev2_GO/bone_1/Transform
-    400016: firespriteonev2_GO/firespriteonev2_GO/bone_1/bone_2/Transform
-    400018: firespriteonev2_GO/firespriteonev2_GO/bone_1/bone_2/bone_3/Transform
-    400020: firespriteonev2_GO/firespriteonev2_GO/bone_1/bone_2/bone_3/bone_4/Transform
-    400022: firespriteonev2_GO/firespriteonev2_GO/bone_1/bone_2/bone_3/bone_5/Transform
-    400024: firespriteonev2_GO/firespriteonev2_GO/bone_1/bone_2/bone_3/bone_5/bone_6/Transform
-    400026: firespriteonev2_GO/firespriteonev2_GO/bone_1/bone_2/bone_3/bone_7/Transform
-    400028: firespriteonev2_GO/firespriteonev2_GO/bone_1/bone_2/bone_3/bone_7/bone_8/Transform
-    2800000: firespriteonev2
-    11400000: firespriteonev2_GO/firespriteonev2_GO/Layer 1 Forearm L/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400002: firespriteonev2_GO/firespriteonev2_GO/Layer 1.5 Arm L/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400004: firespriteonev2_GO/firespriteonev2_GO/Layer 2 Head/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400006: firespriteonev2_GO/firespriteonev2_GO/Layer 3 Body/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400008: firespriteonev2_GO/firespriteonev2_GO/Layer 4 Forearm R/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400010: firespriteonev2_GO/firespriteonev2_GO/Layer 4.5 Arm R/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    21200000: firespriteonev2_GO/firespriteonev2_GO/Layer 1 Forearm L/SpriteRenderer
-    21200002: firespriteonev2_GO/firespriteonev2_GO/Layer 1.5 Arm L/SpriteRenderer
-    21200004: firespriteonev2_GO/firespriteonev2_GO/Layer 2 Head/SpriteRenderer
-    21200006: firespriteonev2_GO/firespriteonev2_GO/Layer 3 Body/SpriteRenderer
-    21200008: firespriteonev2_GO/firespriteonev2_GO/Layer 4 Forearm R/SpriteRenderer
-    21200010: firespriteonev2_GO/firespriteonev2_GO/Layer 4.5 Arm R/SpriteRenderer
-    21300000: 897f673d37f45d7469ab7a1c9d1add86
-    21300002: 06b89ce1b971bea4c8bbf86b2f6aa41c
-    21300004: b8c57ac8c6a83c3418625ee944839e1f
-    21300006: 0d151a5004b85d14fb8d9d704605c7f9
-    21300008: 81a15ff65cf96a1408db39a27075ccc4
-    21300010: 12db2601fe26a6e47af2b6dd86133228
-    100100000: firespriteonev2_GO
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: firespriteonev2_GO/firespriteonev2_GO
+  - first:
+      1: 100002
+    second: firespriteonev2_GO/firespriteonev2_GO/Layer 1 Forearm L
+  - first:
+      1: 100004
+    second: firespriteonev2_GO/firespriteonev2_GO/Layer 1.5 Arm L
+  - first:
+      1: 100006
+    second: firespriteonev2_GO/firespriteonev2_GO/Layer 2 Head
+  - first:
+      1: 100008
+    second: firespriteonev2_GO/firespriteonev2_GO/Layer 3 Body
+  - first:
+      1: 100010
+    second: firespriteonev2_GO/firespriteonev2_GO/Layer 4 Forearm R
+  - first:
+      1: 100012
+    second: firespriteonev2_GO/firespriteonev2_GO/Layer 4.5 Arm R
+  - first:
+      1: 100014
+    second: firespriteonev2_GO/firespriteonev2_GO/bone_1
+  - first:
+      1: 100016
+    second: firespriteonev2_GO/firespriteonev2_GO/bone_1/bone_2
+  - first:
+      1: 100018
+    second: firespriteonev2_GO/firespriteonev2_GO/bone_1/bone_2/bone_3
+  - first:
+      1: 100020
+    second: firespriteonev2_GO/firespriteonev2_GO/bone_1/bone_2/bone_3/bone_4
+  - first:
+      1: 100022
+    second: firespriteonev2_GO/firespriteonev2_GO/bone_1/bone_2/bone_3/bone_5
+  - first:
+      1: 100024
+    second: firespriteonev2_GO/firespriteonev2_GO/bone_1/bone_2/bone_3/bone_5/bone_6
+  - first:
+      1: 100026
+    second: firespriteonev2_GO/firespriteonev2_GO/bone_1/bone_2/bone_3/bone_7
+  - first:
+      1: 100028
+    second: firespriteonev2_GO/firespriteonev2_GO/bone_1/bone_2/bone_3/bone_7/bone_8
+  - first:
+      4: 400000
+    second: firespriteonev2_GO/firespriteonev2_GO/Transform
+  - first:
+      4: 400002
+    second: firespriteonev2_GO/firespriteonev2_GO/Layer 1 Forearm L/Transform
+  - first:
+      4: 400004
+    second: firespriteonev2_GO/firespriteonev2_GO/Layer 1.5 Arm L/Transform
+  - first:
+      4: 400006
+    second: firespriteonev2_GO/firespriteonev2_GO/Layer 2 Head/Transform
+  - first:
+      4: 400008
+    second: firespriteonev2_GO/firespriteonev2_GO/Layer 3 Body/Transform
+  - first:
+      4: 400010
+    second: firespriteonev2_GO/firespriteonev2_GO/Layer 4 Forearm R/Transform
+  - first:
+      4: 400012
+    second: firespriteonev2_GO/firespriteonev2_GO/Layer 4.5 Arm R/Transform
+  - first:
+      4: 400014
+    second: firespriteonev2_GO/firespriteonev2_GO/bone_1/Transform
+  - first:
+      4: 400016
+    second: firespriteonev2_GO/firespriteonev2_GO/bone_1/bone_2/Transform
+  - first:
+      4: 400018
+    second: firespriteonev2_GO/firespriteonev2_GO/bone_1/bone_2/bone_3/Transform
+  - first:
+      4: 400020
+    second: firespriteonev2_GO/firespriteonev2_GO/bone_1/bone_2/bone_3/bone_4/Transform
+  - first:
+      4: 400022
+    second: firespriteonev2_GO/firespriteonev2_GO/bone_1/bone_2/bone_3/bone_5/Transform
+  - first:
+      4: 400024
+    second: firespriteonev2_GO/firespriteonev2_GO/bone_1/bone_2/bone_3/bone_5/bone_6/Transform
+  - first:
+      4: 400026
+    second: firespriteonev2_GO/firespriteonev2_GO/bone_1/bone_2/bone_3/bone_7/Transform
+  - first:
+      4: 400028
+    second: firespriteonev2_GO/firespriteonev2_GO/bone_1/bone_2/bone_3/bone_7/bone_8/Transform
+  - first:
+      28: 2800000
+    second: firespriteonev2
+  - first:
+      114: 11400000
+    second: firespriteonev2_GO/firespriteonev2_GO/Layer 1 Forearm L/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      114: 11400002
+    second: firespriteonev2_GO/firespriteonev2_GO/Layer 1.5 Arm L/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      114: 11400004
+    second: firespriteonev2_GO/firespriteonev2_GO/Layer 2 Head/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      114: 11400006
+    second: firespriteonev2_GO/firespriteonev2_GO/Layer 3 Body/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      114: 11400008
+    second: firespriteonev2_GO/firespriteonev2_GO/Layer 4 Forearm R/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      114: 11400010
+    second: firespriteonev2_GO/firespriteonev2_GO/Layer 4.5 Arm R/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      212: 21200000
+    second: firespriteonev2_GO/firespriteonev2_GO/Layer 1 Forearm L/SpriteRenderer
+  - first:
+      212: 21200002
+    second: firespriteonev2_GO/firespriteonev2_GO/Layer 1.5 Arm L/SpriteRenderer
+  - first:
+      212: 21200004
+    second: firespriteonev2_GO/firespriteonev2_GO/Layer 2 Head/SpriteRenderer
+  - first:
+      212: 21200006
+    second: firespriteonev2_GO/firespriteonev2_GO/Layer 3 Body/SpriteRenderer
+  - first:
+      212: 21200008
+    second: firespriteonev2_GO/firespriteonev2_GO/Layer 4 Forearm R/SpriteRenderer
+  - first:
+      212: 21200010
+    second: firespriteonev2_GO/firespriteonev2_GO/Layer 4.5 Arm R/SpriteRenderer
+  - first:
+      213: 21300000
+    second: 897f673d37f45d7469ab7a1c9d1add86
+  - first:
+      213: 21300002
+    second: 06b89ce1b971bea4c8bbf86b2f6aa41c
+  - first:
+      213: 21300004
+    second: b8c57ac8c6a83c3418625ee944839e1f
+  - first:
+      213: 21300006
+    second: 0d151a5004b85d14fb8d9d704605c7f9
+  - first:
+      213: 21300008
+    second: 81a15ff65cf96a1408db39a27075ccc4
+  - first:
+      213: 21300010
+    second: 12db2601fe26a6e47af2b6dd86133228
+  - first:
+      1001: 100100000
+    second: firespriteonev2_GO
   externalObjects: {}
+  serializedVersion: 2
   userData: 
   assetBundleName: 
   assetBundleVariant: 
@@ -73,6 +174,7 @@ ScriptedImporter:
     isReadable: 0
     streamingMipmaps: 1
     streamingMipmapsPriority: 0
+    vTOnly: 0
     nPOTScale: 1
     sRGBTexture: 1
     spriteMode: 2
@@ -91,6 +193,7 @@ ScriptedImporter:
     textureType: 8
     textureShape: 1
     singleChannelComponent: 0
+    ignorePngGamma: 0
     filterMode: 1
     aniso: 1
     mipBias: 0
@@ -110,6 +213,7 @@ ScriptedImporter:
     maxTextureSizeSet: 0
     compressionQualitySet: 0
     textureFormatSet: 0
+    applyGammaDecoding: 0
   spriteImportData:
   - name: 
     originalName: 
@@ -123,6 +227,7 @@ ScriptedImporter:
       width: 0
       height: 0
     spriteID: 
+    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -146,6 +251,7 @@ ScriptedImporter:
       width: 197
       height: 270
     spriteID: 897f673d37f45d7469ab7a1c9d1add86
+    internalID: 0
     spriteBone:
     - name: bone_6
       position: {x: 121.093216, y: 0.000039290964, z: 0}
@@ -538,6 +644,7 @@ ScriptedImporter:
       width: 144
       height: 216
     spriteID: 06b89ce1b971bea4c8bbf86b2f6aa41c
+    internalID: 0
     spriteBone:
     - name: bone_6
       position: {x: 121.09321, y: 0.000105055005, z: 0}
@@ -950,6 +1057,7 @@ ScriptedImporter:
       width: 468
       height: 430
     spriteID: b8c57ac8c6a83c3418625ee944839e1f
+    internalID: 0
     spriteBone:
     - name: bone_4
       position: {x: 125.19588, y: -0.00008340838, z: 0}
@@ -1441,6 +1549,7 @@ ScriptedImporter:
       width: 512
       height: 550
     spriteID: 0d151a5004b85d14fb8d9d704605c7f9
+    internalID: 0
     spriteBone:
     - name: bone_1
       position: {x: 251.15991, y: 16.64087, z: 0}
@@ -1983,6 +2092,7 @@ ScriptedImporter:
       width: 163
       height: 238
     spriteID: 81a15ff65cf96a1408db39a27075ccc4
+    internalID: 0
     spriteBone:
     - name: bone_8
       position: {x: 121.75744, y: -0.00006423663, z: 0}
@@ -2375,6 +2485,7 @@ ScriptedImporter:
       width: 121
       height: 162
     spriteID: 12db2601fe26a6e47af2b6dd86133228
+    internalID: 0
     spriteBone:
     - name: bone_7
       position: {x: 90.79553, y: 120.59717, z: 0}
@@ -2772,6 +2883,10 @@ ScriptedImporter:
   importedTextureWidth: 1024
   importedTextureHeight: 1024
   documentSize: {x: 1006, y: 1198}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
   textureActualWidth: 1024
   textureActualHeight: 1024
   spritePackingTag: 
@@ -2871,6 +2986,8 @@ ScriptedImporter:
         height: 270
       spriteId: 897f673d37f45d7469ab7a1c9d1add86
       bones: 0500000004000000
+      parentGroup: 0
+      order: 0
     - spritePosition:
         x: 593
         y: 473
@@ -2878,6 +2995,8 @@ ScriptedImporter:
         height: 216
       spriteId: 06b89ce1b971bea4c8bbf86b2f6aa41c
       bones: 0500000004000000
+      parentGroup: 0
+      order: 0
     - spritePosition:
         x: 284
         y: 650
@@ -2885,6 +3004,8 @@ ScriptedImporter:
         height: 430
       spriteId: b8c57ac8c6a83c3418625ee944839e1f
       bones: 0300000002000000
+      parentGroup: 0
+      order: 0
     - spritePosition:
         x: 251
         y: 148
@@ -2892,6 +3013,8 @@ ScriptedImporter:
         height: 550
       spriteId: 0d151a5004b85d14fb8d9d704605c7f9
       bones: 00000000020000000100000003000000
+      parentGroup: 0
+      order: 0
     - spritePosition:
         x: 248
         y: 354
@@ -2899,6 +3022,8 @@ ScriptedImporter:
         height: 238
       spriteId: 81a15ff65cf96a1408db39a27075ccc4
       bones: 0700000006000000
+      parentGroup: 0
+      order: 0
     - spritePosition:
         x: 284
         y: 536
@@ -2906,24 +3031,12 @@ ScriptedImporter:
         height: 162
       spriteId: 12db2601fe26a6e47af2b6dd86133228
       bones: 0600000007000000
+      parentGroup: 0
+      order: 0
     dimension: {x: 0, y: 0}
-  boneGOs:
-  - go: {fileID: 100014, guid: fb6193e0c9c7e1441ab168bca53cf25d, type: 3}
-    index: 0
-  - go: {fileID: 100016, guid: fb6193e0c9c7e1441ab168bca53cf25d, type: 3}
-    index: 1
-  - go: {fileID: 100018, guid: fb6193e0c9c7e1441ab168bca53cf25d, type: 3}
-    index: 2
-  - go: {fileID: 100020, guid: fb6193e0c9c7e1441ab168bca53cf25d, type: 3}
-    index: 3
-  - go: {fileID: 100022, guid: fb6193e0c9c7e1441ab168bca53cf25d, type: 3}
-    index: 4
-  - go: {fileID: 100024, guid: fb6193e0c9c7e1441ab168bca53cf25d, type: 3}
-    index: 5
-  - go: {fileID: 100026, guid: fb6193e0c9c7e1441ab168bca53cf25d, type: 3}
-    index: 6
-  - go: {fileID: 100028, guid: fb6193e0c9c7e1441ab168bca53cf25d, type: 3}
-    index: 7
+    characterGroups: []
   generateGOHierarchy: 0
   textureAssetName: firespriteonev2
   prefabAssetName: firespriteonev2_GO
+  spriteLibAssetName: firespriteonev2 Sprite Lib
+  secondarySpriteTextures: []

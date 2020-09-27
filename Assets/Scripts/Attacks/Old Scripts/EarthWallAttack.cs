@@ -45,7 +45,7 @@ public class EarthWallAttack : StateMachineBehaviour
         Vector3 playerForward = player.GetComponent<PlayerData>().forward;
         Vector2 spawnPosition = player.transform.position + playerForward*earthWallPosition;
         
-        RaycastHit2D rayHit = Physics2D.Raycast(spawnPosition, Vector2.down, raycastLength, LayerMask.GetMask("Platforms"));
+        var rayHit = Physics2D.Raycast(spawnPosition, Vector2.down, raycastLength, LayerMask.GetMask("Platforms"));
         Debug.DrawRay(spawnPosition, Vector2.down*raycastLength,Color.red);
         if(rayHit){
             earthWall = Instantiate(earthWallPrefab, spawnPosition, Quaternion.identity);
