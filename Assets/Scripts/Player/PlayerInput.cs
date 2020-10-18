@@ -1,54 +1,51 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class PlayerInput : MonoBehaviour
+public class PlayerInput: MonoBehaviour
 {
-    private Animator animator;
-    public int magicCoreCount;
     public Vector3 playerPos;
-    public bool lockInput;
-    private int magicCore;
+    public bool inputLocked;
     public WaterMagic waterMagic;
     public EarthMagic earthMagic;
     public FireMagic fireMagic;
     public MetalSummon metalSummon;
+    private PlayerData playerData;
+    
+
     // Start is called before the first frame update
     private void Start()
     {
-        lockInput = false;
-        animator = GetComponent<Animator>();
+        inputLocked = false;
+        playerData = GameObject.FindWithTag("Player").GetComponent<PlayerData>();
     }
 
     // Update is called once per frame
     private void Update()
     {
-        if(!lockInput){
+        if(!inputLocked){
             CheckInputs();
         }
         //setMagicCore();
     }
     private void CheckInputs(){
-        if(Input.GetButtonDown("Fire1")){
+        if(playerData.playerInputActions.Player.Core1.triggered){
             playerPos = GameObject.FindWithTag("Player").transform.position;
             earthMagic.CastSpell();
-        }else if(Input.GetButtonDown("Fire2")){
+        }else if(playerData.playerInputActions.Player.Core2.triggered){
             playerPos = GameObject.FindWithTag("Player").transform.position;
             fireMagic.CastSpell();
-        }else if(Input.GetButtonDown("Fire3")){
+        }else if(playerData.playerInputActions.Player.Core3.triggered){
             playerPos = GameObject.FindWithTag("Player").transform.position;
             metalSummon.CastSpell();
         }
     }
-    private void SetMagicCore(){
-        if(Input.GetKeyDown("q")){
-            magicCore--;
-        }else if(Input.GetKeyDown("e")){
-            magicCore++;
-        }
-        //Loop back to first or last element
-        if(magicCore > magicCoreCount-1){
-            magicCore = 0;
-        }else if(magicCore < 0){
-            magicCore = magicCoreCount-1;
-        }
+    public void LockInput() {
+        inputLocked = true;
+    }
+
+    public void UnlockInput()
+    {
+        inputLocked = false;
     }
 }

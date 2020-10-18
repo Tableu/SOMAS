@@ -127,7 +127,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 228021863269273740}
-  m_LocalRotation: {x: -0, y: -0, z: -0.00000333786, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.0000015795231, w: 1}
   m_LocalPosition: {x: 1.33, y: -0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -275,6 +275,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -329,8 +330,8 @@ MonoBehaviour:
   - {fileID: 3743498483674652889}
   - {fileID: 3743498483674652893}
   m_Bounds:
-    m_Center: {x: -0.0000019073486, y: 0.024606228, z: 0}
-    m_Extent: {x: 2.5599992, y: 2.7704675, z: 0}
+    m_Center: {x: 0, y: 0.024606228, z: 0}
+    m_Extent: {x: 2.5599992, y: 2.7704685, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &3743498483674627299
@@ -380,6 +381,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -432,8 +434,8 @@ MonoBehaviour:
   - {fileID: 3743498483674652885}
   - {fileID: 3743498483674652883}
   m_Bounds:
-    m_Center: {x: 0.06379479, y: -0.13832486, z: 0}
-    m_Extent: {x: 0.88980204, y: 1.1852783, z: 0}
+    m_Center: {x: 0.063795626, y: -0.13832402, z: 0}
+    m_Extent: {x: 0.88980246, y: 1.1852764, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &3743498483674627301
@@ -483,6 +485,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -535,8 +538,8 @@ MonoBehaviour:
   - {fileID: 3743498483674652883}
   - {fileID: 3743498483674652885}
   m_Bounds:
-    m_Center: {x: 0.18119001, y: -0.08273637, z: 0}
-    m_Extent: {x: 0.60848254, y: 0.8130536, z: 0}
+    m_Center: {x: 0.18119335, y: -0.082736015, z: 0}
+    m_Extent: {x: 0.60848206, y: 0.813053, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &3743498483674627303
@@ -590,7 +593,7 @@ GameObject:
   - component: {fileID: 199881304}
   m_Layer: 8
   m_Name: Fire Cultist
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -738,18 +741,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  boundary:
-  - -13
-  - 2
   forward: {x: -1, y: 0}
-  attackLimit: 15
-  followLimit: 30
   playerFound: 0
   grounded: 0
   distanceToPlayer: {x: 0, y: 0}
   mask: 0
   raycastDirections:
   - {x: -1, y: 0}
+  boundary:
+  - -13
+  - 2
+  attackLimit: 15
+  followLimit: 30
 --- !u!114 &7432504223267368050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -822,6 +825,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -874,8 +878,8 @@ MonoBehaviour:
   - {fileID: 3743498483674652881}
   - {fileID: 3743498483674652895}
   m_Bounds:
-    m_Center: {x: 0.0036280751, y: 0.00041782856, z: 0}
-    m_Extent: {x: 0.98136497, y: 1.3462424, z: 0}
+    m_Center: {x: 0.0036296844, y: 0.00041806698, z: 0}
+    m_Extent: {x: 0.9813657, y: 1.3462405, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &3743498483674627309
@@ -925,6 +929,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -977,8 +982,8 @@ MonoBehaviour:
   - {fileID: 3743498483674652881}
   - {fileID: 3743498483674652895}
   m_Bounds:
-    m_Center: {x: -0.0013821721, y: 0.0023100376, z: 0}
-    m_Extent: {x: 0.7150856, y: 1.0776842, z: 0}
+    m_Center: {x: -0.0013825297, y: 0.0023112297, z: 0}
+    m_Extent: {x: 0.71508956, y: 1.0776851, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &3743498483674627311
@@ -1028,6 +1033,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1080,8 +1086,8 @@ MonoBehaviour:
   - {fileID: 3743498483674652893}
   - {fileID: 3743498483674652891}
   m_Bounds:
-    m_Center: {x: 0.042580128, y: -0.060891867, z: 0}
-    m_Extent: {x: 2.3457341, y: 2.1424775, z: 0}
+    m_Center: {x: 0.04258585, y: -0.060890198, z: 0}
+    m_Extent: {x: 2.3457341, y: 2.142478, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &3743498483674627313
@@ -1107,7 +1113,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3743498483674627313}
-  m_LocalRotation: {x: 0, y: 0, z: -0.24945176, w: 0.96838725}
+  m_LocalRotation: {x: 0, y: 0, z: -0.24945647, w: 0.96838605}
   m_LocalPosition: {x: 1.2109317, y: 0.00000027241137, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1138,7 +1144,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3743498483674627315}
-  m_LocalRotation: {x: 0, y: 0, z: 0.9898516, w: 0.1421049}
+  m_LocalRotation: {x: 0, y: 0, z: 0.9898514, w: 0.14210606}
   m_LocalPosition: {x: 1.2927814, y: 0.9267411, z: 0}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
   m_Children:
@@ -1169,7 +1175,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3743498483674627317}
-  m_LocalRotation: {x: 0, y: 0, z: -0.15901986, w: 0.9872754}
+  m_LocalRotation: {x: 0, y: 0, z: -0.15902041, w: 0.9872753}
   m_LocalPosition: {x: 1.2175748, y: -0.00000026741895, z: 0}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
   m_Children:
@@ -1295,7 +1301,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3743498483674627327}
-  m_LocalRotation: {x: 0, y: 0, z: -0.9920551, w: 0.12580423}
+  m_LocalRotation: {x: 0, y: 0, z: -0.9920549, w: 0.1258062}
   m_LocalPosition: {x: 0.74690175, y: -1.4656835, z: 0}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
   m_Children:
@@ -1326,7 +1332,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4644767096883843316}
-  m_LocalRotation: {x: -0, y: -0, z: -0.00000083446514, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.0000020414593, w: 1}
   m_LocalPosition: {x: 1.42, y: -0.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []

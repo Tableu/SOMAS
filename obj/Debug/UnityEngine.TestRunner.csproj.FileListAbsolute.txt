@@ -118,7 +118,6 @@ C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\System.Xml.XPath.dll
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\System.Xml.XPath.XDocument.dll
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityEditor.dll
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityEditor.Graphs.dll
-C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityEditor.VR.dll
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityEditor.WindowsStandalone.Extensions.dll
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityEngine.AccessibilityModule.dll
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityEngine.AIModule.dll
@@ -254,3 +253,7 @@ C:\Users\Darthvader\SOMAS\obj\Debug\UnityEngine.TestRunner.csproj.CoreCompileInp
 C:\Users\Darthvader\SOMAS\obj\Debug\UnityEngine.TestRunner.csproj.CopyComplete
 C:\Users\Darthvader\SOMAS\obj\Debug\UnityEngine.TestRunner.dll
 C:\Users\Darthvader\SOMAS\obj\Debug\UnityEngine.TestRunner.pdb
+C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityEngine.UIElementsNativeModule.dll
+C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityEngine.VirtualTexturingModule.dll
+C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityEngine.UIElementsNativeModule.xml
+C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityEngine.VirtualTexturingModule.xml

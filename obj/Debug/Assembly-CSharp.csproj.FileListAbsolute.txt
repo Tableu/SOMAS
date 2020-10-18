@@ -209,7 +209,6 @@ C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\Unity.RenderPipelines.Universal.Editor.
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\Unity.Timeline.pdb
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\Unity.2D.Animation.Triangle.Runtime.pdb
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\PsdPlugin.pdb
-C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\Unity.CollabProxy.Editor.pdb
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\Unity.Postprocessing.Editor.pdb
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\Unity.Rider.Editor.pdb
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.pdb
@@ -302,3 +301,10 @@ C:\Users\Darthvader\SOMAS\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cac
 C:\Users\Darthvader\SOMAS\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\Darthvader\SOMAS\obj\Debug\Assembly-CSharp.dll
 C:\Users\Darthvader\SOMAS\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityEngine.UIElementsNativeModule.dll
+C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityEngine.VirtualTexturingModule.dll
+C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\Unity.InputSystem.pdb
+C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\Unity.Searcher.Editor.pdb
+C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\Unity.VisualStudio.Editor.pdb
+C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityEngine.UIElementsNativeModule.xml
+C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityEngine.VirtualTexturingModule.xml

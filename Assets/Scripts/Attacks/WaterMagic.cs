@@ -26,10 +26,10 @@ public class WaterMagic : MonoBehaviour
         }
     }
     public void BasicWaterAttack(GameObject projectilePrefab, float speed,float rotationSpeed){
-        player.GetComponent<PlayerInput>().lockInput = true;
+        
         var projectile = AttackFunctions.SpawnProjectile(projectilePrefab, player,speed);
         projectile.GetComponent<Rigidbody2D>().AddTorque(rotationSpeed);
-        player.GetComponent<PlayerInput>().lockInput = false;
+        
     }
     private void IceAttack(GameObject projectilePrefab, float speed){
         Vector3 playerForward = player.GetComponent<PlayerData>().forward;

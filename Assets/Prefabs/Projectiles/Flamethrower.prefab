@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1938820408855756829}
   - component: {fileID: 2111706318150347331}
   - component: {fileID: 3876519292084445011}
+  - component: {fileID: 7848403588364694827}
   m_Layer: 11
   m_Name: Flamethrower
   m_TagString: PlayerProjectile
@@ -47,6 +48,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -94,4 +96,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd7ff81df548f854190c25e7901982fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePoints: 0
+  damagePoints: 10
+  destructible: 0
+  healthPoints: 0
+  timeLimit: 1
+  lifetime: 2
+--- !u!61 &7848403588364694827
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7876251513660944975}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0014288723, y: 0.0103544}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8511047, y: 0.5321295}
+  m_EdgeRadius: 0

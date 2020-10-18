@@ -14,13 +14,13 @@ public class EarthMagic : MonoBehaviour
 
     //Read directional input and cast the appropriate spell
     public void CastSpell(){
-        var horizontal = Input.GetAxis("Horizontal");
-        var vertical = Input.GetAxis("Vertical");
-        if(horizontal != 0){
+        var attackDirection = playerData.playerInputActions.Player.AttackDirection.ReadValue<Vector2>();
+
+        if (attackDirection.Equals(Vector2.left) || attackDirection.Equals(Vector2.right)){
             
-        }else if(vertical > 0){
+        }else if (attackDirection.Equals(Vector2.down)) {
             EarthWall(earthWall, 2,2);
-        }else if(vertical < 0){
+        }else if (attackDirection.Equals(Vector2.up)) {
             
         }
     }

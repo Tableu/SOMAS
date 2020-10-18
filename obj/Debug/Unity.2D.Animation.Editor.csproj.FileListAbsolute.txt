@@ -1,6 +1,5 @@
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\Unity.2D.Animation.Editor.dll
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\Unity.2D.Animation.Editor.pdb
-C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\Boo.Lang.dll
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\ICSharpCode.NRefactory.dll
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\Microsoft.CSharp.dll
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\Microsoft.Win32.Primitives.dll
@@ -122,7 +121,6 @@ C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\Unity.2D.Sprite.Editor.dll
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityEditor.dll
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityEditor.Graphs.dll
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityEditor.UI.dll
-C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityEditor.VR.dll
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityEditor.WindowsStandalone.Extensions.dll
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityEngine.AccessibilityModule.dll
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityEngine.AIModule.dll
@@ -185,8 +183,6 @@ C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityEngine.VideoModule.dll
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityEngine.VRModule.dll
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityEngine.WindModule.dll
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityEngine.XRModule.dll
-C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityScript.dll
-C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityScript.Lang.dll
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\Unity.Mathematics.dll
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\Unity.CompilationPipeline.Common.dll
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\Unity.Cecil.dll
@@ -197,10 +193,6 @@ C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\System.Configuration.dll
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\System.EnterpriseServices.dll
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\System.Transactions.dll
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\System.Diagnostics.Tracing.dll
-C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\Boo.Lang.Compiler.dll
-C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\Boo.Lang.PatternMatching.dll
-C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\Boo.Lang.Parser.dll
-C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\Boo.Lang.Useful.dll
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\Unity.CecilTools.dll
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\Unity.InternalAPIEditorBridge.001.pdb
 C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\Unity.InternalAPIEngineBridge.001.pdb
@@ -282,3 +274,7 @@ C:\Users\Darthvader\SOMAS\obj\Debug\Unity.2D.Animation.Editor.csproj.CoreCompile
 C:\Users\Darthvader\SOMAS\obj\Debug\Unity.2D.Animation.Editor.csproj.CopyComplete
 C:\Users\Darthvader\SOMAS\obj\Debug\Unity.2D.Animation.Editor.dll
 C:\Users\Darthvader\SOMAS\obj\Debug\Unity.2D.Animation.Editor.pdb
+C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityEngine.UIElementsNativeModule.dll
+C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityEngine.VirtualTexturingModule.dll
+C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityEngine.UIElementsNativeModule.xml
+C:\Users\Darthvader\SOMAS\Temp\Bin\Debug\UnityEngine.VirtualTexturingModule.xml

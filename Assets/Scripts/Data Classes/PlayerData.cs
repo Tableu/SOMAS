@@ -17,7 +17,22 @@ public class PlayerData : MonoBehaviour
     public delegate void RotateEventDelegate();
     public event RotateEventDelegate RotateEvent;
     public float previous;
+    public PlayerInputActions playerInputActions;
 
+    private void Awake()
+    {
+        playerInputActions = new PlayerInputActions();
+    }
+
+    private void OnEnable()
+    {
+        playerInputActions.Enable();
+    }
+
+    private void OnDisable()
+    {
+        playerInputActions.Disable();
+    }
     private void Start(){
         boundSize = GetComponent<Collider2D>().bounds.size;
         boundCenterOffset = transform.position - GetComponent<Collider2D>().bounds.center;
@@ -27,8 +42,9 @@ public class PlayerData : MonoBehaviour
     private void Update(){
         UpdateRotation();
     }
-    private void UpdateRotation(){
-        var horizontal = Input.GetAxisRaw("Horizontal");
+    private void UpdateRotation() //Changes which side the player faces and invokes the relevant events
+    {
+        var horizontal = playerInputActions.Player.Move.ReadValue<float>();
         if(horizontal < 0 && previous > 0){
             transform.rotation = Quaternion.Euler(0,0,0);
             forward = Vector2.left;
