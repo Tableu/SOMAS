@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.RenderPipelines.Unive
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Animation.Triangle.Runtime", "Unity.2D.Animation.Triangle.Runtime.csproj", "{2678b0a5-c0a2-2818-2154-b4a872a4d4b8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.InputSystem", "Unity.InputSystem.csproj", "{29dacbe3-8a82-50e8-54a9-3867fd2900bf}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.TextMeshPro", "Unity.TextMeshPro.csproj", "{c93213b3-a4f5-8368-32a3-8c9c256d978d}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Animation.Runtime", "Unity.2D.Animation.Runtime.csproj", "{dd6fd6e8-bb85-971b-f324-758cedf07cc2}"
@@ -107,6 +109,10 @@ Global
 		{2678b0a5-c0a2-2818-2154-b4a872a4d4b8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2678b0a5-c0a2-2818-2154-b4a872a4d4b8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2678b0a5-c0a2-2818-2154-b4a872a4d4b8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29dacbe3-8a82-50e8-54a9-3867fd2900bf}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29dacbe3-8a82-50e8-54a9-3867fd2900bf}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29dacbe3-8a82-50e8-54a9-3867fd2900bf}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29dacbe3-8a82-50e8-54a9-3867fd2900bf}.Release|Any CPU.Build.0 = Release|Any CPU
 		{c93213b3-a4f5-8368-32a3-8c9c256d978d}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{c93213b3-a4f5-8368-32a3-8c9c256d978d}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{c93213b3-a4f5-8368-32a3-8c9c256d978d}.Release|Any CPU.ActiveCfg = Release|Any CPU

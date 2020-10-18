@@ -1,14 +1,19 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
     public int damagePoints;
     public bool destructible;
     public int healthPoints;
+    public bool timeLimit;
+    public int lifetime;
     // Start is called before the first frame update
     private void Start()
     {
-        
+        if (timeLimit){
+            StartCoroutine(deathCoroutine());
+        }
     }
 
     // Update is called once per frame
@@ -21,5 +26,11 @@ public class Projectile : MonoBehaviour
         if(destructible){
             Destroy(gameObject);
         }
+    }
+
+    IEnumerator deathCoroutine()
+    {
+        yield return new WaitForSeconds(lifetime);
+        Destroy(gameObject);
     }
 }

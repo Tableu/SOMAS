@@ -25,17 +25,22 @@ public class PlayerHealth : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!collision.gameObject.CompareTag("EnemyProjectile")) return;
-        
-        healthPoints -= collision.gameObject.GetComponent<Projectile>().damagePoints;
-        var direction = collision.transform.GetComponent<Rigidbody2D>().velocity.normalized.x;
-        GetComponent<Rigidbody2D>().AddForce(new Vector2(playerData.knockback.x*direction,playerData.knockback.y),ForceMode2D.Impulse);
-        StartCoroutine(Invulnerable());
-        if(collision.gameObject.GetComponent<Projectile>().destructible){
-            Destroy(collision.gameObject);
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            healthPoints -= 10;
+            var direction = collision.transform.GetComponent<Rigidbody2D>().velocity.normalized.x;
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(playerData.knockback.x*direction,playerData.knockback.y),ForceMode2D.Impulse);
+            StartCoroutine(Invulnerable());
+        }else if (collision.gameObject.CompareTag("EnemyProjectile"))
+        {
+            healthPoints -= collision.gameObject.GetComponent<Projectile>().damagePoints;
+            var direction = collision.transform.GetComponent<EnemyData>().forward.normalized.x;
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(playerData.knockback.x*direction,playerData.knockback.y),ForceMode2D.Impulse);
+            StartCoroutine(Invulnerable());
         }
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision){
@@ -43,8 +48,8 @@ public class PlayerHealth : MonoBehaviour
     }
 
     private IEnumerator Invulnerable(){
-        col.enabled = false;
-        yield return new WaitForSeconds(3);
-        col.enabled = true;
+        gameObject.layer = 14;
+        yield return new WaitForSeconds(2);
+        gameObject.layer = 12;
     }
 }

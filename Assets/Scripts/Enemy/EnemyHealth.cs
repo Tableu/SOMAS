@@ -18,7 +18,7 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision){
+    private void OnCollisionEnter2D(Collision2D collision){
         if(collision.gameObject.CompareTag("PlayerProjectile")){
             healthPoints -= collision.gameObject.GetComponent<Projectile>().damagePoints;
         }
