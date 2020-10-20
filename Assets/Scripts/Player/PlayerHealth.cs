@@ -9,12 +9,16 @@ public class PlayerHealth : MonoBehaviour
     public event DeathEventDelegate DeathEvent; //Handles death of player, i.e stop camera, stop enemies
     private Animator animator;
     private PlayerData playerData;
+    private Rigidbody2D rigidBody;
+    private PlayerInput playerInput;
     // Start is called before the first frame update
     private void Start()
     {
         animator = GetComponent<Animator>();
         col = GetComponent<Collider2D>();
+        rigidBody = GetComponent<Rigidbody2D>();
         playerData = GetComponent<PlayerData>();
+        playerInput = GetComponent<PlayerInput>();
     }
 
     // Update is called once per frame
@@ -29,16 +33,26 @@ public class PlayerHealth : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            healthPoints -= 10;
-            var direction = collision.transform.GetComponent<Rigidbody2D>().velocity.normalized.x;
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(playerData.knockback.x*direction,playerData.knockback.y),ForceMode2D.Impulse);
             StartCoroutine(Invulnerable());
+            StartCoroutine(LockPlayerInput());
+            healthPoints -= 10;
+            var direction = (gameObject.transform.position - collision.gameObject.transform.position).normalized.x;
+            rigidBody.velocity = Vector2.zero;
+            if (playerData.grounded) {
+                rigidBody.AddForce(new Vector2(playerData.knockback.x * direction, playerData.knockback.y), ForceMode2D.Impulse);
+            }
+            else {
+                rigidBody.AddForce(new Vector2(playerData.knockback.x * direction, 0), ForceMode2D.Impulse);
+            }
         }else if (collision.gameObject.CompareTag("EnemyProjectile"))
         {
-            healthPoints -= collision.gameObject.GetComponent<Projectile>().damagePoints;
-            var direction = collision.transform.GetComponent<EnemyData>().forward.normalized.x;
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(playerData.knockback.x*direction,playerData.knockback.y),ForceMode2D.Impulse);
             StartCoroutine(Invulnerable());
+            StartCoroutine(LockPlayerInput());
+            healthPoints -= collision.gameObject.GetComponent<Projectile>().damagePoints;
+            var direction = collision.transform.GetComponent<Rigidbody2D>().velocity.normalized.x;
+            rigidBody.velocity = Vector2.zero;
+            rigidBody.AddForce(new Vector2(playerData.knockback.x*direction,playerData.knockback.y),ForceMode2D.Impulse);
+            
         }
         
     }
@@ -47,9 +61,15 @@ public class PlayerHealth : MonoBehaviour
         
     }
 
+    private IEnumerator LockPlayerInput()
+    {
+        playerInput.inputLocked = true;
+        yield return new WaitForSeconds(0.2f);
+        playerInput.inputLocked = false;
+    }
     private IEnumerator Invulnerable(){
         gameObject.layer = 14;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1f);
         gameObject.layer = 12;
     }
 }
