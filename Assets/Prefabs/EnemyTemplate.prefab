@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 3675484298278620470}
   m_Layer: 8
   m_Name: EnemyTemplate
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,12 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  boundary:
-  - -100
-  - 100
   forward: {x: -1, y: 0}
-  attackLimit: 15
-  followLimit: 30
   playerFound: 0
   grounded: 0
   distanceToPlayer: {x: 0, y: 0}
@@ -166,6 +161,11 @@ MonoBehaviour:
   raycastDirections:
   - {x: -1, y: 0}
   - {x: 1, y: 0}
+  boundary:
+  - -100
+  - 100
+  attackLimit: 15
+  followLimit: 30
 --- !u!114 &1157726372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +194,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

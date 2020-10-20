@@ -9,11 +9,13 @@ public class PlayerMovement : MonoBehaviour
     private bool isTouchingCol;
     private PlayerData playerData;
     private PlayerInputActions playerInputActions;
+    private PlayerInput playerInput;
     private void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
         playerData = GetComponent<PlayerData>();
+        playerInput = GetComponent<PlayerInput>();
         isTouchingCol = false;
         playerInputActions = playerData.playerInputActions;
         playerInputActions.Player.Move.performed += Stop; //Subscribe to input system triggers
@@ -23,6 +25,11 @@ public class PlayerMovement : MonoBehaviour
 
     // Update is called once per frame
     private void Update()
+    {
+        
+    }
+
+    public void Move()
     {
         var horizontal = playerInputActions.Player.Move.ReadValue<float>();
 
@@ -37,7 +44,8 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Jump(InputAction.CallbackContext context)
     {
-        //If player is touching the ground don't jump
+        //If player is not touching the ground don't jump
+        if (playerInput.inputLocked) return;
         if (!playerData.grounded) return;
         rigidBody.AddRelativeForce(new Vector2(0,playerData.jumpVelocity), ForceMode2D.Impulse);
         Debug.Log("Jump Key");

@@ -11,13 +11,14 @@ public class PlayerInput: MonoBehaviour
     public FireMagic fireMagic;
     public MetalSummon metalSummon;
     private PlayerData playerData;
-    
+    private PlayerMovement playerMovement;
 
     // Start is called before the first frame update
     private void Start()
     {
         inputLocked = false;
         playerData = GameObject.FindWithTag("Player").GetComponent<PlayerData>();
+        playerMovement = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -25,6 +26,7 @@ public class PlayerInput: MonoBehaviour
     {
         if(!inputLocked){
             CheckInputs();
+            playerMovement.Move();
         }
         //setMagicCore();
     }
