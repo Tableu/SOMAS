@@ -5,9 +5,10 @@ public class WaterMagic : MonoBehaviour
     public GameObject waterOrb;
     public GameObject waterWave;
     private GameObject player;
-
-    private void Start(){
-
+    private PlayerInput playerInput;
+    private void Start()
+    {
+        playerInput = player.GetComponent<PlayerInput>();
     }
 
     private void Update(){
@@ -27,12 +28,12 @@ public class WaterMagic : MonoBehaviour
     }
     public void BasicWaterAttack(GameObject projectilePrefab, float speed,float rotationSpeed){
         
-        var projectile = AttackFunctions.SpawnProjectile(projectilePrefab, player,speed);
-        projectile.GetComponent<Rigidbody2D>().AddTorque(rotationSpeed);
+        //var projectile = AttackFunctions.SpawnProjectile(projectilePrefab, player,speed);
+        //projectile.GetComponent<Rigidbody2D>().AddTorque(rotationSpeed);
         
     }
     private void IceAttack(GameObject projectilePrefab, float speed){
-        Vector3 playerForward = player.GetComponent<PlayerData>().forward;
+        Vector3 playerForward = playerInput.GetForward();
         var playerPos = player.GetComponent<PlayerInput>().playerPos;
         var spawnPos = new Vector3[3];
         var projectile = new GameObject[3];
@@ -51,13 +52,13 @@ public class WaterMagic : MonoBehaviour
         projectile[0].transform.rotation = Quaternion.Euler(0,0,angle);
         projectile[1].transform.rotation = Quaternion.Euler(0,0,angle);
         projectile[2].transform.rotation = Quaternion.Euler(0,0,angle);
-
-        projectile[0].GetComponent<Rigidbody2D>().velocity = player.GetComponent<PlayerData>().forward*speed;
-        projectile[1].GetComponent<Rigidbody2D>().velocity = player.GetComponent<PlayerData>().forward*speed;
-        projectile[2].GetComponent<Rigidbody2D>().velocity = player.GetComponent<PlayerData>().forward*speed;
+        playerForward = playerInput.GetForward();
+        projectile[0].GetComponent<Rigidbody2D>().velocity = playerForward*speed;
+        projectile[1].GetComponent<Rigidbody2D>().velocity = playerForward*speed;
+        projectile[2].GetComponent<Rigidbody2D>().velocity = playerForward*speed;
     }
     private void WaveAttack(GameObject projectilePrefab, float speed, Vector2 displacement){
-        Vector3 playerForward = player.GetComponent<PlayerData>().forward;
+        Vector3 playerForward = playerInput.GetForward();
         Vector3 dist = playerForward*displacement;
         var angle = 0;
         var projectile = Instantiate(projectilePrefab, player.transform.position+dist, Quaternion.identity);

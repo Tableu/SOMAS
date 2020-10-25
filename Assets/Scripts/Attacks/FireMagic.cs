@@ -4,11 +4,11 @@ public class FireMagic : MonoBehaviour
 {
     private GameObject player;
     public GameObject flamethrower;
-    private PlayerData playerData;
+    private PlayerInput playerInput;
 
     private void Start(){
         player = GameObject.FindWithTag("Player");
-        playerData = player.GetComponent<PlayerData>();
+        playerInput = GetComponent<PlayerInput>();
     }
 
     private void Update(){
@@ -16,7 +16,7 @@ public class FireMagic : MonoBehaviour
     }
     //Read directional input and cast the appropriate spell
     public void CastSpell(){
-        var attackDirection = playerData.playerInputActions.Player.AttackDirection.ReadValue<Vector2>();
+        var attackDirection = playerInput.playerInputActions.Player.AttackDirection.ReadValue<Vector2>();
 
         if (attackDirection.Equals(Vector2.left) || attackDirection.Equals(Vector2.right)){
             
@@ -28,7 +28,7 @@ public class FireMagic : MonoBehaviour
     }
     //Spawn flamethrower projectile in front of player.
     private void Flamethrower(GameObject projectilePrefab){
-        Vector3 playerForward = playerData.forward;
+        Vector3 playerForward = playerInput.GetForward();
         var projectile = Instantiate(projectilePrefab, player.transform.position + new Vector3(7.5f*playerForward.x,0.2f,0), Quaternion.identity);
         projectile.transform.parent = player.transform;
         projectile.transform.rotation = Quaternion.Euler(0,0,80*playerForward.x);

@@ -12,7 +12,6 @@ public class MetalSummon : MonoBehaviour
     public int metalRotation;
     private SpriteRenderer spriteRenderer;
     public int healthPoints;
-    private PlayerData playerData;
     private PlayerInput playerInput;
     private Rigidbody2D rigidBody;
     private Vector3 shieldPos;
@@ -23,12 +22,11 @@ public class MetalSummon : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
-        player.GetComponent<PlayerData>().RotateEvent += OnRotateEvent;
+        player.GetComponent<PlayerInput>().RotateEvent += OnRotateEvent;
         currentForm = Shield;
         metalRotation = Left;
         spriteRenderer = GetComponent<SpriteRenderer>();
         col = GetComponent<Collider2D>();
-        playerData = player.GetComponent<PlayerData>();
         playerInput = player.GetComponent<PlayerInput>();
         rigidBody = GetComponent<Rigidbody2D>();
         shieldPos = transform.localPosition;
@@ -40,8 +38,8 @@ public class MetalSummon : MonoBehaviour
         transform.rotation = Quaternion.Euler(0,metalRotation,0);
     }
     public void CastSpell(){
-        var horizontal = playerData.playerInputActions.Player.AttackDirection.ReadValue<Vector2>().x;
-        var attackDirection = playerData.playerInputActions.Player.AttackDirection.ReadValue<Vector2>();
+        var horizontal = playerInput.playerInputActions.Player.AttackDirection.ReadValue<Vector2>().x;
+        var attackDirection = playerInput.playerInputActions.Player.AttackDirection.ReadValue<Vector2>();
         if (attackDirection.Equals(Vector2.left) || attackDirection.Equals(Vector2.right))
         {
             if ((horizontal < 0 && metalRotation == Right) || (horizontal > 0 && metalRotation == Left)) {
@@ -58,7 +56,7 @@ public class MetalSummon : MonoBehaviour
         }
     }
     private void OnDestroy(){
-        GameObject.FindWithTag("Player").GetComponent<PlayerData>().RotateEvent -= OnRotateEvent;
+        GameObject.FindWithTag("Player").GetComponent<PlayerInput>().RotateEvent -= OnRotateEvent;
     }
     private void ChangeForm(int form){ //Switch to a different metal form (liquid, shield, sword)
         spriteRenderer.sprite = sprites[form];
@@ -80,9 +78,9 @@ public class MetalSummon : MonoBehaviour
         }
     }
     private void ReturnToPlayer(){ //Reattaches the summon to the player. Updates summon attributes accordingly
-        var playerDirection = player.GetComponent<PlayerData>().forward.x;
+        var playerDirection = playerInput.GetForward().x;
         gameObject.transform.parent = player.transform;
-        player.GetComponent<PlayerData>().RotateEvent += OnRotateEvent;
+        playerInput.RotateEvent += OnRotateEvent;
         rigidBody.velocity = new Vector2(0,0);
         transform.localPosition = shieldPos;
         gameObject.layer = 13;
@@ -98,9 +96,9 @@ public class MetalSummon : MonoBehaviour
     }
 
     private void Attack(){
-        var horizontal = playerData.playerInputActions.Player.AttackDirection.ReadValue<Vector2>().x;
+        var horizontal = playerInput.playerInputActions.Player.AttackDirection.ReadValue<Vector2>().x;
         gameObject.transform.parent = null;
-        player.GetComponent<PlayerData>().RotateEvent -= OnRotateEvent;
+        playerInput.RotateEvent -= OnRotateEvent;
         ChangeForm(Sword);
         gameObject.layer = 11; //Change layer to playerprojectiles
         if(horizontal < 0)

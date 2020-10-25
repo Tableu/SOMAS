@@ -7,20 +7,24 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rigidBody;
     private Collider2D col;
     private bool isTouchingCol;
-    private PlayerData playerData;
     private PlayerInputActions playerInputActions;
     private PlayerInput playerInput;
+    public float speed;
+    public float jumpVelocity;
+    public float maxSpeed;
+    private Vector3 boundSize;
+    private Vector3 boundCenterOffset;
     private void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
-        playerData = GetComponent<PlayerData>();
         playerInput = GetComponent<PlayerInput>();
         isTouchingCol = false;
-        playerInputActions = playerData.playerInputActions;
+        playerInputActions = playerInput.playerInputActions;
         playerInputActions.Player.Move.performed += Stop; //Subscribe to input system triggers
         playerInputActions.Player.Jump.started += Jump;
-        
+        boundSize = col.bounds.size;
+        boundCenterOffset = transform.position - col.bounds.center;
     }
 
     // Update is called once per frame
@@ -33,12 +37,12 @@ public class PlayerMovement : MonoBehaviour
     {
         var horizontal = playerInputActions.Player.Move.ReadValue<float>();
 
-        var horizontalVelocity = horizontal*playerData.speed;
+        var horizontalVelocity = horizontal*speed;
 
-        if(Mathf.Abs(rigidBody.velocity.x) < playerData.maxSpeed){
+        if(Mathf.Abs(rigidBody.velocity.x) < maxSpeed){
             rigidBody.AddForce(new Vector2(horizontalVelocity, 0),ForceMode2D.Impulse);
         }
-        if(!playerData.grounded && isTouchingCol && playerData.forwardRaycastHit){
+        if(!PlayerRaycasts.Grounded(transform.position,boundCenterOffset,boundSize) && isTouchingCol && PlayerRaycasts.ForwardHit(transform,boundCenterOffset,boundSize,playerInput.GetForward())){
             rigidBody.velocity = new Vector2(0, rigidBody.velocity.y);
         }
     }
@@ -46,8 +50,8 @@ public class PlayerMovement : MonoBehaviour
     {
         //If player is not touching the ground don't jump
         if (playerInput.inputLocked) return;
-        if (!playerData.grounded) return;
-        rigidBody.AddRelativeForce(new Vector2(0,playerData.jumpVelocity), ForceMode2D.Impulse);
+        if (!PlayerRaycasts.Grounded(transform.position,boundCenterOffset,boundSize)) return;
+        rigidBody.AddRelativeForce(new Vector2(0,jumpVelocity), ForceMode2D.Impulse);
         Debug.Log("Jump Key");
     }
 
