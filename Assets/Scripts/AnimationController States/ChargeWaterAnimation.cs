@@ -10,7 +10,7 @@ public class ChargeWaterAnimation : StateMachineBehaviour
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player = GameObject.FindWithTag("Player"); 
-        displacement = new Vector3(displacement.x*player.GetComponent<PlayerData>().forward.x,0,0);
+        //displacement = new Vector3(displacement.x*player.GetComponent<PlayerData>().forward.x,0,0);
         chargingAnimation = Instantiate(chargingAnimationPrefab, player.transform.position+displacement, Quaternion.identity);
         chargingAnimation.transform.parent = player.transform;
     }

@@ -8,17 +8,20 @@ public class PlayerHealth : MonoBehaviour
     public delegate void DeathEventDelegate();
     public event DeathEventDelegate DeathEvent; //Handles death of player, i.e stop camera, stop enemies
     private Animator animator;
-    private PlayerData playerData;
     private Rigidbody2D rigidBody;
     private PlayerInput playerInput;
+    public Vector2 knockback;
+    private Vector3 boundSize;
+    private Vector3 boundCenterOffset;
     // Start is called before the first frame update
     private void Start()
     {
         animator = GetComponent<Animator>();
         col = GetComponent<Collider2D>();
         rigidBody = GetComponent<Rigidbody2D>();
-        playerData = GetComponent<PlayerData>();
         playerInput = GetComponent<PlayerInput>();
+        boundSize = col.bounds.size;
+        boundCenterOffset = transform.position - col.bounds.center;
     }
 
     // Update is called once per frame
@@ -38,11 +41,11 @@ public class PlayerHealth : MonoBehaviour
             healthPoints -= 10;
             var direction = (gameObject.transform.position - collision.gameObject.transform.position).normalized.x;
             rigidBody.velocity = Vector2.zero;
-            if (playerData.grounded) {
-                rigidBody.AddForce(new Vector2(playerData.knockback.x * direction, playerData.knockback.y), ForceMode2D.Impulse);
+            if (PlayerRaycasts.Grounded(transform.position, boundCenterOffset,boundSize)) {
+                rigidBody.AddForce(new Vector2(knockback.x * direction, knockback.y), ForceMode2D.Impulse);
             }
             else {
-                rigidBody.AddForce(new Vector2(playerData.knockback.x * direction, 0), ForceMode2D.Impulse);
+                rigidBody.AddForce(new Vector2(knockback.x * direction, 0), ForceMode2D.Impulse);
             }
         }else if (collision.gameObject.CompareTag("EnemyProjectile"))
         {
@@ -51,7 +54,7 @@ public class PlayerHealth : MonoBehaviour
             healthPoints -= collision.gameObject.GetComponent<Projectile>().damagePoints;
             var direction = collision.transform.GetComponent<Rigidbody2D>().velocity.normalized.x;
             rigidBody.velocity = Vector2.zero;
-            rigidBody.AddForce(new Vector2(playerData.knockback.x*direction,playerData.knockback.y),ForceMode2D.Impulse);
+            rigidBody.AddForce(new Vector2(knockback.x*direction,knockback.y),ForceMode2D.Impulse);
             
         }
         

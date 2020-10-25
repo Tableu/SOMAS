@@ -4,19 +4,19 @@ public class PlayerModel : MonoBehaviour
 {
     private Animator animator;
     private Rigidbody2D rigidBody;
-    private PlayerData playerData;
+    private PlayerInput playerInput;
     // Start is called before the first frame update
     private void Start()
     {
         animator = GetComponent<Animator>();
         rigidBody = transform.parent.GetComponent<Rigidbody2D>();
-        playerData = GameObject.FindWithTag("Player").GetComponent<PlayerData>();
+        playerInput = GameObject.FindWithTag("Player").GetComponent<PlayerInput>();
     }
 
     // Update is called once per frame
     private void Update()
     {
-        if(playerData.playerInputActions.Player.Move.ReadValue<float>() == 0){
+        if(playerInput.playerInputActions.Player.Move.ReadValue<float>() == 0){
             animator.SetBool("Walk",false);
             animator.SetBool("Idle",true);
         }else{
