@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
         if(Mathf.Abs(rigidBody.velocity.x) < maxSpeed){
             rigidBody.AddForce(new Vector2(horizontalVelocity, 0),ForceMode2D.Impulse);
         }
-        if(!PlayerRaycasts.Grounded(transform.position,boundCenterOffset,boundSize) && isTouchingCol && PlayerRaycasts.ForwardHit(transform,boundCenterOffset,boundSize,playerInput.GetForward())){
+        if(!PlayerRaycasts.Grounded(transform.position,boundCenterOffset,boundSize) && isTouchingCol && PlayerRaycasts.ForwardHit(transform,boundCenterOffset,boundSize,transform.right)){
             rigidBody.velocity = new Vector2(0, rigidBody.velocity.y);
         }
     }
