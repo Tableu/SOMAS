@@ -28,7 +28,7 @@ public class EarthMagic : MonoBehaviour
     private void EarthWall(GameObject earthWallPrefab, float raycastLength, float earthWallPosition){
         //if(!playerData.grounded)
             //return;
-        Vector3 playerForward = playerInput.GetForward();
+        Vector3 playerForward = transform.parent.right;
         Vector2 spawnPosition = player.transform.position + playerForward*earthWallPosition;
         var rayHit = Physics2D.Raycast(spawnPosition, Vector2.down, raycastLength, LayerMask.GetMask("Platforms"));
         Debug.DrawRay(spawnPosition, Vector2.down*raycastLength,Color.red);

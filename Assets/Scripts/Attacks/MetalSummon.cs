@@ -24,7 +24,7 @@ public class MetalSummon : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         player.GetComponent<PlayerInput>().RotateEvent += OnRotateEvent;
         currentForm = Shield;
-        metalRotation = Left;
+        metalRotation = Right;
         spriteRenderer = GetComponent<SpriteRenderer>();
         col = GetComponent<Collider2D>();
         playerInput = player.GetComponent<PlayerInput>();
@@ -78,19 +78,19 @@ public class MetalSummon : MonoBehaviour
         }
     }
     private void ReturnToPlayer(){ //Reattaches the summon to the player. Updates summon attributes accordingly
-        var playerDirection = playerInput.GetForward().x;
+        var playerDirection = player.transform.right.x;
         gameObject.transform.parent = player.transform;
         playerInput.RotateEvent += OnRotateEvent;
         rigidBody.velocity = new Vector2(0,0);
-        transform.localPosition = shieldPos;
+        transform.localPosition = new Vector3((-1)*shieldPos.x,shieldPos.y,shieldPos.z);
         gameObject.layer = 13;
         if (playerDirection > 0)
         {
-            transform.rotation = Quaternion.Euler(0,0,0);
+            transform.rotation = Quaternion.Euler(0,Right,0);
             metalRotation = Right;
         }else if(playerDirection < 0)
         {
-            transform.rotation = Quaternion.Euler(0,180,0);
+            transform.rotation = Quaternion.Euler(0,Left,0);
             metalRotation = Left;
         }
     }
@@ -119,8 +119,8 @@ public class MetalSummon : MonoBehaviour
         {
             playerInput.LockInput();
             Transform transform1;
-            (transform1 = transform).rotation = Quaternion.Euler(0,180,0);
-            transform1.localPosition = new Vector3(shieldPos.x,position.y,position.z);
+            (transform1 = transform).rotation = Quaternion.Euler(0,Left,0);
+            transform1.localPosition = new Vector3((-1)*shieldPos.x,position.y,position.z);
             metalRotation = Left;
             Debug.Log("Metal switched to left side");
             playerInput.UnlockInput();
@@ -128,8 +128,8 @@ public class MetalSummon : MonoBehaviour
         {
             playerInput.LockInput();
             Transform transform1;
-            (transform1 = transform).rotation = Quaternion.Euler(0,0,0);
-            transform1.localPosition = new Vector3(shieldPos.x,position.y,position.z);
+            (transform1 = transform).rotation = Quaternion.Euler(0,Right,0);
+            transform1.localPosition = new Vector3((-1)*shieldPos.x,position.y,position.z);
             metalRotation = Right;
             Debug.Log("Metal switched to right side");
             playerInput.UnlockInput();

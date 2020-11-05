@@ -1,19 +1,7 @@
 ﻿using UnityEngine;
 
-public class PlayerRaycasts : MonoBehaviour
+public class PlayerRaycasts
 {
-    private Collider2D col;
-    // Start is called before the first frame update
-    private void Start()
-    {
-        col = GetComponent<Collider2D>();
-    }
-
-    // Update is called once per frame
-    private void Update()
-    {
-        
-    }
     public static bool Grounded(Vector3 position, Vector3 boundCenterOffset, Vector3 boundSize)
     {
         var downRaycasts = new RaycastHit2D[3];
