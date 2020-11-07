@@ -9,21 +9,21 @@ public class WaterMagic : MonoBehaviour
     private void Start()
     {
         playerInput = transform.parent.GetComponent<PlayerInput>();
+        player = GameObject.FindWithTag("Player");
     }
 
     private void Update(){
 
     }
     public void CastSpell(){
-        var horizontal = Input.GetAxis("Horizontal");
-        var vertical = Input.GetAxis("Vertical");
-        player = GameObject.FindWithTag("Player");
-        if(horizontal != 0){
+        var attackDirection = playerInput.playerInputActions.Player.AttackDirection.ReadValue<Vector2>();
+
+        if (attackDirection.Equals(Vector2.left) || attackDirection.Equals(Vector2.right)){
             BasicWaterAttack(waterOrb, 10, 10);
-        }else if(vertical > 0){
-            
-        }else if(vertical < 0){
+        }else if (attackDirection.Equals(Vector2.down)) {
             WaveAttack(waterWave,10,new Vector2(2,0));
+        }else if (attackDirection.Equals(Vector2.up)) {
+            FreezeAttack(2);
         }
     }
     public void BasicWaterAttack(GameObject projectilePrefab, float speed,float rotationSpeed){
@@ -56,6 +56,13 @@ public class WaterMagic : MonoBehaviour
         projectile[0].GetComponent<Rigidbody2D>().velocity = playerForward*speed;
         projectile[1].GetComponent<Rigidbody2D>().velocity = playerForward*speed;
         projectile[2].GetComponent<Rigidbody2D>().velocity = playerForward*speed;
+    }
+
+    private void FreezeAttack(float freezeDuration)
+    {
+        var hit = Physics2D.CircleCast(player.transform.position,3,new Vector2(1,0),1,LayerMask.GetMask("Water"));
+        if(hit)
+            hit.collider.gameObject.GetComponent<SpriteRenderer>().color = Color.black;
     }
     private void WaveAttack(GameObject projectilePrefab, float speed, Vector2 displacement){
         Vector3 playerForward = transform.parent.right;
