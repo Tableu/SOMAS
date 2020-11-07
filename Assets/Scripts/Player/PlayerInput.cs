@@ -53,7 +53,7 @@ public class PlayerInput: MonoBehaviour
             earthMagic.CastSpell();
         }else if(playerInputActions.Player.Core2.triggered){
             playerPos = transform.position;
-            fireMagic.CastSpell();
+            waterMagic.CastSpell();
         }else if(playerInputActions.Player.Core3.triggered){
             playerPos = transform.position;
             metalSummon.CastSpell();
