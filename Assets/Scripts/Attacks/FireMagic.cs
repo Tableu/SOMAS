@@ -16,7 +16,7 @@ public class FireMagic : MonoBehaviour
     }
     //Read directional input and cast the appropriate spell
     public void CastSpell(){
-        var attackDirection = playerInput.playerInputActions.Player.AttackDirection.ReadValue<Vector2>();
+        var attackDirection = playerInput.playerInputActions.Player.TapAttack.ReadValue<Vector2>();
 
         if (attackDirection.Equals(Vector2.left) || attackDirection.Equals(Vector2.right)){
             

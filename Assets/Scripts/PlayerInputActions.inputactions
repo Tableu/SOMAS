@@ -22,33 +22,41 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Core 1",
+                    "name": "Water",
                     "type": "Button",
                     "id": "b43ef5c4-1425-4248-915b-0d52fe37e015",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Hold"
+                    "interactions": "Press(behavior=1)"
                 },
                 {
-                    "name": "Core 2",
+                    "name": "Earth",
                     "type": "Button",
                     "id": "a0dd803f-6c02-4ee3-b6ff-a5aba33adfb2",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press"
                 },
                 {
-                    "name": "Core 3",
+                    "name": "Ice",
                     "type": "Button",
                     "id": "5371135e-e67b-454f-8bfb-c733947ef853",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press"
+                },
+                {
+                    "name": "Tap Attack",
+                    "type": "Button",
+                    "id": "d9ee865e-2ab1-48b0-a1cf-ba531f449639",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 },
                 {
-                    "name": "Attack Direction",
+                    "name": "Hold Attack",
                     "type": "Button",
-                    "id": "d9ee865e-2ab1-48b0-a1cf-ba531f449639",
+                    "id": "a4c8d7a3-7124-4dc1-b051-fcd971097112",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -139,29 +147,29 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Core 1",
+                    "action": "Water",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "f487a203-148b-4630-9388-68e581275817",
-                    "path": "<Keyboard>/k",
+                    "path": "<Keyboard>/j",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Core 2",
+                    "action": "Earth",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "87b09ac0-2331-43a4-b6e2-ede0fd6f4a2c",
-                    "path": "<Keyboard>/l",
+                    "path": "<Keyboard>/k",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Core 3",
+                    "action": "Ice",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -172,7 +180,7 @@
                     "interactions": "Tap",
                     "processors": "",
                     "groups": "",
-                    "action": "Attack Direction",
+                    "action": "Tap Attack",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -183,7 +191,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Attack Direction",
+                    "action": "Tap Attack",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -194,7 +202,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Attack Direction",
+                    "action": "Tap Attack",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -205,7 +213,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Attack Direction",
+                    "action": "Tap Attack",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -216,7 +224,62 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Attack Direction",
+                    "action": "Tap Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "2D Vector",
+                    "id": "5379961c-d4aa-4513-937c-e5737674cd99",
+                    "path": "2DVector",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Hold Attack",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "4606338f-abc5-43c7-906f-042c6fce920d",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Hold Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "603ae869-23bf-48fd-a76d-8845647b1d1e",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Hold Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "482dc281-ff0b-46d5-b885-7edd644d5db7",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Hold Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "89c904f4-7fc7-4b8d-beab-9243c8597796",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Hold Attack",
                     "isComposite": false,
                     "isPartOfComposite": true
                 }

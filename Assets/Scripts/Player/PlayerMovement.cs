@@ -28,9 +28,8 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void Update()
-    {
-        
+    private void Update() {
+        Move();
     }
 
     public void Move()
@@ -49,7 +48,6 @@ public class PlayerMovement : MonoBehaviour
     private void Jump(InputAction.CallbackContext context)
     {
         //If player is not touching the ground don't jump
-        if (playerInput.inputLocked) return;
         if (!PlayerRaycasts.Grounded(transform.position,boundCenterOffset,boundSize)) return;
         rigidBody.AddRelativeForce(new Vector2(0,jumpVelocity), ForceMode2D.Impulse);
         Debug.Log("Jump Key");

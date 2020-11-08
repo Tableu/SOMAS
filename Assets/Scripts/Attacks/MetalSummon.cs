@@ -38,8 +38,8 @@ public class MetalSummon : MonoBehaviour
         transform.rotation = Quaternion.Euler(0,metalRotation,0);
     }
     public void CastSpell(){
-        var horizontal = playerInput.playerInputActions.Player.AttackDirection.ReadValue<Vector2>().x;
-        var attackDirection = playerInput.playerInputActions.Player.AttackDirection.ReadValue<Vector2>();
+        var horizontal = playerInput.playerInputActions.Player.TapAttack.ReadValue<Vector2>().x;
+        var attackDirection = playerInput.playerInputActions.Player.TapAttack.ReadValue<Vector2>();
         if (attackDirection.Equals(Vector2.left) || attackDirection.Equals(Vector2.right))
         {
             if ((horizontal < 0 && metalRotation == Right) || (horizontal > 0 && metalRotation == Left)) {
@@ -96,7 +96,7 @@ public class MetalSummon : MonoBehaviour
     }
 
     private void Attack(){
-        var horizontal = playerInput.playerInputActions.Player.AttackDirection.ReadValue<Vector2>().x;
+        var horizontal = playerInput.playerInputActions.Player.TapAttack.ReadValue<Vector2>().x;
         gameObject.transform.parent = null;
         playerInput.RotateEvent -= OnRotateEvent;
         ChangeForm(Sword);
