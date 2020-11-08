@@ -6,14 +6,19 @@ public class EarthMagic : MonoBehaviour
     public GameObject earthWall;
     private GameObject player;
     private PlayerInput playerInput;
+    private PlayerInputActions playerInputActions;
     private void Start(){
         player = GameObject.FindWithTag("Player");
-        playerInput = GetComponent<PlayerInput>();
+        playerInput =  transform.parent.GetComponent<PlayerInput>();
+        playerInputActions = playerInput.playerInputActions;
+        playerInputActions.Player.Earth.performed += context => {
+            CastSpell();
+        };
     }
 
     //Read directional input and cast the appropriate spell
     public void CastSpell(){
-        var attackDirection = playerInput.playerInputActions.Player.AttackDirection.ReadValue<Vector2>();
+        var attackDirection = playerInputActions.Player.TapAttack.ReadValue<Vector2>();
 
         if (attackDirection.Equals(Vector2.left) || attackDirection.Equals(Vector2.right)){
             

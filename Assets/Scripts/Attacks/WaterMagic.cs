@@ -6,35 +6,48 @@ public class WaterMagic : MonoBehaviour
     public GameObject waterWave;
     private GameObject player;
     private PlayerInput playerInput;
+    public PlayerInputActions playerInputActions;
     private void Start()
     {
         playerInput = transform.parent.GetComponent<PlayerInput>();
         player = GameObject.FindWithTag("Player");
+        playerInputActions = playerInput.playerInputActions;
+        playerInputActions.Player.Water.performed += context => {
+            CastSpell(context.duration);
+        };
+        playerInputActions.Player.Ice.performed += context => {
+            FreezeAttack(2);
+        };
     }
 
     private void Update(){
 
     }
-    public void CastSpell(){
-        var attackDirection = playerInput.playerInputActions.Player.AttackDirection.ReadValue<Vector2>();
-
-        if (attackDirection.Equals(Vector2.left) || attackDirection.Equals(Vector2.right)){
-            BasicWaterAttack(waterOrb, 10, 10);
+    private void CastSpell(double holdDuration){
+        var attackDirection = playerInputActions.Player.TapAttack.ReadValue<Vector2>();
+        if (attackDirection.Equals(Vector2.left) || attackDirection.Equals(Vector2.right)) {
+            //basic water push
         }else if (attackDirection.Equals(Vector2.down)) {
-            WaveAttack(waterWave,10,new Vector2(2,0));
+            
         }else if (attackDirection.Equals(Vector2.up)) {
-            FreezeAttack(2);
+            
+        }else{
+            if (holdDuration > 1){
+                WaveAttack(waterWave, 10, new Vector2(2, 0));
+            }
+            else{
+                WaterOrb(waterOrb, 10, 10);
+            }
         }
     }
-    public void BasicWaterAttack(GameObject projectilePrefab, float speed,float rotationSpeed){
-        
-        //var projectile = AttackFunctions.SpawnProjectile(projectilePrefab, player,speed);
-        //projectile.GetComponent<Rigidbody2D>().AddTorque(rotationSpeed);
-        
+    private void WaterOrb(GameObject projectilePrefab, float speed,float rotationSpeed){
+        var projectile = Instantiate(projectilePrefab, player.transform.position, Quaternion.identity);
+        projectile.GetComponent<Rigidbody2D>().velocity = player.transform.right*speed;
+        projectile.GetComponent<Rigidbody2D>().AddTorque(rotationSpeed);
     }
     private void IceAttack(GameObject projectilePrefab, float speed){
         Vector3 playerForward = transform.parent.right;
-        var playerPos = player.GetComponent<PlayerInput>().playerPos;
+        var playerPos = player.transform.position;
         var spawnPos = new Vector3[3];
         var projectile = new GameObject[3];
         var angle = 0;

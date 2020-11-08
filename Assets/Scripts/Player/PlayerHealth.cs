@@ -66,9 +66,9 @@ public class PlayerHealth : MonoBehaviour
 
     private IEnumerator LockPlayerInput()
     {
-        playerInput.inputLocked = true;
+        playerInput.LockInput();
         yield return new WaitForSeconds(0.2f);
-        playerInput.inputLocked = false;
+        playerInput.UnlockInput();
     }
     private IEnumerator Invulnerable(){
         gameObject.layer = 14;

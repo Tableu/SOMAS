@@ -1,71 +1,40 @@
 ﻿using System;
+using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerInput: MonoBehaviour
 {
-    public Vector3 playerPos;
-    public bool inputLocked;
-    public WaterMagic waterMagic;
-    public EarthMagic earthMagic;
-    public FireMagic fireMagic;
-    public MetalSummon metalSummon;
     private PlayerMovement playerMovement;
     public delegate void RotateEventDelegate();
     public event RotateEventDelegate RotateEvent;
     public float previous;
     public PlayerInputActions playerInputActions;
     // Start is called before the first frame update
-    private void Awake()
-    {
+    private void Awake() {
         playerInputActions = new PlayerInputActions();
     }
 
-    private void OnEnable()
-    {
+    private void OnEnable() {
         playerInputActions.Enable();
     }
 
-    private void OnDisable()
-    {
+    private void OnDisable() {
         playerInputActions.Disable();
     }
-    private void Start()
-    {
-        inputLocked = false;
-        playerMovement = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
+    private void Start(){
         previous = -1;
     }
-
     // Update is called once per frame
-    private void Update()
-    {
+    private void Update(){
         UpdateRotation();
-        if(!inputLocked){
-            CheckInputs();
-            playerMovement.Move();
-        }
-        //setMagicCore();
-    }
-    private void CheckInputs(){
-        if(playerInputActions.Player.Core1.triggered){
-            playerPos = transform.position;
-            earthMagic.CastSpell();
-        }else if(playerInputActions.Player.Core2.triggered){
-            playerPos = transform.position;
-            waterMagic.CastSpell();
-        }else if(playerInputActions.Player.Core3.triggered){
-            playerPos = transform.position;
-            metalSummon.CastSpell();
-        }
     }
     public void LockInput() {
-        inputLocked = true;
+        playerInputActions.Player.Disable();
     }
 
-    public void UnlockInput()
-    {
-        inputLocked = false;
+    public void UnlockInput() {
+        playerInputActions.Player.Enable();
     }
     private void UpdateRotation() //Changes which side the player faces and invokes the relevant events
     {

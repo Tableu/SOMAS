@@ -35,33 +35,41 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Core 1"",
+                    ""name"": ""Water"",
                     ""type"": ""Button"",
                     ""id"": ""b43ef5c4-1425-4248-915b-0d52fe37e015"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Hold""
+                    ""interactions"": ""Press(behavior=1)""
                 },
                 {
-                    ""name"": ""Core 2"",
+                    ""name"": ""Earth"",
                     ""type"": ""Button"",
                     ""id"": ""a0dd803f-6c02-4ee3-b6ff-a5aba33adfb2"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Press""
                 },
                 {
-                    ""name"": ""Core 3"",
+                    ""name"": ""Ice"",
                     ""type"": ""Button"",
                     ""id"": ""5371135e-e67b-454f-8bfb-c733947ef853"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""Tap Attack"",
+                    ""type"": ""Button"",
+                    ""id"": ""d9ee865e-2ab1-48b0-a1cf-ba531f449639"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Attack Direction"",
+                    ""name"": ""Hold Attack"",
                     ""type"": ""Button"",
-                    ""id"": ""d9ee865e-2ab1-48b0-a1cf-ba531f449639"",
+                    ""id"": ""a4c8d7a3-7124-4dc1-b051-fcd971097112"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -152,29 +160,29 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Core 1"",
+                    ""action"": ""Water"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
                     ""id"": ""f487a203-148b-4630-9388-68e581275817"",
-                    ""path"": ""<Keyboard>/k"",
+                    ""path"": ""<Keyboard>/j"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Core 2"",
+                    ""action"": ""Earth"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
                     ""id"": ""87b09ac0-2331-43a4-b6e2-ede0fd6f4a2c"",
-                    ""path"": ""<Keyboard>/l"",
+                    ""path"": ""<Keyboard>/k"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Core 3"",
+                    ""action"": ""Ice"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -185,7 +193,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""interactions"": ""Tap"",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Attack Direction"",
+                    ""action"": ""Tap Attack"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -196,7 +204,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Attack Direction"",
+                    ""action"": ""Tap Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -207,7 +215,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Attack Direction"",
+                    ""action"": ""Tap Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -218,7 +226,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Attack Direction"",
+                    ""action"": ""Tap Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -229,7 +237,62 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Attack Direction"",
+                    ""action"": ""Tap Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""5379961c-d4aa-4513-937c-e5737674cd99"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": ""Hold"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Hold Attack"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""4606338f-abc5-43c7-906f-042c6fce920d"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Hold Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""603ae869-23bf-48fd-a76d-8845647b1d1e"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Hold Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""482dc281-ff0b-46d5-b885-7edd644d5db7"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Hold Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""89c904f4-7fc7-4b8d-beab-9243c8597796"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Hold Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 }
@@ -809,10 +872,11 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
-        m_Player_Core1 = m_Player.FindAction("Core 1", throwIfNotFound: true);
-        m_Player_Core2 = m_Player.FindAction("Core 2", throwIfNotFound: true);
-        m_Player_Core3 = m_Player.FindAction("Core 3", throwIfNotFound: true);
-        m_Player_AttackDirection = m_Player.FindAction("Attack Direction", throwIfNotFound: true);
+        m_Player_Water = m_Player.FindAction("Water", throwIfNotFound: true);
+        m_Player_Earth = m_Player.FindAction("Earth", throwIfNotFound: true);
+        m_Player_Ice = m_Player.FindAction("Ice", throwIfNotFound: true);
+        m_Player_TapAttack = m_Player.FindAction("Tap Attack", throwIfNotFound: true);
+        m_Player_HoldAttack = m_Player.FindAction("Hold Attack", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -876,20 +940,22 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Jump;
-    private readonly InputAction m_Player_Core1;
-    private readonly InputAction m_Player_Core2;
-    private readonly InputAction m_Player_Core3;
-    private readonly InputAction m_Player_AttackDirection;
+    private readonly InputAction m_Player_Water;
+    private readonly InputAction m_Player_Earth;
+    private readonly InputAction m_Player_Ice;
+    private readonly InputAction m_Player_TapAttack;
+    private readonly InputAction m_Player_HoldAttack;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
         public PlayerActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
-        public InputAction @Core1 => m_Wrapper.m_Player_Core1;
-        public InputAction @Core2 => m_Wrapper.m_Player_Core2;
-        public InputAction @Core3 => m_Wrapper.m_Player_Core3;
-        public InputAction @AttackDirection => m_Wrapper.m_Player_AttackDirection;
+        public InputAction @Water => m_Wrapper.m_Player_Water;
+        public InputAction @Earth => m_Wrapper.m_Player_Earth;
+        public InputAction @Ice => m_Wrapper.m_Player_Ice;
+        public InputAction @TapAttack => m_Wrapper.m_Player_TapAttack;
+        public InputAction @HoldAttack => m_Wrapper.m_Player_HoldAttack;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -905,18 +971,21 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @Jump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
-                @Core1.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCore1;
-                @Core1.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCore1;
-                @Core1.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCore1;
-                @Core2.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCore2;
-                @Core2.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCore2;
-                @Core2.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCore2;
-                @Core3.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCore3;
-                @Core3.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCore3;
-                @Core3.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCore3;
-                @AttackDirection.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttackDirection;
-                @AttackDirection.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttackDirection;
-                @AttackDirection.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttackDirection;
+                @Water.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWater;
+                @Water.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWater;
+                @Water.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWater;
+                @Earth.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEarth;
+                @Earth.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEarth;
+                @Earth.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEarth;
+                @Ice.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnIce;
+                @Ice.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnIce;
+                @Ice.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnIce;
+                @TapAttack.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTapAttack;
+                @TapAttack.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTapAttack;
+                @TapAttack.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTapAttack;
+                @HoldAttack.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHoldAttack;
+                @HoldAttack.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHoldAttack;
+                @HoldAttack.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHoldAttack;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -927,18 +996,21 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
-                @Core1.started += instance.OnCore1;
-                @Core1.performed += instance.OnCore1;
-                @Core1.canceled += instance.OnCore1;
-                @Core2.started += instance.OnCore2;
-                @Core2.performed += instance.OnCore2;
-                @Core2.canceled += instance.OnCore2;
-                @Core3.started += instance.OnCore3;
-                @Core3.performed += instance.OnCore3;
-                @Core3.canceled += instance.OnCore3;
-                @AttackDirection.started += instance.OnAttackDirection;
-                @AttackDirection.performed += instance.OnAttackDirection;
-                @AttackDirection.canceled += instance.OnAttackDirection;
+                @Water.started += instance.OnWater;
+                @Water.performed += instance.OnWater;
+                @Water.canceled += instance.OnWater;
+                @Earth.started += instance.OnEarth;
+                @Earth.performed += instance.OnEarth;
+                @Earth.canceled += instance.OnEarth;
+                @Ice.started += instance.OnIce;
+                @Ice.performed += instance.OnIce;
+                @Ice.canceled += instance.OnIce;
+                @TapAttack.started += instance.OnTapAttack;
+                @TapAttack.performed += instance.OnTapAttack;
+                @TapAttack.canceled += instance.OnTapAttack;
+                @HoldAttack.started += instance.OnHoldAttack;
+                @HoldAttack.performed += instance.OnHoldAttack;
+                @HoldAttack.canceled += instance.OnHoldAttack;
             }
         }
     }
@@ -1097,10 +1169,11 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
-        void OnCore1(InputAction.CallbackContext context);
-        void OnCore2(InputAction.CallbackContext context);
-        void OnCore3(InputAction.CallbackContext context);
-        void OnAttackDirection(InputAction.CallbackContext context);
+        void OnWater(InputAction.CallbackContext context);
+        void OnEarth(InputAction.CallbackContext context);
+        void OnIce(InputAction.CallbackContext context);
+        void OnTapAttack(InputAction.CallbackContext context);
+        void OnHoldAttack(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
