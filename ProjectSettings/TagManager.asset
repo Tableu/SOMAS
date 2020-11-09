@@ -8,6 +8,7 @@ TagManager:
   - EnemyProjectile
   - PlayerProjectile
   - Enemy
+  - Water
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - Player
   - PlayerSummons
   - PlayerPhysics
-  - 
+  - MagicTriggers
   - 
   - 
   - 

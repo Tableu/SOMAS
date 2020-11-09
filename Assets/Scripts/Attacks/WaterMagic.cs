@@ -73,9 +73,11 @@ public class WaterMagic : MonoBehaviour
 
     private void FreezeAttack(float freezeDuration)
     {
-        var hit = Physics2D.CircleCast(player.transform.position,3,new Vector2(1,0),1,LayerMask.GetMask("Water"));
-        if(hit)
+        var hit = Physics2D.CircleCast(player.transform.position,3,new Vector2(1,0),1,LayerMask.GetMask("MagicTriggers"));
+        if (hit) {
             hit.collider.gameObject.GetComponent<SpriteRenderer>().color = Color.black;
+            hit.collider.gameObject.tag = "Ice";
+        }
     }
     private void WaveAttack(GameObject projectilePrefab, float speed, Vector2 displacement){
         Vector3 playerForward = transform.parent.right;
