@@ -5,17 +5,22 @@ public class EnemyDetection : MonoBehaviour
     private GameObject player;
     private Animator animator;
     private Rigidbody2D rigidBody;
-    private EnemyData enemyData;
+    private EnemyRaycasts enemyRaycasts;
+    public bool playerFound;
     private Collider2D col;
+    public Vector2 distanceToPlayer;
+
+    public float speed;
     // Start is called before the first frame update
     private void Start()
     {
         animator = GetComponent<Animator>();
         player = GameObject.FindWithTag("Player");
         rigidBody = GetComponent<Rigidbody2D>();
-        enemyData = GetComponent<EnemyData>();
+        enemyRaycasts = GetComponent<EnemyRaycasts>();
         col = GetComponent<Collider2D>();
         player.GetComponent<PlayerHealth>().DeathEvent += OnDeathEvent;
+        playerFound = false;
     }
     
     // Update is called once per frame
@@ -24,23 +29,25 @@ public class EnemyDetection : MonoBehaviour
         DetectPlayer();
     }
     private void DetectPlayer(){
-        enemyData.distanceToPlayer = (player.transform.position - transform.position);
+        distanceToPlayer = (player.transform.position - transform.position);
         var stateInfo = animator.GetCurrentAnimatorStateInfo(0);
         
-        if(!enemyData.playerFound && enemyData.grounded){
+        if(!playerFound && enemyRaycasts.grounded){
             if(!stateInfo.IsName("Attack")){
-                if(CheckRaycastsForTag(enemyData.raycastArray, "Player")){
+                if(CheckRaycastsForTag(enemyRaycasts.raycastArray, "Player")){
                     animator.SetTrigger("Attack");
-                    enemyData.playerFound = true;
+                    playerFound = true;
+                    animator.SetBool("PlayerFound",playerFound);
                 }
             }
         }else{
-            var magnitude = enemyData.distanceToPlayer.magnitude;
-            animator.SetFloat("AttackLimit", magnitude - enemyData.attackLimit);
-            animator.SetFloat("FollowLimit", magnitude - enemyData.followLimit);
+            var magnitude = distanceToPlayer.magnitude;
+            animator.SetFloat("AttackLimit", magnitude - enemyRaycasts.attackLimit);
+            animator.SetFloat("FollowLimit", magnitude - enemyRaycasts.followLimit);
             
-            if(stateInfo.IsName("Follow") && magnitude > enemyData.followLimit){
-                enemyData.playerFound = false;
+            if(stateInfo.IsName("Follow") && magnitude > enemyRaycasts.followLimit){
+                playerFound = false;
+                animator.SetBool("PlayerFound",playerFound);
             }
         }
     }
