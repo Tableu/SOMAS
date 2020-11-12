@@ -10,30 +10,26 @@ public class EnemyMovement
     }
     public static void Walk(GameObject gameObject){
         var transform = gameObject.GetComponent<Transform>();
-        var enemyData = gameObject.GetComponent<EnemyData>();
+        var enemyRaycasts = gameObject.GetComponent<EnemyRaycasts>();
         var rigidBody = gameObject.GetComponent<Rigidbody2D>();
         
-        if(transform.position.x > enemyData.boundary[1]){
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
-            enemyData.forward = Vector2.left;
-        }else if(transform.position.x < enemyData.boundary[0]){
+        if(transform.position.x > enemyRaycasts.boundary[1]){
             transform.localRotation = Quaternion.Euler(0, 180, 0);
-            enemyData.forward = Vector2.right;
+        }else if(transform.position.x < enemyRaycasts.boundary[0]){
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
-        rigidBody.velocity = new Vector2(enemyData.forward.x*enemyData.speed,rigidBody.velocity.y);
+        rigidBody.velocity = new Vector2(gameObject.transform.right.x*enemyRaycasts.speed,rigidBody.velocity.y);
     }
     public static void FlipCharacter(GameObject gameObject){
-        var enemyData = gameObject.GetComponent<EnemyData>();
+        var enemyDetection = gameObject.GetComponent<EnemyDetection>();
         var transform = gameObject.GetComponent<Transform>();
         var localRotation = transform.localRotation;
-        if(enemyData.distanceToPlayer.x < 0){
-            localRotation = Quaternion.Euler(localRotation.x, 0, localRotation.z);
-            transform.localRotation = localRotation;
-            enemyData.forward = Vector2.left;
-        }else if(enemyData.distanceToPlayer.x > 0){
+        if(enemyDetection.distanceToPlayer.x < 0){
             localRotation = Quaternion.Euler(localRotation.x, 180, localRotation.z);
             transform.localRotation = localRotation;
-            enemyData.forward = Vector2.right;
+        }else if(enemyDetection.distanceToPlayer.x > 0){
+            localRotation = Quaternion.Euler(localRotation.x, 0, localRotation.z);
+            transform.localRotation = localRotation;
         }
     }
 
@@ -44,11 +40,11 @@ public class EnemyMovement
     }
 
     public static void FollowPlayer(GameObject gameObject){
-        var enemyData = gameObject.GetComponent<EnemyData>();
+        var enemyDetection = gameObject.GetComponent<EnemyDetection>();
         var rigidBody = gameObject.GetComponent<Rigidbody2D>();
-        var distanceToPlayer = enemyData.distanceToPlayer;
+        var distanceToPlayer = enemyDetection.distanceToPlayer;
         
         distanceToPlayer = new Vector2(distanceToPlayer.x,0).normalized;
-        rigidBody.velocity = new Vector2(distanceToPlayer.x*enemyData.speed, rigidBody.velocity.y);
+        rigidBody.velocity = new Vector2(distanceToPlayer.x*enemyDetection.speed, rigidBody.velocity.y);
     }
 }
