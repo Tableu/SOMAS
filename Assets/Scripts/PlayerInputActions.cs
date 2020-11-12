@@ -48,7 +48,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""id"": ""a0dd803f-6c02-4ee3-b6ff-a5aba33adfb2"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press""
+                    ""interactions"": ""Tap""
                 },
                 {
                     ""name"": ""Ice"",

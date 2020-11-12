@@ -1,9 +1,12 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class EarthMagic : MonoBehaviour
 {
     //Magic Prefabs
     public GameObject earthWall;
+    public GameObject wallFragment;
     private GameObject player;
     private PlayerInput playerInput;
     private PlayerInputActions playerInputActions;
@@ -20,8 +23,8 @@ public class EarthMagic : MonoBehaviour
     public void CastSpell(){
         var attackDirection = playerInputActions.Player.TapAttack.ReadValue<Vector2>();
 
-        if (attackDirection.Equals(Vector2.left) || attackDirection.Equals(Vector2.right)){
-            
+        if (attackDirection.Equals(Vector2.left) || attackDirection.Equals(Vector2.right)) {
+            EarthPunch(wallFragment);
         }else if (attackDirection.Equals(Vector2.down)) {
             EarthWall(earthWall, 2,2);
         }else if (attackDirection.Equals(Vector2.up)) {
@@ -42,8 +45,19 @@ public class EarthMagic : MonoBehaviour
         var wall = Instantiate(earthWallPrefab, spawnPosition, Quaternion.identity);
         Destroy(wall, 2);
     }
-
-    private void EarthPunch(){
-        
+    private Vector2 RandomVector2(float angle, float angleMin){
+        float random = Random.value * angle + angleMin;
+        return new Vector2(Mathf.Cos(random), Mathf.Sin(random));
+    }
+    private void EarthPunch(GameObject wallFragment) {
+        float raycastLength = 4;
+        var hit = Physics2D.Raycast(player.transform.position, player.transform.right, raycastLength, LayerMask.GetMask("Platforms"));
+        Debug.DrawRay(player.transform.position, player.transform.right*raycastLength,Color.red);
+        if (!hit) return;
+        for (int index = 0; index < 3; index++) {
+            var fragment = Instantiate(wallFragment, hit.collider.transform.position, Quaternion.identity);
+            fragment.GetComponent<Rigidbody2D>().velocity = RandomVector2(20 * (3.1415f / 180f), -10 * (3.1415f / 180f)) * 50;
+        }
+        Destroy(hit.collider.gameObject);
     }
 }
