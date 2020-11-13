@@ -50,8 +50,7 @@ public class MetalSummon : MonoBehaviour
         }else if (attackDirection.Equals(Vector2.down) && currentForm != Shield) {
             ReturnToPlayer();
             ChangeForm(Shield);
-        }else if (attackDirection.Equals(Vector2.up))
-        {
+        }else if (attackDirection.Equals(Vector2.up)){
             
         }
     }
@@ -101,11 +100,9 @@ public class MetalSummon : MonoBehaviour
         playerInput.RotateEvent -= OnRotateEvent;
         ChangeForm(Sword);
         gameObject.layer = 11; //Change layer to playerprojectiles
-        if(horizontal < 0)
-        {
+        if(horizontal < 0){
             rigidBody.velocity = new Vector2(-10,0);
-        }else if(horizontal > 0)
-        {
+        }else if(horizontal > 0){
             rigidBody.velocity = new Vector2(10,0);
         }
     }

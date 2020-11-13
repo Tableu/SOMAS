@@ -24,9 +24,9 @@ public class PlayerInput: MonoBehaviour
     }
     private void Start(){
         previous = -1;
-        playerInputActions.Player.Water.Disable();
-        playerInputActions.Player.Ice.Disable();
-        playerInputActions.Player.Earth.Disable();
+        //playerInputActions.Player.Water.Disable();
+        //playerInputActions.Player.Ice.Disable();
+        //playerInputActions.Player.Earth.Disable();
     }
     // Update is called once per frame
     private void Update(){
@@ -54,7 +54,7 @@ public class PlayerInput: MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        var element = other.gameObject.tag;
+        /*var element = other.gameObject.tag;
         switch (element) {
             case "Water":
                 playerInputActions.Player.Water.Enable();
@@ -65,11 +65,11 @@ public class PlayerInput: MonoBehaviour
             case "Earth":
                 playerInputActions.Player.Earth.Enable();
                 break;
-        }
+        }*/
     }
 
     private void OnTriggerExit2D(Collider2D other) {
-        var element = other.gameObject.tag;
+        /*var element = other.gameObject.tag;
         switch (element) {
             case "Water":
                 playerInputActions.Player.Water.Disable();
@@ -80,6 +80,6 @@ public class PlayerInput: MonoBehaviour
             case "Earth":
                 playerInputActions.Player.Earth.Disable();
                 break;
-        }
+        }*/
     }
 }
