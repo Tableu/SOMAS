@@ -73,6 +73,14 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Earth Creation"",
+                    ""type"": ""Button"",
+                    ""id"": ""088a7f37-871e-448f-bdd6-c6539bc0748a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -295,6 +303,17 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""action"": ""Hold Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b1a57478-e145-4b38-928a-4307f973eb93"",
+                    ""path"": ""<Keyboard>/l"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Earth Creation"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -877,6 +896,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         m_Player_Ice = m_Player.FindAction("Ice", throwIfNotFound: true);
         m_Player_TapAttack = m_Player.FindAction("Tap Attack", throwIfNotFound: true);
         m_Player_HoldAttack = m_Player.FindAction("Hold Attack", throwIfNotFound: true);
+        m_Player_EarthCreation = m_Player.FindAction("Earth Creation", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -945,6 +965,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Ice;
     private readonly InputAction m_Player_TapAttack;
     private readonly InputAction m_Player_HoldAttack;
+    private readonly InputAction m_Player_EarthCreation;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -956,6 +977,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         public InputAction @Ice => m_Wrapper.m_Player_Ice;
         public InputAction @TapAttack => m_Wrapper.m_Player_TapAttack;
         public InputAction @HoldAttack => m_Wrapper.m_Player_HoldAttack;
+        public InputAction @EarthCreation => m_Wrapper.m_Player_EarthCreation;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -986,6 +1008,9 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @HoldAttack.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHoldAttack;
                 @HoldAttack.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHoldAttack;
                 @HoldAttack.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHoldAttack;
+                @EarthCreation.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEarthCreation;
+                @EarthCreation.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEarthCreation;
+                @EarthCreation.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEarthCreation;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -1011,6 +1036,9 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @HoldAttack.started += instance.OnHoldAttack;
                 @HoldAttack.performed += instance.OnHoldAttack;
                 @HoldAttack.canceled += instance.OnHoldAttack;
+                @EarthCreation.started += instance.OnEarthCreation;
+                @EarthCreation.performed += instance.OnEarthCreation;
+                @EarthCreation.canceled += instance.OnEarthCreation;
             }
         }
     }
@@ -1174,6 +1202,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         void OnIce(InputAction.CallbackContext context);
         void OnTapAttack(InputAction.CallbackContext context);
         void OnHoldAttack(InputAction.CallbackContext context);
+        void OnEarthCreation(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

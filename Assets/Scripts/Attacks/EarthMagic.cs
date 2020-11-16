@@ -17,6 +17,9 @@ public class EarthMagic : MonoBehaviour
         playerInputActions.Player.Earth.performed += context => {
             CastSpell();
         };
+        playerInputActions.Player.EarthCreation.performed += context => {
+            EarthCreation(earthWall,2,2);
+        };
     }
 
     //Read directional input and cast the appropriate spell
@@ -26,24 +29,32 @@ public class EarthMagic : MonoBehaviour
         if (attackDirection.Equals(Vector2.left) || attackDirection.Equals(Vector2.right)) {
             EarthPunch(wallFragment);
         }else if (attackDirection.Equals(Vector2.down)) {
-            EarthWall(earthWall, 2,2);
+            //EarthCreation(earthWall, 2,2);
         }else if (attackDirection.Equals(Vector2.up)) {
             
         }
     }
 
     //Construct a wall of earth in front of the player that blocks attacks. Use a raycast to check if the earth wall can be spawned.
-    private void EarthWall(GameObject earthWallPrefab, float raycastLength, float earthWallPosition){
-        //if(!playerData.grounded)
-            //return;
+    private void EarthCreation(GameObject earthWallPrefab, float raycastLength, float position){
         Vector3 playerForward = transform.parent.right;
-        Vector2 spawnPosition = player.transform.position + playerForward*earthWallPosition;
-        var rayHit = Physics2D.Raycast(spawnPosition, Vector2.down, raycastLength, LayerMask.GetMask("Platforms"));
-        Debug.DrawRay(spawnPosition, Vector2.down*raycastLength,Color.red);
         
-        if (!rayHit) return;
-        var wall = Instantiate(earthWallPrefab, spawnPosition, Quaternion.identity);
-        Destroy(wall, 2);
+        var rayHit = Physics2D.Raycast(player.transform.position, Vector2.down, raycastLength, LayerMask.GetMask("Platforms"));
+        Debug.DrawRay(player.transform.position, Vector2.down*raycastLength,Color.red);
+
+        if (rayHit) {
+            Vector2 spawnPosition = player.transform.position + playerForward*position;
+            rayHit = Physics2D.Raycast(spawnPosition, Vector2.down, raycastLength, LayerMask.GetMask("Platforms"));
+            Debug.DrawRay(spawnPosition, Vector2.down*raycastLength,Color.red);
+            if (!rayHit)
+                return;
+            var wall = Instantiate(earthWallPrefab, spawnPosition, Quaternion.identity);
+            Destroy(wall, 2);
+        }else {
+            var platform = Instantiate(earthWallPrefab, player.transform.position+ new Vector3(0,-2,0), Quaternion.identity);
+            platform.transform.rotation = Quaternion.Euler(0,0,90);
+            Destroy(platform, 5);
+        }
     }
     private Vector2 RandomVector2(float angle, float angleMin){
         float random = Random.value * angle + angleMin;

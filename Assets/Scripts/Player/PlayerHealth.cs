@@ -37,7 +37,7 @@ public class PlayerHealth : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             StartCoroutine(Invulnerable());
-            StartCoroutine(LockPlayerInput());
+            StartCoroutine(LockPlayerInput(0.2f));
             healthPoints -= 10;
             var direction = (gameObject.transform.position - collision.gameObject.transform.position).normalized.x;
             rigidBody.velocity = Vector2.zero;
@@ -50,7 +50,7 @@ public class PlayerHealth : MonoBehaviour
         }else if (collision.gameObject.CompareTag("EnemyProjectile"))
         {
             StartCoroutine(Invulnerable());
-            StartCoroutine(LockPlayerInput());
+            StartCoroutine(LockPlayerInput(0.2f));
             healthPoints -= collision.gameObject.GetComponent<Projectile>().damagePoints;
             var direction = collision.transform.GetComponent<Rigidbody2D>().velocity.normalized.x;
             rigidBody.velocity = Vector2.zero;
@@ -64,10 +64,10 @@ public class PlayerHealth : MonoBehaviour
         
     }
 
-    private IEnumerator LockPlayerInput()
+    private IEnumerator LockPlayerInput(float stunTime)
     {
         playerInput.LockInput();
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(stunTime);
         playerInput.UnlockInput();
     }
     private IEnumerator Invulnerable(){

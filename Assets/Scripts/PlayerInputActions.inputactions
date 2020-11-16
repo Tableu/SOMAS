@@ -60,6 +60,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Earth Creation",
+                    "type": "Button",
+                    "id": "088a7f37-871e-448f-bdd6-c6539bc0748a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -282,6 +290,17 @@
                     "action": "Hold Attack",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "b1a57478-e145-4b38-928a-4307f973eb93",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Earth Creation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },

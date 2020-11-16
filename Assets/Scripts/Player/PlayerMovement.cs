@@ -29,7 +29,8 @@ public class PlayerMovement : MonoBehaviour
 
     // Update is called once per frame
     private void Update() {
-        Move();
+        if(!playerInput.inputLocked)
+            Move();
     }
 
     public void Move()
