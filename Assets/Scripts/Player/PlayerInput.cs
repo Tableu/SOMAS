@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerInput: MonoBehaviour
 {
     private PlayerMovement playerMovement;
+    public bool inputLocked;
     public delegate void RotateEventDelegate();
     public event RotateEventDelegate RotateEvent;
     public float previous;
@@ -24,6 +25,7 @@ public class PlayerInput: MonoBehaviour
     }
     private void Start(){
         previous = -1;
+        inputLocked = false;
         //playerInputActions.Player.Water.Disable();
         //playerInputActions.Player.Ice.Disable();
         //playerInputActions.Player.Earth.Disable();
@@ -33,11 +35,13 @@ public class PlayerInput: MonoBehaviour
         UpdateRotation();
     }
     public void LockInput() {
-        playerInputActions.Player.Disable();
+        playerInputActions.Player.Jump.Disable();
+        inputLocked = true;
     }
 
     public void UnlockInput() {
-        playerInputActions.Player.Enable();
+        playerInputActions.Player.Jump.Enable();
+        inputLocked = false;
     }
     private void UpdateRotation() //Changes which side the player faces and invokes the relevant events
     {
