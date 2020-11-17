@@ -22,7 +22,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Water",
+                    "name": "Basic Spell Hold",
                     "type": "Button",
                     "id": "b43ef5c4-1425-4248-915b-0d52fe37e015",
                     "expectedControlType": "Button",
@@ -30,20 +30,12 @@
                     "interactions": "Press(behavior=1)"
                 },
                 {
-                    "name": "Earth",
+                    "name": "Basic Spell",
                     "type": "Button",
-                    "id": "a0dd803f-6c02-4ee3-b6ff-a5aba33adfb2",
+                    "id": "256e084a-efbd-4d2a-a212-2ab7a0d382bd",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Tap"
-                },
-                {
-                    "name": "Ice",
-                    "type": "Button",
-                    "id": "5371135e-e67b-454f-8bfb-c733947ef853",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press(behavior=2)"
                 },
                 {
                     "name": "Tap Attack",
@@ -62,12 +54,12 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Earth Creation",
+                    "name": "Form Spell",
                     "type": "Button",
-                    "id": "088a7f37-871e-448f-bdd6-c6539bc0748a",
+                    "id": "e51cc579-5f0c-4032-be68-db4830fda356",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press"
                 }
             ],
             "bindings": [
@@ -155,29 +147,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Water",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "f487a203-148b-4630-9388-68e581275817",
-                    "path": "<Keyboard>/j",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Earth",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "87b09ac0-2331-43a4-b6e2-ede0fd6f4a2c",
-                    "path": "<Keyboard>/k",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Ice",
+                    "action": "Basic Spell Hold",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -185,7 +155,7 @@
                     "name": "2D Vector",
                     "id": "f58281c9-ca6b-4f21-a7b6-814fe47aa014",
                     "path": "2DVector",
-                    "interactions": "Tap",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "",
                     "action": "Tap Attack",
@@ -293,12 +263,23 @@
                 },
                 {
                     "name": "",
-                    "id": "b1a57478-e145-4b38-928a-4307f973eb93",
-                    "path": "<Keyboard>/l",
+                    "id": "8c42ecc0-d6f4-4447-9557-e88dc86e2552",
+                    "path": "<Keyboard>/j",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Earth Creation",
+                    "action": "Basic Spell",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8a872983-3b85-40d3-84a0-949af5695a65",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Form Spell",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

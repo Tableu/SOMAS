@@ -403,6 +403,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7427574982177556115, guid: b9a7936759a15a94690033a61550a583,
         type: 3}
+    - target: {fileID: 6822149216606794067, guid: 82a7ef88237bed14f91868958c25ff46,
+        type: 3}
+      propertyPath: iceSpike
+      value: 
+      objectReference: {fileID: 2859989554125169538, guid: 1da545291b2ea4d46a26d944e0e8b47e,
+        type: 3}
     - target: {fileID: 7377049859478706322, guid: 82a7ef88237bed14f91868958c25ff46,
         type: 3}
       propertyPath: m_FlipX
