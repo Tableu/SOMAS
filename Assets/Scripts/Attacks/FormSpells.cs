@@ -1,64 +1,52 @@
 ﻿using System.Collections;
-using Unity.Mathematics;
 using UnityEngine;
+using Unity.Mathematics;
+using Random = UnityEngine.Random;
 
-public class WaterMagic : MonoBehaviour
+public class FormSpells : MonoBehaviour
 {
-    public GameObject waterOrb;
-    public GameObject waterWave;
-    public GameObject icePrison;
-    private GameObject player;
     private PlayerInput playerInput;
-    public PlayerInputActions playerInputActions;
+    private PlayerInputActions playerInputActions;
+    public GameObject wallFragment;
+    public GameObject icePrison;
+    public GameObject iceSpike;
     private static readonly int Stunned = Animator.StringToHash("Stunned");
-
-    private void Start()
+    // Start is called before the first frame update
+    void Start()
     {
-        playerInput = transform.parent.GetComponent<PlayerInput>();
-        player = GameObject.FindWithTag("Player");
+        playerInput = GetComponent<PlayerInput>();
         playerInputActions = playerInput.playerInputActions;
-        playerInputActions.Player.Water.performed += context => {
-            CastSpell(context.duration);
-        };
-        playerInputActions.Player.Ice.performed += context => {
-            StartCoroutine(FreezeAttack(2));
+        playerInputActions.Player.FormSpell.started += context => {
+            CastSpell();
         };
     }
 
-    private void Update(){
-
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
-    private void CastSpell(double holdDuration){
+    public void CastSpell(){
         var attackDirection = playerInputActions.Player.TapAttack.ReadValue<Vector2>();
+
         if (attackDirection.Equals(Vector2.left) || attackDirection.Equals(Vector2.right)) {
-            
+            EarthPunch(wallFragment);
         }else if (attackDirection.Equals(Vector2.down)) {
-            
+            StartCoroutine(FreezeAttack(2));
         }else if (attackDirection.Equals(Vector2.up)) {
             
-        }else{
-            if (holdDuration > 1){
-                WaveAttack(waterWave, 10, new Vector2(2, 0));
-            }
-            else{
-                WaterOrb(waterOrb, 10, 10);
-            }
+        }else {
+            
         }
-    }
-    private void WaterOrb(GameObject projectilePrefab, float speed,float rotationSpeed){
-        var projectile = Instantiate(projectilePrefab, player.transform.position, Quaternion.identity);
-        projectile.GetComponent<Rigidbody2D>().velocity = player.transform.right*speed;
-        projectile.GetComponent<Rigidbody2D>().AddTorque(rotationSpeed);
     }
     private void IceAttack(GameObject projectilePrefab, float speed){
         Vector3 playerForward = transform.parent.right;
-        var playerPos = player.transform.position;
         var spawnPos = new Vector3[3];
         var projectile = new GameObject[3];
         var angle = 0;
-        spawnPos[0] = player.transform.position + playerForward*-1f*2 + new Vector3(0,1,0);
-        spawnPos[1] = player.transform.position + playerForward*-1f*4;
-        spawnPos[2] = player.transform.position + playerForward*-1f*2 + new Vector3(0,-1,0);
+        spawnPos[0] = transform.position + playerForward*-1f*2 + new Vector3(0,1,0);
+        spawnPos[1] = transform.position + playerForward*-1f*4;
+        spawnPos[2] = transform.position + playerForward*-1f*2 + new Vector3(0,-1,0);
         
         projectile[0] = Instantiate(projectilePrefab, spawnPos[0], Quaternion.identity);
         projectile[1] = Instantiate(projectilePrefab, spawnPos[1], Quaternion.identity);
@@ -78,7 +66,7 @@ public class WaterMagic : MonoBehaviour
 
     IEnumerator FreezeAttack(float freezeDuration)
     {
-        var hit = Physics2D.CircleCast(player.transform.position,3,new Vector2(1,0),1,LayerMask.GetMask("MagicTriggers","Enemies"));
+        var hit = Physics2D.CircleCast(transform.position,3,new Vector2(1,0),1,LayerMask.GetMask("MagicTriggers","Enemies"));
         if (!hit) yield break;
         if (hit.collider.CompareTag("Water")) {
             hit.collider.gameObject.GetComponent<SpriteRenderer>().color = Color.black;
@@ -92,16 +80,20 @@ public class WaterMagic : MonoBehaviour
             hit.collider.gameObject.GetComponent<Animator>().SetBool(Stunned, false);
             Destroy(ice);
         }
+    } //Prevents the casting of a a water spell from casting if therea spell has already been casted
+    private Vector2 RandomVector2(float angle, float angleMin){
+        float random = Random.value * angle + angleMin;
+        return new Vector2(Mathf.Cos(random), Mathf.Sin(random));
     }
-    private void WaveAttack(GameObject projectilePrefab, float speed, Vector2 displacement){
-        Vector3 playerForward = transform.parent.right;
-        Vector3 dist = playerForward*displacement;
-        var angle = 0;
-        var projectile = Instantiate(projectilePrefab, player.transform.position+dist, Quaternion.identity);
-        projectile.GetComponent<Rigidbody2D>().velocity = playerForward*speed;
-        if(playerForward.x < 0){
-            angle = 180;
+    private void EarthPunch(GameObject wallFragment) {
+        float raycastLength = 4;
+        var hit = Physics2D.Raycast(transform.position, transform.right, raycastLength, LayerMask.GetMask("Platforms"));
+        Debug.DrawRay(transform.position, transform.right*raycastLength,Color.red);
+        if (!hit) return;
+        for (int index = 0; index < 3; index++) {
+            var fragment = Instantiate(wallFragment, hit.collider.transform.position, Quaternion.identity);
+            fragment.GetComponent<Rigidbody2D>().velocity = RandomVector2(20 * (3.1415f / 180f), -10 * (3.1415f / 180f)) * 50;
         }
-        projectile.transform.rotation = Quaternion.Euler(0,angle,0);
+        Destroy(hit.collider.gameObject);
     }
 }

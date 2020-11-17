@@ -35,7 +35,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Water"",
+                    ""name"": ""Basic Spell Hold"",
                     ""type"": ""Button"",
                     ""id"": ""b43ef5c4-1425-4248-915b-0d52fe37e015"",
                     ""expectedControlType"": ""Button"",
@@ -43,20 +43,12 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""interactions"": ""Press(behavior=1)""
                 },
                 {
-                    ""name"": ""Earth"",
+                    ""name"": ""Basic Spell"",
                     ""type"": ""Button"",
-                    ""id"": ""a0dd803f-6c02-4ee3-b6ff-a5aba33adfb2"",
+                    ""id"": ""256e084a-efbd-4d2a-a212-2ab7a0d382bd"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Tap""
-                },
-                {
-                    ""name"": ""Ice"",
-                    ""type"": ""Button"",
-                    ""id"": ""5371135e-e67b-454f-8bfb-c733947ef853"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Press""
+                    ""interactions"": ""Press(behavior=2)""
                 },
                 {
                     ""name"": ""Tap Attack"",
@@ -75,12 +67,12 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Earth Creation"",
+                    ""name"": ""Form Spell"",
                     ""type"": ""Button"",
-                    ""id"": ""088a7f37-871e-448f-bdd6-c6539bc0748a"",
+                    ""id"": ""e51cc579-5f0c-4032-be68-db4830fda356"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Press""
                 }
             ],
             ""bindings"": [
@@ -168,29 +160,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Water"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""f487a203-148b-4630-9388-68e581275817"",
-                    ""path"": ""<Keyboard>/j"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Earth"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""87b09ac0-2331-43a4-b6e2-ede0fd6f4a2c"",
-                    ""path"": ""<Keyboard>/k"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Ice"",
+                    ""action"": ""Basic Spell Hold"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -198,7 +168,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""name"": ""2D Vector"",
                     ""id"": ""f58281c9-ca6b-4f21-a7b6-814fe47aa014"",
                     ""path"": ""2DVector"",
-                    ""interactions"": ""Tap"",
+                    ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Tap Attack"",
@@ -306,12 +276,23 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""b1a57478-e145-4b38-928a-4307f973eb93"",
-                    ""path"": ""<Keyboard>/l"",
+                    ""id"": ""8c42ecc0-d6f4-4447-9557-e88dc86e2552"",
+                    ""path"": ""<Keyboard>/j"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Earth Creation"",
+                    ""action"": ""Basic Spell"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8a872983-3b85-40d3-84a0-949af5695a65"",
+                    ""path"": ""<Keyboard>/k"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Form Spell"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -891,12 +872,11 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
-        m_Player_Water = m_Player.FindAction("Water", throwIfNotFound: true);
-        m_Player_Earth = m_Player.FindAction("Earth", throwIfNotFound: true);
-        m_Player_Ice = m_Player.FindAction("Ice", throwIfNotFound: true);
+        m_Player_BasicSpellHold = m_Player.FindAction("Basic Spell Hold", throwIfNotFound: true);
+        m_Player_BasicSpell = m_Player.FindAction("Basic Spell", throwIfNotFound: true);
         m_Player_TapAttack = m_Player.FindAction("Tap Attack", throwIfNotFound: true);
         m_Player_HoldAttack = m_Player.FindAction("Hold Attack", throwIfNotFound: true);
-        m_Player_EarthCreation = m_Player.FindAction("Earth Creation", throwIfNotFound: true);
+        m_Player_FormSpell = m_Player.FindAction("Form Spell", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -960,24 +940,22 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Jump;
-    private readonly InputAction m_Player_Water;
-    private readonly InputAction m_Player_Earth;
-    private readonly InputAction m_Player_Ice;
+    private readonly InputAction m_Player_BasicSpellHold;
+    private readonly InputAction m_Player_BasicSpell;
     private readonly InputAction m_Player_TapAttack;
     private readonly InputAction m_Player_HoldAttack;
-    private readonly InputAction m_Player_EarthCreation;
+    private readonly InputAction m_Player_FormSpell;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
         public PlayerActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
-        public InputAction @Water => m_Wrapper.m_Player_Water;
-        public InputAction @Earth => m_Wrapper.m_Player_Earth;
-        public InputAction @Ice => m_Wrapper.m_Player_Ice;
+        public InputAction @BasicSpellHold => m_Wrapper.m_Player_BasicSpellHold;
+        public InputAction @BasicSpell => m_Wrapper.m_Player_BasicSpell;
         public InputAction @TapAttack => m_Wrapper.m_Player_TapAttack;
         public InputAction @HoldAttack => m_Wrapper.m_Player_HoldAttack;
-        public InputAction @EarthCreation => m_Wrapper.m_Player_EarthCreation;
+        public InputAction @FormSpell => m_Wrapper.m_Player_FormSpell;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -993,24 +971,21 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @Jump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
-                @Water.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWater;
-                @Water.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWater;
-                @Water.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWater;
-                @Earth.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEarth;
-                @Earth.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEarth;
-                @Earth.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEarth;
-                @Ice.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnIce;
-                @Ice.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnIce;
-                @Ice.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnIce;
+                @BasicSpellHold.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBasicSpellHold;
+                @BasicSpellHold.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBasicSpellHold;
+                @BasicSpellHold.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBasicSpellHold;
+                @BasicSpell.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBasicSpell;
+                @BasicSpell.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBasicSpell;
+                @BasicSpell.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBasicSpell;
                 @TapAttack.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTapAttack;
                 @TapAttack.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTapAttack;
                 @TapAttack.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTapAttack;
                 @HoldAttack.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHoldAttack;
                 @HoldAttack.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHoldAttack;
                 @HoldAttack.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHoldAttack;
-                @EarthCreation.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEarthCreation;
-                @EarthCreation.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEarthCreation;
-                @EarthCreation.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEarthCreation;
+                @FormSpell.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFormSpell;
+                @FormSpell.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFormSpell;
+                @FormSpell.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFormSpell;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -1021,24 +996,21 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
-                @Water.started += instance.OnWater;
-                @Water.performed += instance.OnWater;
-                @Water.canceled += instance.OnWater;
-                @Earth.started += instance.OnEarth;
-                @Earth.performed += instance.OnEarth;
-                @Earth.canceled += instance.OnEarth;
-                @Ice.started += instance.OnIce;
-                @Ice.performed += instance.OnIce;
-                @Ice.canceled += instance.OnIce;
+                @BasicSpellHold.started += instance.OnBasicSpellHold;
+                @BasicSpellHold.performed += instance.OnBasicSpellHold;
+                @BasicSpellHold.canceled += instance.OnBasicSpellHold;
+                @BasicSpell.started += instance.OnBasicSpell;
+                @BasicSpell.performed += instance.OnBasicSpell;
+                @BasicSpell.canceled += instance.OnBasicSpell;
                 @TapAttack.started += instance.OnTapAttack;
                 @TapAttack.performed += instance.OnTapAttack;
                 @TapAttack.canceled += instance.OnTapAttack;
                 @HoldAttack.started += instance.OnHoldAttack;
                 @HoldAttack.performed += instance.OnHoldAttack;
                 @HoldAttack.canceled += instance.OnHoldAttack;
-                @EarthCreation.started += instance.OnEarthCreation;
-                @EarthCreation.performed += instance.OnEarthCreation;
-                @EarthCreation.canceled += instance.OnEarthCreation;
+                @FormSpell.started += instance.OnFormSpell;
+                @FormSpell.performed += instance.OnFormSpell;
+                @FormSpell.canceled += instance.OnFormSpell;
             }
         }
     }
@@ -1197,12 +1169,11 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
-        void OnWater(InputAction.CallbackContext context);
-        void OnEarth(InputAction.CallbackContext context);
-        void OnIce(InputAction.CallbackContext context);
+        void OnBasicSpellHold(InputAction.CallbackContext context);
+        void OnBasicSpell(InputAction.CallbackContext context);
         void OnTapAttack(InputAction.CallbackContext context);
         void OnHoldAttack(InputAction.CallbackContext context);
-        void OnEarthCreation(InputAction.CallbackContext context);
+        void OnFormSpell(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
