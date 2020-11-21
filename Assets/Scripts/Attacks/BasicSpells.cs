@@ -52,31 +52,49 @@ public class BasicSpells : MonoBehaviour
     {
         
     }
-    private void WaterOrb(GameObject projectilePrefab, float speed,float rotationSpeed){
+    private void WaterOrb(GameObject projectilePrefab, float speed,float rotationSpeed) {
+        var mana = playerInput.manaPoints;
+        var cost = projectilePrefab.GetComponent<Projectile>().manaCost;
+        if (mana < cost)
+            return;
         var projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
         projectile.GetComponent<Rigidbody2D>().velocity = transform.right*speed;
         projectile.GetComponent<Rigidbody2D>().AddTorque(rotationSpeed);
+        playerInput.manaPoints -= cost;
     }
     private void WaveAttack(GameObject projectilePrefab, float speed, Vector2 displacement){
         Vector3 playerForward = transform.right;
         Vector3 dist = playerForward*displacement;
         var angle = 0;
+        var mana = playerInput.manaPoints;
+        var cost = projectilePrefab.GetComponent<Projectile>().manaCost;
+        if (mana < cost)
+            return;
         var projectile = Instantiate(projectilePrefab, transform.position+dist, Quaternion.identity);
         projectile.GetComponent<Rigidbody2D>().velocity = playerForward*speed;
         if(playerForward.x < 0){
             angle = 180;
         }
         projectile.transform.rotation = Quaternion.Euler(0,angle,0);
+        playerInput.manaPoints -= cost;
     }
     private void Flamethrower(GameObject projectilePrefab){
         Vector3 playerForward = transform.right;
+        var mana = playerInput.manaPoints;
+        var cost = projectilePrefab.GetComponent<Projectile>().manaCost;
+        if (mana < cost)
+            return;
         var projectile = Instantiate(projectilePrefab, transform.position + new Vector3(7.5f*playerForward.x,0.2f,0), Quaternion.identity);
         projectile.transform.parent = transform;
         projectile.transform.rotation = Quaternion.Euler(0,0,80*playerForward.x);
+        playerInput.manaPoints -= cost;
     }
     private void EarthCreation(GameObject earthWallPrefab, float raycastLength, float position){
         Vector3 playerForward = transform.right;
-        
+        var mana = playerInput.manaPoints;
+        var cost = earthWallPrefab.GetComponent<Projectile>().manaCost;
+        if (mana < cost)
+            return;
         var rayHit = Physics2D.Raycast(transform.position, Vector2.down, raycastLength, LayerMask.GetMask("Platforms"));
         Debug.DrawRay(transform.position, Vector2.down*raycastLength,Color.red);
 
@@ -92,6 +110,7 @@ public class BasicSpells : MonoBehaviour
             var platform = Instantiate(earthWallPrefab, transform.position+ new Vector3(0,-2,0), Quaternion.identity);
             platform.transform.rotation = Quaternion.Euler(0,0,90);
             Destroy(platform, 5);
+            playerInput.manaPoints -= cost;
         }
     }
 }

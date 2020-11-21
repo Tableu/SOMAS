@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - Water
   - Earth
+  - Ice
   layers:
   - Default
   - TransparentFX
