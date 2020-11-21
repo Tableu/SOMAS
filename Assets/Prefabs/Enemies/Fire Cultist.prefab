@@ -758,7 +758,8 @@ MonoBehaviour:
   mask: 0
   grounded: 0
   speed: 5
-  raycastDirections: []
+  raycastDirections:
+  - {x: 1, y: 0}
   boundary: []
   attackLimit: 15
   followLimit: 30

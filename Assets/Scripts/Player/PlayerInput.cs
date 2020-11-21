@@ -7,6 +7,8 @@ public class PlayerInput: MonoBehaviour
 {
     private PlayerMovement playerMovement;
     public bool inputLocked;
+    public float manaPoints;
+    public int maxMana;
     public delegate void RotateEventDelegate();
     public event RotateEventDelegate RotateEvent;
     public float previous;
@@ -26,6 +28,7 @@ public class PlayerInput: MonoBehaviour
     private void Start(){
         previous = -1;
         inputLocked = false;
+        manaPoints = maxMana;
         //playerInputActions.Player.Water.Disable();
         //playerInputActions.Player.Ice.Disable();
         //playerInputActions.Player.Earth.Disable();
@@ -33,6 +36,8 @@ public class PlayerInput: MonoBehaviour
     // Update is called once per frame
     private void Update(){
         UpdateRotation();
+        if (manaPoints < maxMana)
+            manaPoints += 0.01f;
     }
     public void LockInput() {
         playerInputActions.Player.Jump.Disable();

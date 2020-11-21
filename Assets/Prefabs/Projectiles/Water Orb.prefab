@@ -139,3 +139,4 @@ MonoBehaviour:
   healthPoints: 0
   timeLimit: 0
   lifetime: 0
+  manaCost: 10

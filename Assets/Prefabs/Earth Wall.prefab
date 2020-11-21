@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7210971611276219260}
   - component: {fileID: 8697855117510705629}
   - component: {fileID: 1966790499135656431}
+  - component: {fileID: 3067562242818067189}
   m_Layer: 10
   m_Name: Earth Wall
   m_TagString: Platform
@@ -47,6 +48,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -108,3 +110,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &3067562242818067189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4986695957360725536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd7ff81df548f854190c25e7901982fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePoints: 0
+  destructible: 0
+  healthPoints: 0
+  timeLimit: 0
+  lifetime: 0
+  manaCost: 10

@@ -50,6 +50,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -120,6 +121,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damagePoints: 0
   destructible: 0
+  healthPoints: 0
+  timeLimit: 0
+  lifetime: 0
+  manaCost: 20
 --- !u!61 &8823839597983417100
 BoxCollider2D:
   m_ObjectHideFlags: 0

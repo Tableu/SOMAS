@@ -101,6 +101,7 @@ MonoBehaviour:
   healthPoints: 0
   timeLimit: 1
   lifetime: 2
+  manaCost: 10
 --- !u!61 &7848403588364694827
 BoxCollider2D:
   m_ObjectHideFlags: 0
