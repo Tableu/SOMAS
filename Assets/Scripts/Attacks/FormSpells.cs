@@ -7,7 +7,7 @@ public class FormSpells : MonoBehaviour
 {
     private PlayerInput playerInput;
     private PlayerInputActions playerInputActions;
-    public GameObject wallFragment;
+    public GameObject wallFragmentPrefab;
     public GameObject icePrison;
     public GameObject iceSpike;
     private static readonly int Stunned = Animator.StringToHash("Stunned");
@@ -30,7 +30,7 @@ public class FormSpells : MonoBehaviour
         var attackDirection = playerInputActions.Player.TapAttack.ReadValue<Vector2>();
 
         if (attackDirection.Equals(Vector2.left) || attackDirection.Equals(Vector2.right)) {
-            EarthPunch(wallFragment);
+            EarthPunch(wallFragmentPrefab);
         }else if (attackDirection.Equals(Vector2.down)) {
             StartCoroutine(FreezeAttack(2));
         }else if (attackDirection.Equals(Vector2.up)) {
@@ -89,11 +89,16 @@ public class FormSpells : MonoBehaviour
         float raycastLength = 4;
         var hit = Physics2D.Raycast(transform.position, transform.right, raycastLength, LayerMask.GetMask("Platforms"));
         Debug.DrawRay(transform.position, transform.right*raycastLength,Color.red);
-        if (!hit) return;
-        for (int index = 0; index < 3; index++) {
-            var fragment = Instantiate(wallFragment, hit.collider.transform.position, Quaternion.identity);
-            fragment.GetComponent<Rigidbody2D>().velocity = RandomVector2(20 * (3.1415f / 180f), -10 * (3.1415f / 180f)) * 50;
+        if (hit) {
+            for (var index = 0; index < 3; index++) {
+                var fragment = Instantiate(wallFragment, hit.collider.transform.position, Quaternion.identity);
+                fragment.GetComponent<Rigidbody2D>().velocity =
+                    RandomVector2(20 * (3.1415f / 180f), -10 * (3.1415f / 180f)) * 50;
+            }
+            Destroy(hit.collider.gameObject);
+        }else{
+            var fragment = Instantiate(wallFragment, transform.position, Quaternion.identity);
+            fragment.GetComponent<Rigidbody2D>().velocity = new Vector2(transform.right.x*50,0);
         }
-        Destroy(hit.collider.gameObject);
     }
 }

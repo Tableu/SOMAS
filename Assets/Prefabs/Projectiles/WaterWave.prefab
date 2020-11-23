@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5864375196442618281}
   - component: {fileID: 4932054679613063357}
   - component: {fileID: 8823839597983417100}
-  - component: {fileID: 1049077916491724723}
+  - component: {fileID: 6664080571809081678}
   m_Layer: 11
   m_Name: WaterWave
   m_TagString: PlayerProjectile
@@ -135,7 +135,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -1.3134613, y: -1.7946095}
@@ -151,7 +151,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 11.113663, y: 6.822091}
   m_EdgeRadius: 0
---- !u!114 &1049077916491724723
+--- !u!114 &6664080571809081678
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,7 +160,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2085190120941759905}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3e03f8b5c1765e4d9ea8f0ba83b6e9b, type: 3}
+  m_Script: {fileID: 11500000, guid: 041a84f4f35f619448cd76ca98725cce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: -1}
+  water: {fileID: 9196975784834476675, guid: e082c340b7f4e014d82ee3a9f651c73d, type: 3}
+  rigidBody: {fileID: 0}

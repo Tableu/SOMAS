@@ -692,7 +692,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerFound: 0
   distanceToPlayer: {x: 0, y: 0}
-  speed: 5
+  speed: 2
 --- !u!61 &1355264971
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -757,7 +757,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mask: 0
   grounded: 0
-  speed: 5
+  speed: 2
   raycastDirections:
   - {x: 1, y: 0}
   boundary: []
