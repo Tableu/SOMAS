@@ -18,7 +18,10 @@ public class EnemyMovement
         }else if(transform.position.x < enemyRaycasts.boundary[0]){
             transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
-        rigidBody.velocity = new Vector2(gameObject.transform.right.x*enemyRaycasts.speed,rigidBody.velocity.y);
+
+        if (Mathf.Abs(rigidBody.velocity.x) < enemyRaycasts.speed) {
+            rigidBody.AddForce(new Vector2(gameObject.transform.right.x * enemyRaycasts.speed, 0), ForceMode2D.Impulse);
+        }
     }
     public static void FlipCharacter(GameObject gameObject){
         var enemyDetection = gameObject.GetComponent<EnemyDetection>();
@@ -35,8 +38,8 @@ public class EnemyMovement
 
     public static void StopCharacter(GameObject gameObject){
         var rigidBody = gameObject.GetComponent<Rigidbody2D>();
-        
-        rigidBody.velocity = new Vector2(0,rigidBody.velocity.y);
+        if(Mathf.Abs(rigidBody.velocity.x) > 0)
+            rigidBody.velocity = new Vector2(0,rigidBody.velocity.y);
     }
 
     public static void FollowPlayer(GameObject gameObject){
@@ -45,6 +48,8 @@ public class EnemyMovement
         var distanceToPlayer = enemyDetection.distanceToPlayer;
         
         distanceToPlayer = new Vector2(distanceToPlayer.x,0).normalized;
-        rigidBody.velocity = new Vector2(distanceToPlayer.x*enemyDetection.speed, rigidBody.velocity.y);
+        if (Mathf.Abs(rigidBody.velocity.x) < enemyDetection.speed) {
+            rigidBody.AddForce(new Vector2(distanceToPlayer.x * enemyDetection.speed, 0), ForceMode2D.Impulse);
+        }
     }
 }

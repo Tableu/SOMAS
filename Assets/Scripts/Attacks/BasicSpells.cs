@@ -106,6 +106,7 @@ public class BasicSpells : MonoBehaviour
                 return;
             var wall = Instantiate(earthWallPrefab, spawnPosition, Quaternion.identity);
             Destroy(wall, 2);
+            playerInput.manaPoints -= cost;
         }else {
             var platform = Instantiate(earthWallPrefab, transform.position+ new Vector3(0,-2,0), Quaternion.identity);
             platform.transform.rotation = Quaternion.Euler(0,0,90);
