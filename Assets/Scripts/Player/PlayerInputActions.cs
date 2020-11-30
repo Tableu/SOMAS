@@ -35,12 +35,12 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Basic Spell Hold"",
+                    ""name"": ""Basic Spell Press"",
                     ""type"": ""Button"",
                     ""id"": ""b43ef5c4-1425-4248-915b-0d52fe37e015"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press(behavior=1)""
+                    ""interactions"": ""Press""
                 },
                 {
                     ""name"": ""Basic Spell"",
@@ -160,7 +160,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Basic Spell Hold"",
+                    ""action"": ""Basic Spell Press"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -872,7 +872,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
-        m_Player_BasicSpellHold = m_Player.FindAction("Basic Spell Hold", throwIfNotFound: true);
+        m_Player_BasicSpellPress = m_Player.FindAction("Basic Spell Press", throwIfNotFound: true);
         m_Player_BasicSpell = m_Player.FindAction("Basic Spell", throwIfNotFound: true);
         m_Player_TapAttack = m_Player.FindAction("Tap Attack", throwIfNotFound: true);
         m_Player_HoldAttack = m_Player.FindAction("Hold Attack", throwIfNotFound: true);
@@ -940,7 +940,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Jump;
-    private readonly InputAction m_Player_BasicSpellHold;
+    private readonly InputAction m_Player_BasicSpellPress;
     private readonly InputAction m_Player_BasicSpell;
     private readonly InputAction m_Player_TapAttack;
     private readonly InputAction m_Player_HoldAttack;
@@ -951,7 +951,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         public PlayerActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
-        public InputAction @BasicSpellHold => m_Wrapper.m_Player_BasicSpellHold;
+        public InputAction @BasicSpellPress => m_Wrapper.m_Player_BasicSpellPress;
         public InputAction @BasicSpell => m_Wrapper.m_Player_BasicSpell;
         public InputAction @TapAttack => m_Wrapper.m_Player_TapAttack;
         public InputAction @HoldAttack => m_Wrapper.m_Player_HoldAttack;
@@ -971,9 +971,9 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @Jump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
-                @BasicSpellHold.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBasicSpellHold;
-                @BasicSpellHold.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBasicSpellHold;
-                @BasicSpellHold.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBasicSpellHold;
+                @BasicSpellPress.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBasicSpellPress;
+                @BasicSpellPress.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBasicSpellPress;
+                @BasicSpellPress.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBasicSpellPress;
                 @BasicSpell.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBasicSpell;
                 @BasicSpell.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBasicSpell;
                 @BasicSpell.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBasicSpell;
@@ -996,9 +996,9 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
-                @BasicSpellHold.started += instance.OnBasicSpellHold;
-                @BasicSpellHold.performed += instance.OnBasicSpellHold;
-                @BasicSpellHold.canceled += instance.OnBasicSpellHold;
+                @BasicSpellPress.started += instance.OnBasicSpellPress;
+                @BasicSpellPress.performed += instance.OnBasicSpellPress;
+                @BasicSpellPress.canceled += instance.OnBasicSpellPress;
                 @BasicSpell.started += instance.OnBasicSpell;
                 @BasicSpell.performed += instance.OnBasicSpell;
                 @BasicSpell.canceled += instance.OnBasicSpell;
@@ -1169,7 +1169,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
-        void OnBasicSpellHold(InputAction.CallbackContext context);
+        void OnBasicSpellPress(InputAction.CallbackContext context);
         void OnBasicSpell(InputAction.CallbackContext context);
         void OnTapAttack(InputAction.CallbackContext context);
         void OnHoldAttack(InputAction.CallbackContext context);

@@ -22,12 +22,12 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Basic Spell Hold",
+                    "name": "Basic Spell Press",
                     "type": "Button",
                     "id": "b43ef5c4-1425-4248-915b-0d52fe37e015",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press(behavior=1)"
+                    "interactions": "Press"
                 },
                 {
                     "name": "Basic Spell",
@@ -147,7 +147,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Basic Spell Hold",
+                    "action": "Basic Spell Press",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

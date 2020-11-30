@@ -84,9 +84,16 @@ public class BasicSpells : MonoBehaviour
         var cost = projectilePrefab.GetComponent<Projectile>().manaCost;
         if (mana < cost)
             return;
-        var projectile = Instantiate(projectilePrefab, transform.position + new Vector3(7.5f*playerForward.x,0.2f,0), Quaternion.identity);
+        var projectile = Instantiate(projectilePrefab, transform.position+new Vector3(0,1,0), Quaternion.identity);
+        projectile.transform.localScale = new Vector3(0.4f,0.4f,0.4f);
         projectile.transform.parent = transform;
-        projectile.transform.rotation = Quaternion.Euler(0,0,80*playerForward.x);
+        if (transform.right.x < 0) {
+            projectile.transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        else {
+            projectile.transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+
         playerInput.manaPoints -= cost;
     }
     private void EarthCreation(GameObject earthWallPrefab, float raycastLength, float position){
