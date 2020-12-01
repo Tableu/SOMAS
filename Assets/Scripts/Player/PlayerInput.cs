@@ -1,5 +1,4 @@
 ﻿using System;
-using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -26,7 +25,7 @@ public class PlayerInput: MonoBehaviour
         playerInputActions.Disable();
     }
     private void Start(){
-        previous = -1;
+        previous = 1;
         inputLocked = false;
         manaPoints = maxMana;
         //playerInputActions.Player.Water.Disable();

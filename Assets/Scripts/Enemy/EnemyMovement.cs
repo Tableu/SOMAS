@@ -36,12 +36,6 @@ public class EnemyMovement
         }
     }
 
-    public static void StopCharacter(GameObject gameObject){
-        var rigidBody = gameObject.GetComponent<Rigidbody2D>();
-        if(Mathf.Abs(rigidBody.velocity.x) > 0)
-            rigidBody.velocity = new Vector2(0,rigidBody.velocity.y);
-    }
-
     public static void FollowPlayer(GameObject gameObject){
         var enemyDetection = gameObject.GetComponent<EnemyDetection>();
         var rigidBody = gameObject.GetComponent<Rigidbody2D>();
