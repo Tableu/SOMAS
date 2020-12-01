@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd7ff81df548f854190c25e7901982fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePoints: 0
+  damagePoints: 10
   destructible: 0
   healthPoints: 0
   timeLimit: 0
@@ -165,4 +165,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: {x: 0, y: -1}
   water: {fileID: 9196975784834476675, guid: e082c340b7f4e014d82ee3a9f651c73d, type: 3}
-  rigidBody: {fileID: 0}

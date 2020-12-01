@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcde94053c3e12a4f9d60b6b52fcad8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementMethods:
-  - StopCharacter
+  movementMethods: []
 --- !u!1101 &-7747646465967731069
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
