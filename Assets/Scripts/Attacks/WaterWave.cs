@@ -21,7 +21,7 @@ public class WaterWave : MonoBehaviour {
         Debug.DrawRay(raycastPos, transform.TransformDirection(direction)*7,Color.red);
         if(Physics2D.Raycast(raycastPos,direction,7) == false){
             //Spread water
-            Instantiate(water, transform.position, Quaternion.identity);
+            //Instantiate(water, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
