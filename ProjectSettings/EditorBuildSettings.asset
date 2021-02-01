@@ -4,13 +4,7 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Demo.unity
-    guid: dc06dc78a5537c44596192c7fabd4308
-  - enabled: 1
-    path: Assets/Scenes/Fire Cult Lair.unity
-    guid: c490f97ec1767d9418050f91e55e78ae
+  m_Scenes: []
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: a355dfa565c2971458d97c41ee3c8375,
       type: 2}

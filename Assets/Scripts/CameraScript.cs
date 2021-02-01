@@ -3,18 +3,18 @@
 public class CameraScript : MonoBehaviour
 {
     private Vector3 velocity;
-    private Transform player;
+    public Transform player;
     public float horizontalFollowDistance;
     public float verticalFollowDistance;
     private float horizontalOffset;
-    private float[] horizontalLimits = new float[2];
-    private float[] verticalLimits = new float[2];
+    public float[] horizontalLimits = new float[2];
+    public float[] verticalLimits = new float[2];
     public Transform leftBoundary;
     public Transform rightBoundary;
     // Start is called before the first frame update
     private void Awake(){
-        leftBoundary = transform.GetChild(0).transform;
-        rightBoundary = transform.GetChild(1).transform;
+        leftBoundary = transform.GetChild(1).transform;
+        rightBoundary = transform.GetChild(2).transform;
     }
 
     private void Start()
@@ -24,7 +24,6 @@ public class CameraScript : MonoBehaviour
         horizontalLimits[1] = rightBoundary.position.x;
         verticalLimits[1] = rightBoundary.position.y;
         velocity = Vector3.zero;
-        player = GameObject.FindWithTag("Player").transform;
         GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().DeathEvent += OnDeathEvent;
     }
 
