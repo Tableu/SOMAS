@@ -92,8 +92,9 @@ public class FormSpells : MonoBehaviour
         if (hit) {
             for (var index = 0; index < 3; index++) {
                 var fragment = Instantiate(wallFragment, hit.collider.transform.position, Quaternion.identity);
-                fragment.GetComponent<Rigidbody2D>().velocity =
-                    RandomVector2(20 * (3.1415f / 180f), -10 * (3.1415f / 180f)) * 50;
+                var randVector = RandomVector2(20 * (3.1415f / 180f), -10 * (3.1415f / 180f)) * 50;
+                randVector = new Vector2(transform.right.x*randVector.x, randVector.y);
+                fragment.GetComponent<Rigidbody2D>().velocity = randVector;
             }
             Destroy(hit.collider.gameObject);
         }else{
