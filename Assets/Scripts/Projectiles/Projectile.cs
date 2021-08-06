@@ -8,7 +8,8 @@ public class Projectile : MonoBehaviour
     public int healthPoints;
     public bool timeLimit;
     public int lifetime;
-
+    public int speed;
+    
     public int manaCost;
     // Start is called before the first frame update
     private void Start()

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7729170371549848859}
   - component: {fileID: 4697627458096377711}
   - component: {fileID: 1427364102179543253}
-  - component: {fileID: 8976722934280838971}
+  - component: {fileID: 3029745769159674048}
   m_Layer: 11
   m_Name: Water Orb
   m_TagString: PlayerProjectile
@@ -122,7 +122,7 @@ CircleCollider2D:
   m_Offset: {x: 0.0827198, y: -0.03790927}
   serializedVersion: 2
   m_Radius: 0.60523725
---- !u!114 &8976722934280838971
+--- !u!114 &3029745769159674048
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8943973420012103811}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd7ff81df548f854190c25e7901982fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fd9ab07f0d6a514486fcc010e44d420, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damagePoints: 10
@@ -139,4 +139,6 @@ MonoBehaviour:
   healthPoints: 0
   timeLimit: 0
   lifetime: 0
+  speed: 0
   manaCost: 10
+  rotation: 10

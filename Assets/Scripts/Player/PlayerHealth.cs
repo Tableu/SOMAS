@@ -51,7 +51,7 @@ public class PlayerHealth : MonoBehaviour
         {
             StartCoroutine(Invulnerable());
             StartCoroutine(LockPlayerInput(0.2f));
-            healthPoints -= collision.gameObject.GetComponent<Projectile>().damagePoints;
+            healthPoints -= (collision.gameObject.GetComponent(typeof(Projectile)) as Projectile).damagePoints;
             var direction = collision.transform.GetComponent<Rigidbody2D>().velocity.normalized.x;
             rigidBody.velocity = Vector2.zero;
             rigidBody.AddForce(new Vector2(knockback.x*direction,knockback.y),ForceMode2D.Impulse);
