@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class Projectile: MonoBehaviour
 {
     public int damagePoints;
     public bool destructible;

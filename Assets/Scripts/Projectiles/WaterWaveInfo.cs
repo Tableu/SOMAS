@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaterWave : MonoBehaviour {
-    private int lifetime;
+public class WaterWaveInfo : Projectile {
     public Vector2 direction;
     public GameObject water;
+    public Vector2 displacement;
 
     private Rigidbody2D rigidBody;
     // Start is called before the first frame update

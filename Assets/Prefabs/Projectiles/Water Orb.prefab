@@ -139,6 +139,6 @@ MonoBehaviour:
   healthPoints: 0
   timeLimit: 0
   lifetime: 0
-  speed: 0
+  speed: 10
   manaCost: 10
-  rotation: 10
+  rotationSpeed: 10

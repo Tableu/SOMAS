@@ -11,6 +11,10 @@ public class BasicSpells : MonoBehaviour
     private PlayerInput playerInput;
     private PlayerInputActions playerInputActions;
     private bool cast; //Prevents a water spell from casting if a spell has already been casted
+
+    private SpellCommand waterWaveCommand;
+
+    private SpellCommand waterOrbCommand;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +28,9 @@ public class BasicSpells : MonoBehaviour
         playerInputActions.Player.BasicSpell.performed += context => {
             WaterSpells(context.duration);
         };
+        
+        waterWaveCommand = new WaterWaveCommand();
+        waterOrbCommand = new WaterOrbCommand();
     }
     private void CastSpell(){
         var attackDirection = playerInputActions.Player.HoldAttack.ReadValue<Vector2>();
@@ -40,10 +47,10 @@ public class BasicSpells : MonoBehaviour
     private void WaterSpells(double holdDuration){
         if(cast)
             return;
-        if (holdDuration > 1){
-            WaveAttack(waterWave, 10, new Vector2(2, 0));         
-        }else if (holdDuration > 0.5){
-            WaterOrb(waterOrb, 10, 10);
+        if (holdDuration > 1) {
+            waterWaveCommand.Execute(waterWave, gameObject);
+        }else if (holdDuration > 0.5) {
+            waterOrbCommand.Execute(waterOrb, gameObject);
         }
     }
     

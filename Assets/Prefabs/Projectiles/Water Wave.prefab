@@ -11,11 +11,10 @@ GameObject:
   - component: {fileID: 7734394405819752435}
   - component: {fileID: 7849859831846090157}
   - component: {fileID: 5864375196442618281}
-  - component: {fileID: 4932054679613063357}
   - component: {fileID: 8823839597983417100}
   - component: {fileID: 6664080571809081678}
   m_Layer: 11
-  m_Name: WaterWave
+  m_Name: Water Wave
   m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,24 +106,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &4932054679613063357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2085190120941759905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd7ff81df548f854190c25e7901982fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damagePoints: 10
-  destructible: 0
-  healthPoints: 0
-  timeLimit: 0
-  lifetime: 0
-  manaCost: 20
 --- !u!61 &8823839597983417100
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -163,5 +144,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041a84f4f35f619448cd76ca98725cce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePoints: 10
+  destructible: 0
+  healthPoints: 0
+  timeLimit: 0
+  lifetime: 0
+  speed: 10
+  manaCost: 20
   direction: {x: 0, y: -1}
   water: {fileID: 9196975784834476675, guid: e082c340b7f4e014d82ee3a9f651c73d, type: 3}
+  displacement: {x: 2, y: 0}

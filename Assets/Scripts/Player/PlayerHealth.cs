@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour
     private Animator animator;
     private Rigidbody2D rigidBody;
     private PlayerInput playerInput;
-    public Vector2 knockback;
+    [SerializeField] public Vector2 knockback;
     private Vector3 boundSize;
     private Vector3 boundCenterOffset;
     // Start is called before the first frame update

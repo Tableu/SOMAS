@@ -2,6 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaterOrb : Projectile {
-    public int rotation;
+public class WaterOrbInfo : Projectile {
+    public int rotationSpeed;
 }
