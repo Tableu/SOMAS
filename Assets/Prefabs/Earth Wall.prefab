@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8697855117510705629}
   - component: {fileID: 1966790499135656431}
   - component: {fileID: 3067562242818067189}
+  - component: {fileID: 7847080205864826202}
   m_Layer: 10
   m_Name: Earth Wall
   m_TagString: Platform
@@ -127,4 +128,28 @@ MonoBehaviour:
   healthPoints: 0
   timeLimit: 0
   lifetime: 0
+  speed: 0
   manaCost: 10
+--- !u!114 &7847080205864826202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4986695957360725536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 861d8a7c86caa034e8447b6709efd7f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePoints: 0
+  destructible: 0
+  healthPoints: 0
+  timeLimit: 1
+  lifetime: 2
+  speed: 0
+  manaCost: 10
+  raycastLength: 2
+  position: 2
+  platformLifetime: 5
+  wallLifetime: 2

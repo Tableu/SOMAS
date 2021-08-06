@@ -15,7 +15,7 @@ public class Projectile: MonoBehaviour
     private void Start()
     {
         if (timeLimit){
-            StartCoroutine(deathCoroutine());
+            StartCoroutine(DeathCoroutine());
         }
     }
 
@@ -31,7 +31,7 @@ public class Projectile: MonoBehaviour
         }
     }
 
-    IEnumerator deathCoroutine()
+    IEnumerator DeathCoroutine()
     {
         yield return new WaitForSeconds(lifetime);
         Destroy(gameObject);

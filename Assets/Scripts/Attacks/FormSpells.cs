@@ -80,7 +80,7 @@ public class FormSpells : MonoBehaviour
             hit.collider.gameObject.GetComponent<Animator>().SetBool(Stunned, false);
             Destroy(ice);
         }
-    } //Prevents the casting of a a water spell from casting if therea spell has already been casted
+    } //Prevents the casting of a a water spell from casting if a spell has already been casted
     private Vector2 RandomVector2(float angle, float angleMin){
         float random = Random.value * angle + angleMin;
         return new Vector2(Mathf.Cos(random), Mathf.Sin(random));
