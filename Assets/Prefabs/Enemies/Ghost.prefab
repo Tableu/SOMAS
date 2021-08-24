@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2298517373927134903}
   - component: {fileID: 2298517373927134901}
   - component: {fileID: 2298517373927134899}
-  - component: {fileID: 6481739473276592}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Untagged
@@ -45,10 +44,12 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -125,22 +126,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6481739473276592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2298517373927134856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee368f0d2d5211a4b83d4c81c4c02bfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontalLimits:
-  - -15
-  - 15
-  horizontalSpeed: 2
-  verticalSpeed: 2
-  verticalMaxSpeed: 1
-  velocity: 0

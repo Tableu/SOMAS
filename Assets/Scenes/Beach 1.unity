@@ -1075,7 +1075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebac931c073fa5041abda58bbf13e47a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: Demo
+  nextLevel: Beach 2
 --- !u!61 &2080616221
 BoxCollider2D:
   m_ObjectHideFlags: 0
