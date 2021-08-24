@@ -2,8 +2,8 @@
 using UnityEngine.SceneManagement;
 
 namespace Level {
-    public class LevelExit : MonoBehaviour
-    {
+    public class LevelExit : MonoBehaviour {
+        public Scene nextLevel;
         // Start is called before the first frame update
         void Start()
         {
@@ -17,7 +17,7 @@ namespace Level {
         }
 
         private void OnTriggerEnter2D(Collider2D other) {
-            SceneManager.LoadScene("Fire Cult Lair");
+            SceneManager.LoadScene(nextLevel.name);
         }
     }
 }
