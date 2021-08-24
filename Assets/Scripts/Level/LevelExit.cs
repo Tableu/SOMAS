@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Level {
     public class LevelExit : MonoBehaviour {
-        public Scene nextLevel;
+        public String nextLevel;
         // Start is called before the first frame update
         void Start()
         {
@@ -17,7 +18,7 @@ namespace Level {
         }
 
         private void OnTriggerEnter2D(Collider2D other) {
-            SceneManager.LoadScene(nextLevel.name);
+            SceneManager.LoadScene(nextLevel);
         }
     }
 }

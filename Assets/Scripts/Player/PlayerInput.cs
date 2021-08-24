@@ -26,7 +26,7 @@ namespace Player {
         private void Start(){
             previous = 1;
             inputLocked = false;
-            manaPoints = maxMana;
+            manaPoints = PlayerPrefs.GetFloat("Mana",maxMana);
             //playerInputActions.Player.Water.Disable();
             //playerInputActions.Player.Ice.Disable();
             //playerInputActions.Player.Earth.Disable();
@@ -36,6 +36,10 @@ namespace Player {
             UpdateRotation();
             if (manaPoints < maxMana)
                 manaPoints += 0.01f;
+        }
+
+        private void OnDestroy() {
+            PlayerPrefs.SetFloat("Mana", manaPoints);
         }
         public void LockInput() {
             playerInputActions.Player.Jump.Disable();

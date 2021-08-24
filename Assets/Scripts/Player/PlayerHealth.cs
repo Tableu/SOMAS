@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Projectiles;
 using UnityEngine;
 
@@ -24,6 +25,7 @@ namespace Player {
             playerInput = GetComponent<PlayerInput>();
             boundSize = col.bounds.size;
             boundCenterOffset = transform.position - col.bounds.center;
+            healthPoints = PlayerPrefs.GetInt("Health", 100);
         }
 
         // Update is called once per frame
@@ -76,6 +78,10 @@ namespace Player {
             gameObject.layer = 14;
             yield return new WaitForSeconds(1f);
             gameObject.layer = 12;
+        }
+
+        public void OnDestroy() {
+            PlayerPrefs.SetInt("Health", healthPoints);
         }
     }
 }
