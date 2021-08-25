@@ -13,7 +13,7 @@ namespace Player {
         private Animator animator;
         private Rigidbody2D rigidBody;
         private PlayerInput playerInput;
-        [SerializeField] public Vector2 knockback;
+        public Vector2 knockback;
         private Vector3 boundSize;
         private Vector3 boundCenterOffset;
         // Start is called before the first frame update

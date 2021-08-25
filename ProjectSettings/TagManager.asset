@@ -11,6 +11,8 @@ TagManager:
   - Water
   - Earth
   - Ice
+  - Canvas
+  - SceneLoad
   layers:
   - Default
   - TransparentFX

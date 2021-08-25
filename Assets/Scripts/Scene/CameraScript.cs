@@ -15,8 +15,8 @@ namespace Level {
         public Transform rightBoundary;
         // Start is called before the first frame update
         private void Awake(){
-            leftBoundary = transform.GetChild(1).transform;
-            rightBoundary = transform.GetChild(2).transform;
+            leftBoundary = transform.GetChild(0).transform;
+            rightBoundary = transform.GetChild(1).transform;
         }
 
         private void Start()
@@ -26,6 +26,7 @@ namespace Level {
             horizontalLimits[1] = rightBoundary.position.x;
             verticalLimits[1] = rightBoundary.position.y;
             velocity = Vector3.zero;
+            player = GameObject.FindWithTag("Player").transform;
             GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().DeathEvent += OnDeathEvent;
         }
 

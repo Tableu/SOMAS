@@ -14,6 +14,7 @@ namespace Player {
         // Start is called before the first frame update
         private void Awake() {
             playerInputActions = new PlayerInputActions();
+            DontDestroyOnLoad(gameObject);
         }
 
         private void OnEnable() {
@@ -27,6 +28,7 @@ namespace Player {
             previous = 1;
             inputLocked = false;
             manaPoints = PlayerPrefs.GetFloat("Mana",maxMana);
+            
             //playerInputActions.Player.Water.Disable();
             //playerInputActions.Player.Ice.Disable();
             //playerInputActions.Player.Earth.Disable();
